@@ -1,0 +1,44 @@
+$color-primary: black;
+$color-background: #fffcf3;
+$color-text: black;
+$color-highlight: #00bc8f;
+$color-highlight2: #4b47ff;
+$color-hightlight3: #ff9900;
+
+$font-base: "Syne", sans-serif;
+
+$button-padding: 20px 60px;
+
+%btn-primary {
+  background-color: $color-background;
+  color: $color-text;
+  border: 4px solid $color-primary;
+  padding: $button-padding;
+  font-family: $font-base;
+  font-size: 16px;
+  width: 207px;
+  height: 68px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+%btn-secondary {
+  background-color: $color-primary;
+  color: $color-background;
+  border: 4px solid $color-background;
+  padding: $button-padding;
+  font-family: $font-base;
+  font-size: 16px;
+  width: 207px;
+  height: 68px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
