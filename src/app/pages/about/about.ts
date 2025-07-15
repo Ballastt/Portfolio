@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-about',
+  imports: [],
+  templateUrl: './about.html',
+  styleUrl: './about.scss'
+})
+export class AboutComponent {
+  constructor() {
+    // Initialization logic can go here
+  }
+
+}
