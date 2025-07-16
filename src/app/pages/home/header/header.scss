@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  background-color: var(--color-background);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  
+  > img {
+    width: 48px;
+    height: 48px;
+  }
+  > a {
+    color: var(--color-text);
+    padding: 8px 16px;
+  }
+  > span {
+    font-size: 18px;
+  }
+}
+
+a {
+  background-image: linear-gradient(to right, #00bc8f, #00bc8f 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
+}
