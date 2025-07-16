@@ -1,13 +1,13 @@
-@use 'variables'; 
+@use "variables";
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--font-base);
   display: flex;
   flex-direction: column;
   max-width: 1920px;
+  font-family: var(--font-base);
 }
 
 html {
