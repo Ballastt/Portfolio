@@ -46,13 +46,14 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 .email-rotated {
   display: flex;
   align-items: center;
-  padding-left: 290px;
+  margin-left: 80px;
+  margin-bottom: 150px;
   transform-origin: bottom;
   perspective: 800px; /* this adds depth */
   backface-visibility: visible; /* optional */
@@ -66,10 +67,48 @@
 .scroll-down {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding-right: 80px;
+  width: 100px;
+  position: relative;
   > span {
-    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 170px;
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-background) !important;
+    padding: 0 4px;
+    font-size: 22px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 120px;
+  }
+}
+
+.scroll-down img {
+  height: 84px; 
+  width: auto; 
+  display: block;
+  margin: 0 auto; 
+  animation: scrollDownAnim 2s linear infinite;
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scrollDownAnim {
+  0% {
+    transform: translateY(-60px);
+  }
+  50% {
+    transform: translateY(210px); 
+  }
+  99.99% {
+    transform: translateY(210px);
+  }
+  100% {
+    transform: translateY(-180px);
   }
 }
