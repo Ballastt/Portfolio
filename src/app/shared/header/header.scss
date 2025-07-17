@@ -1,13 +1,17 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 100px;
+  gap: 900px;
+  height: 80px;
   background-color: var(--color-background);
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 4px;
-  
+  padding: 0 100px;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+
   > img {
     width: 48px;
     height: 48px;
@@ -19,6 +23,17 @@
   > span {
     font-size: 18px;
   }
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.burger {
+  cursor: pointer;
 }
 
 a {
@@ -48,4 +63,46 @@ a:hover {
 
 a:hover::before {
   width: 100%;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lang {
+  position: relative;
+  padding: 2px 4px;
+  transition: border 0.2s ease;
+  font-weight: 700;
+}
+
+.lang::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 25%; 
+  width: 50%;
+  height: 2px;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lang:hover::after {
+  opacity: 1;
+}
+
+.lang:active {
+  border: 3px solid black;
+  transition: none;
+}
+
+.lang.active {
+  border: 3px solid var(--color-highlight);
 }

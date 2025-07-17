@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/header/header';
 import { Footer } from './shared/footer/footer';
+import { AboveTheFold } from "./pages/home/above-the-fold/above-the-fold";
 
 
 @Component({

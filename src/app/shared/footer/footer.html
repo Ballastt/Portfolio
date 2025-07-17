@@ -8,13 +8,14 @@
       <span>Sag hallo, lass uns Ideen diskutieren und sie machbar machen</span>
     </div>
 
-    <form autocomplete="on">
+    <form>
       <input
         type="text"
         id="fname"
         name="fname"
         placeholder="Dein Name"
         required
+        autocomplete="off"
       />
       <br />
       <input
@@ -23,6 +24,7 @@
         name="email"
         placeholder="Deine Email"
         required
+        autocomplete="off"
       />
       <br />
 
@@ -32,7 +34,11 @@
         required
       ></textarea>
     </form>
-    <div class="checkbox-wrapper">
+    <div
+      class="checkbox-wrapper"
+      (mouseenter)="isPrivacyHovered = true"
+      (mouseleave)="isPrivacyHovered = false"
+    >
       <label class="custom-checkbox">
         <div class="checkbox-circle-wrapper">
           <span class="circle-bg" [class.visible]="isPrivacyHovered"></span>
@@ -42,13 +48,7 @@
         </div>
 
         Ich habe die
-        <a
-          href="/privacy-policy"
-          target="_blank"
-          (mouseenter)="isPrivacyHovered = true"
-          (mouseleave)="isPrivacyHovered = false"
-          >Datenschutzerklärung</a
-        >
+        <a href="/privacy-policy" target="_blank">Datenschutzerklärung</a>
         gelesen und stimme dem Verarbeiten meiner Daten zu.
       </label>
     </div>

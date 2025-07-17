@@ -224,7 +224,7 @@ form {
   cursor: pointer;
 }
 
-/* Custom Box oben drauf */
+
 .checkbox-box {
   width: 14px;
   height: 14px;
@@ -235,10 +235,9 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none; // wichtig, damit checkbox klickbar bleibt
+  pointer-events: none; 
 }
 
-/* ✅ Sichtbare Box übernimmt Kreisfarbe beim Hover */
 .checkbox-box.visible {
   background-color: var(--color-highlight);
 }
@@ -278,5 +277,5 @@ form {
 }
 
 .legal a:hover::after {
-  width: calc(100% - 2.6em); /* nur ab dem 'l' bis zum Wortende */
+  width: calc(100% - 2.6em); 
 }

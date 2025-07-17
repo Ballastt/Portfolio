@@ -3,6 +3,73 @@
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
+  padding-top: 250px;
+  box-sizing: border-box;
+  border: 2px solid red;
 }
 
+.frontend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  > h1 {
+    font-weight: 800;
+    font-size: 120px;
+    margin: 0;
+    line-height: 110px;
+  }
+}
 
+.frontend-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+
+  > h1 {
+    color: var(--color-highlight);
+    font-size: 50px;
+  }
+}
+
+.black-line {
+  border: none;
+  height: 3px;
+  background-color: black;
+  width: 50%;
+  margin: 0 2rem;
+}
+
+.side-pieces {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+.email-rotated {
+  display: flex;
+  align-items: center;
+  padding-left: 290px;
+  transform-origin: bottom;
+  perspective: 800px; /* this adds depth */
+  backface-visibility: visible; /* optional */
+  transform: rotate(-90deg);
+  > a {
+    color: black;
+    font-size: 20px;
+  }
+}
+
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 80px;
+  > span {
+    font-size: 24px;
+  }
+}

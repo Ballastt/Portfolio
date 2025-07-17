@@ -1,8 +1,31 @@
 <div class="header">
-    <img src="assets/imgs/mylogo.png" alt="Website-Logo">
-    <a href="#aboutme">Über mich</a>
-    <a href="#skills">Fähigkeiten</a>
-    <a href="#projects">Projekte</a>
-    <a href="#contact">Kontakt</a>
-    <span>DE | EN</span>
+  <img src="assets/imgs/mylogo.png" alt="Website-Logo" />
+  <!-- <a href="#aboutme">Über mich</a> -->
+  <!-- <a href="#skills">Fähigkeiten</a> -->
+  <!-- <a href="#projects">Projekte</a> -->
+  <!-- <a href="#contact">Kontakt</a> -->
+  <div class="right-header">
+    <div class="lang-toggle">
+      <span
+        class="lang"
+        [class.active]="activeLang === 'de'"
+        (click)="setLang('de')"
+        >DE</span
+      >
+      <span class="divider">|</span>
+      <span
+        class="lang"
+        [class.active]="activeLang === 'en'"
+        (click)="setLang('en')"
+        >EN</span
+      >
+    </div>
+
+    <img
+      class="burger"
+      src="assets/icons/burger_header.png"
+      alt="Menu"
+      (click)="toggleBurger()"
+    />
+  </div>
 </div>

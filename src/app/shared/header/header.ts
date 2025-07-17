@@ -5,8 +5,15 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrl: './header.scss',
 })
 export class Header {
+  activeLang: string = 'de';
 
+  setLang(lang: string) {
+    this.activeLang = lang;
+  }
+
+  toggleBurger(){}
+ 
 }
