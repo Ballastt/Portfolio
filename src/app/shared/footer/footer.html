@@ -1,21 +1,83 @@
 <section class="angled-footer">
   <div class="content">
     <p>Sag Hi!</p>
-    <address>
-      <a href="mailto:birgit.leitner&#64;yahoo.de"
-        >birgit.leitner&#64;yahoo.de</a
-      >
-    </address>
   </div>
-  <div class="social-media">
-    <a href="#github" class="icon-link">
-      <img src="assets/icons/github.png" alt="Github Icon to click on" />
-    </a>
-    <a href="#email" class="icon-link">
-      <img src="assets/icons/email.png" alt="Email Icon to click on" />
-    </a>
-    <a href="#Linkdin" class="icon-link">
-      <img src="assets/icons/linkdIn.png" alt="LinkdIn Icon to click on" />
-    </a>
+  <div class="form">
+    <div class="text-container">
+      <h3>Willst du über ein Projekt sprechen?</h3>
+      <span>Sag hallo, lass uns Ideen diskutieren und sie machbar machen</span>
+    </div>
+
+    <form autocomplete="on">
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Dein Name"
+        required
+      />
+      <br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Deine Email"
+        required
+      />
+      <br />
+
+      <textarea
+        name="message"
+        placeholder="Deine Nachricht"
+        required
+      ></textarea>
+    </form>
+    <div class="checkbox-wrapper">
+      <label class="custom-checkbox">
+        <div class="checkbox-circle-wrapper">
+          <span class="circle-bg" [class.visible]="isPrivacyHovered"></span>
+
+          <input type="checkbox" id="privacy" name="privacy" required />
+          <span class="checkbox-box" [class.visible]="isPrivacyHovered"></span>
+        </div>
+
+        Ich habe die
+        <a
+          href="/privacy-policy"
+          target="_blank"
+          (mouseenter)="isPrivacyHovered = true"
+          (mouseleave)="isPrivacyHovered = false"
+          >Datenschutzerklärung</a
+        >
+        gelesen und stimme dem Verarbeiten meiner Daten zu.
+      </label>
+    </div>
+
+    <div class="arrow-btn-container">
+      <button class="btn-primary send-btn">Sende Nachricht</button>
+      <a href="#top" class="arrow">
+        <img src="assets/icons/default_arrow.png" alt="Scroll up" />
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="copyright">
+      <img src="assets/imgs/mylogo.png" alt="Website-Logo" />
+      <p>&copy; {{ currentYear }} Birgit Leitner</p>
+    </div>
+    <div class="social-media">
+      <a href="#github" class="icon-link">
+        <img src="assets/icons/github.png" alt="Github Icon to click on" />
+      </a>
+      <a href="#email" class="icon-link">
+        <img src="assets/icons/email.png" alt="Email Icon to click on" />
+      </a>
+      <a href="#Linkdin" class="icon-link">
+        <img src="assets/icons/linkdIn.png" alt="LinkdIn Icon to click on" />
+      </a>
+    </div>
+  </div>
+  <div class="legal">
+    <a href="">Legal Notice</a>
   </div>
 </section>

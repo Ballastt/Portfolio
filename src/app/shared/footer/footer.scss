@@ -1,34 +1,29 @@
 .angled-footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 260px;
+  height: 950px;
   background-color: black;
   color: white;
-  clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
-  
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
- 
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
   margin-left: 44px;
+  margin-bottom: 20px;
+
   > p {
     font-size: 72px;
-    font-weight: 600;
+    font-family: var(--font-base);
+    font-weight: 800;
     margin: 0;
     padding: 8px;
-  }
-  > address > a {
-    padding: 8px;
-    color: white;
-    transition: all 0.3s ease;
   }
 }
 
@@ -41,44 +36,247 @@
 }
 
 .icon-link {
-  position: relative;
   display: inline-block;
   padding: 12px;
 
   img {
-    width: 48px;
-    height: 48px;
-    display: block;
-    z-index: 1;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    border-top-color: var(--color-highlight4);
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-
-  &:hover::before {
-    opacity: 1;
-    animation: orbit-stroke 1.2s linear infinite;
+    width: 42px;
+    height: 42px;
   }
 }
 
-@keyframes orbit-stroke {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+.social-media .icon-link img {
+  transition: transform 0.3s ease;
+}
+
+.social-media .icon-link:hover img {
+  transform: translateY(-16px); /* oder -5px für dezenter */
+}
+
+app-footer {
+  display: block;
+}
+
+.copyright {
+  padding-left: 32px;
+  > img {
+    height: 32px;
+    width: 32px;
   }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 450px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+form {
+  > input,
+  textarea {
+    width: 440px;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    font-family: var(--font-base);
+    color: white;
+    box-sizing: border-box;
   }
+  > input {
+    height: 50px;
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid white;
+  }
+  > input:hover {
+    border: 4px solid white;
+  }
+  > textarea {
+    height: 200px;
+    background-color: black;
+    border: none;
+    resize: vertical;
+    border-bottom: 2px solid white;
+    padding-top: 16px;
+  }
+  > textarea:hover {
+    border: 4px solid white;
+  }
+  > input::placeholder,
+  textarea::placeholder {
+    color: white;
+    opacity: 1;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > h3 {
+    color: var(--color-highlight);
+  }
+  > span {
+    padding-bottom: 26px;
+  }
+}
+
+.checkbox-wrapper {
+  font-size: 14px;
+  margin-bottom: 32px;
+  > a {
+    color: var(--color-highlight);
+  }
+}
+
+.send-btn {
+  background-color: black;
+  color: #5d5d5d;
+  border: 3px solid #5d5d5d;
+}
+
+.legal {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+  margin-bottom: 20px;
+  > a {
+    color: white;
+  }
+}
+
+.arrow-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  right: 40px;
+  bottom: 140px;
+  z-index: 1000;
+}
+
+.arrow img {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover img {
+  transform: scaleY(1.5);
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.4;
+}
+
+/* Wrapper für Kreis + Checkbox */
+.checkbox-circle-wrapper {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Kreis hinter der Checkbox */
+.circle-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-highlight); // deine Wunschfarbe
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+.circle-bg.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Verstecke native Checkbox */
+.checkbox-circle-wrapper input[type="checkbox"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Custom Box oben drauf */
+.checkbox-box {
+  width: 14px;
+  height: 14px;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 4px;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; // wichtig, damit checkbox klickbar bleibt
+}
+
+/* ✅ Sichtbare Box übernimmt Kreisfarbe beim Hover */
+.checkbox-box.visible {
+  background-color: var(--color-highlight);
+}
+
+/* Checked Zustand */
+.checkbox-circle-wrapper input[type="checkbox"]:checked + .checkbox-box {
+  background-color: var(--color-highlight);
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><path d='M6.173 13.19L2.12 9.138l1.414-1.414 2.638 2.638L12.466 3.07l1.414 1.414z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.legal a {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  transform: font-weight 0.1s ease-out;
+}
+
+.legal a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; 
+  left: calc(2.5em); 
+  width: 0;
+  height: 2px;
+  background-color: var(--color-highlight);
+  transition: width 0.2s ease-out;
+}
+
+.legal a:hover {
+  transform: translateX(12px);
+  font-weight: 600;
+}
+
+.legal a:hover::after {
+  width: calc(100% - 2.6em); /* nur ab dem 'l' bis zum Wortende */
 }
