@@ -1,1 +1,33 @@
-<p>about works!</p>
+<div class="content">
+  <h1>Über mich</h1>
+  <div class="about-me">
+    <p>
+      Ich bin nicht der geborene Entwickler – und ehrlich gesagt, gibt es viele
+      Tage, an denen mir alles zu viel ist und ich an meinen Fähigkeiten
+      zweifle. Aber genau deshalb programmiere ich. Frontend-Entwicklung gibt
+      mir die Möglichkeit, kreativ zu sein, Dinge sichtbar zu machen und Ideen
+      Form zu geben. Auch wenn es manchmal frustrierend ist, liebe ich das
+      Gefühl, wenn etwas funktioniert – wenn aus Code ein Design wird, das lebt.
+      Ich bin nicht perfekt, aber ich bin dran.
+    </p>
+    <div class="home">
+      <img src="assets/icons/home.png" alt="Home Icon" />
+      <p>Wohnhaft in Wien</p>
+    </div>
+    <div class="remote">
+      <img
+        src="assets/icons/laptop.png"
+        alt="Laptop Icon to indicate Remotness"
+      />
+      <p>Offen dafür remote zu arbeiten</p>
+    </div>
+    <div class="btn-wrapper">
+      <button class="btn-primary"
+      [ngClass]="{ 'clicked': isClicked }"
+      (click)="scrollToContact()">
+        <span>Schreib mir</span>
+      </button>
+    </div>
+  </div>
+  <div class="portrait"></div>
+</div>

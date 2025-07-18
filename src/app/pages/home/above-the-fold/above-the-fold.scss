@@ -5,7 +5,6 @@
   flex-direction: column;
   padding-top: 250px;
   box-sizing: border-box;
-  border: 2px solid red;
 }
 
 .frontend {
@@ -88,10 +87,10 @@
 }
 
 .scroll-down img {
-  height: 84px; 
-  width: auto; 
+  height: 84px;
+  width: auto;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
   animation: scrollDownAnim 2s linear infinite;
   transform-origin: center;
   position: relative;
@@ -103,7 +102,7 @@
     transform: translateY(-60px);
   }
   50% {
-    transform: translateY(210px); 
+    transform: translateY(210px);
   }
   99.99% {
     transform: translateY(210px);

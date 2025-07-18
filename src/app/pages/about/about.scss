@@ -1,0 +1,54 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  height: 80vh;
+  padding: 70px 120px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 800;
+  &:hover {
+    color: var(--color-highlight);
+  }
+}
+
+.about-me {
+  width: 700px;
+  font-size: 22px;
+  > p {
+    margin-top: 32px;
+  }
+}
+
+.home,
+.remote {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  > img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+  font-size: 24px;
+  transition: all .15s;
+  > .btn-primary:hover {
+    transform: scaleX(1.1);
+    transition: all .15s;
+    font-weight: 500;
+  }
+  > span {
+    transform: none;
+  }
+  
+}
+
