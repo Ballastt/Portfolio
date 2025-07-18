@@ -4,22 +4,25 @@
   </a>
 </div>
 <div class="skills-container">
-  <h1>Meine <br />Fähigkeiten</h1>
+  <div class="border">
+    <div class="border-top"></div>
+    <h1>Meine <br />Fähigkeiten</h1>
 
-  <div class="skills-grid">
-    <div class="skill" *ngFor="let skill of skills">
-      <img [src]="skill.img" [alt]="skill.name" />
-      <span>{{ skill.name }} </span>
+    <div class="skills-grid">
+      <div class="skill" *ngFor="let skill of skills">
+        <img [src]="skill.img" [alt]="skill.name" />
+        <span>{{ skill.name }} </span>
+      </div>
     </div>
-  </div>
-  <div class="rtl-wrapper">
-    <img
-      src="assets/icons/lang/learning.png"
-      alt="Icon that implicates willigness to learn"
-    />
-    <span
-      >Du suchst etwas anderes? Ich bin offen für neue Technologien - 
-      <a href="#contact"><span>Schreib mir!</span></a></span
-    >
+    <div class="rtl-wrapper">
+      <img
+        src="assets/icons/lang/learning.png"
+        alt="Icon that implicates willigness to learn"
+      />
+      <span
+        >Du suchst etwas anderes? Ich bin offen für neue Technologien -
+        <a href="#contact" class="underline-slide">Schreib mir!</a></span
+      >
+    </div>
   </div>
 </div>
