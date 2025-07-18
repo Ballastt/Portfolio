@@ -1,43 +1,131 @@
 .scroll-left {
-    height: 200px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 140px;
+  padding-bottom: 100px;
 }
 
 .skills-container {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    > h1 {
-        font-weight: 800;
-        font-size: 60px;
-        text-align: center;
-    }
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 82px;
-    height: 30%;
-    margin-top: 42px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 82px;
+  padding: 40px 40px;
 }
 
 .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .rtl-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    font-size: 22px;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 22px;
+  gap: 16px;
+}
+
+a {
+  display: inline-block;
+  width: 150px;
+}
+
+a:hover {
+  font-weight: 600;
+}
+
+.underline-slide {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.underline-slide::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: currentColor;
+  transition: transform 0.2s ease-out, width 0.2s ease-out;
+  transform: translateX(0);
+  opacity: 0;
+}
+
+.underline-slide:hover::after {
+  width: 40%;
+  transform: translateX(110%);
+  opacity: 1;
+}
+
+.border {
+  position: relative;
+  height: 80vh;
+  width: 90%;
+  border-bottom: 6px solid black;
+  > h1 {
+    font-weight: 800;
+    font-size: 60px;
+    text-align: center;
+  }
+}
+
+/* linke Linie */
+.border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12%;           /* hier Startpunkt der Linie */
+  height: 88%;        /* hier Länge der Linie */
+  width: 6px;
+  background-color: black;
+}
+
+/* rechte Linie */
+.border::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 12%;           /* Startpunkt */
+  height: 88%;        /* Länge */
+  width: 6px;
+  background-color: black;
+}
+
+/* linke obere Linie */
+.border-top::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: 0;
+  height: 6px;          /* Höhe der Linie (Border-Dicke) */
+  width: 35%;           /* Länge der linken Linie */
+  background-color: black;
+}
+
+/* rechte obere Linie */
+.border-top::after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: 0;
+  height: 6px;
+  width: 35%;           /* Länge der rechten Linie */
+  background-color: black;
 }
