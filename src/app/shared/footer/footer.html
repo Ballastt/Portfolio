@@ -36,6 +36,8 @@
     </form>
     <div
       class="checkbox-wrapper"
+      [class.hovered]="isPrivacyHovered"
+      [class.checked]="isPrivacyChecked"
       (mouseenter)="isPrivacyHovered = true"
       (mouseleave)="isPrivacyHovered = false"
     >
@@ -43,12 +45,23 @@
         <div class="checkbox-circle-wrapper">
           <span class="circle-bg" [class.visible]="isPrivacyHovered"></span>
 
-          <input type="checkbox" id="privacy" name="privacy" required />
-          <span class="checkbox-box" [class.visible]="isPrivacyHovered"></span>
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            required
+            [(ngModel)]="isPrivacyChecked"
+          />
+          <span
+            class="checkbox-box"
+            [class.visible]="isPrivacyHovered && !isPrivacyChecked"
+          ></span>
         </div>
 
         Ich habe die
-        <a href="/privacy-policy" target="_blank">Datenschutzerklärung</a>
+        <a href="/privacy-policy" target="_blank" class="pp"
+          >Datenschutzerklärung</a
+        >
         gelesen und stimme dem Verarbeiten meiner Daten zu.
       </label>
     </div>
