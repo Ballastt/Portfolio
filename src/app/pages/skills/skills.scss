@@ -18,17 +18,28 @@
 
 .skills-grid {
   display: grid;
+  width: fit-content;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 82px;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  gap: 102px;
   padding: 40px 40px;
+  margin: 0 auto;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 8px;
+  word-break: normal;
+  > span {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &:hover {
+    color: var(--color-highlight);
+  }
 }
 
 .rtl-wrapper {
@@ -40,19 +51,13 @@
   gap: 16px;
 }
 
-a {
-  display: inline-block;
-  width: 150px;
-}
-
-a:hover {
-  font-weight: 600;
-}
-
 .underline-slide {
   position: relative;
   display: inline-block;
-  text-decoration: none;
+  width: 150px;
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .underline-slide::after {
@@ -91,8 +96,8 @@ a:hover {
   content: "";
   position: absolute;
   left: 0;
-  top: 12%;           /* hier Startpunkt der Linie */
-  height: 88%;        /* hier Länge der Linie */
+  top: 12%; /* hier Startpunkt der Linie */
+  height: 88%; /* hier Länge der Linie */
   width: 6px;
   background-color: black;
 }
@@ -102,8 +107,8 @@ a:hover {
   content: "";
   position: absolute;
   right: 0;
-  top: 12%;           /* Startpunkt */
-  height: 88%;        /* Länge */
+  top: 12%; /* Startpunkt */
+  height: 88%; /* Länge */
   width: 6px;
   background-color: black;
 }
@@ -114,8 +119,8 @@ a:hover {
   position: absolute;
   top: 12%;
   left: 0;
-  height: 6px;          /* Höhe der Linie (Border-Dicke) */
-  width: 35%;           /* Länge der linken Linie */
+  height: 6px; /* Höhe der Linie (Border-Dicke) */
+  width: 35%; /* Länge der linken Linie */
   background-color: black;
 }
 
@@ -126,6 +131,43 @@ a:hover {
   top: 12%;
   right: 0;
   height: 6px;
-  width: 35%;           /* Länge der rechten Linie */
+  width: 35%; /* Länge der rechten Linie */
   background-color: black;
+}
+
+.skill img {
+  transition: transform 0.3s ease;
+  animation: none;
+  will-change: transform;
+}
+
+.skill:hover img {
+  animation: radiateX 0.35s ease-in-out;
+}
+
+@keyframes radiateX {
+  0% {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(90%) scaleX(1);
+    opacity: 1;
+  }
+  35% {
+    transform: translateX(50%) scaleX(0.4);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-50%) scaleX(0.4);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-90%) scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
 }
