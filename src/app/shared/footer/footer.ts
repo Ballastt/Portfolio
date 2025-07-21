@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ContactComponent } from '../../pages/contact/contact';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, FormsModule],
+  imports: [ContactComponent],
   templateUrl: './footer.html',
-  styleUrl: './footer.scss'
+  styleUrl: './footer.scss',
 })
 export class Footer {
-   currentYear = new Date().getFullYear();
-   isPrivacyHovered = false;
-   isPrivacyChecked = false;
+  currentYear = new Date().getFullYear();
+  
 }
