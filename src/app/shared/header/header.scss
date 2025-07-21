@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   max-width: 1920px;
   height: 80px;
   background-color: var(--color-background);
@@ -22,48 +22,18 @@
     color: var(--color-text);
     padding: 8px 16px;
   }
- 
 }
 
 .right-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 230px;
+  padding-right: 200px;
   gap: 50px;
 }
 
 .burger {
   cursor: pointer;
-}
-
-a {
-  background-image: linear-gradient(to right, #00bc8f, #00bc8f 50%, #000 50%);
-  background-size: 200% 100%;
-  background-position: -100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-a:before {
-  content: "";
-  background: #54b3d6;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-}
-
-a:hover {
-  background-position: 0;
-}
-
-a:hover::before {
-  width: 100%;
 }
 
 .lang-toggle {
@@ -86,8 +56,8 @@ a:hover::before {
 .lang::after {
   content: "";
   position: absolute;
-  bottom: 1px;
-  left: 25%; 
+  bottom: -2px;
+  left: 27%;
   width: 50%;
   height: 2px;
   background-color: black;
@@ -95,7 +65,8 @@ a:hover::before {
   transition: opacity 0.2s ease;
 }
 
-.lang:hover::after {
+/* Nur auf nicht-aktiven Sprachen sichtbar machen */
+.lang:not(.active):hover::after {
   opacity: 1;
 }
 
