@@ -14,6 +14,5 @@ export class Header {
     this.activeLang = lang;
   }
 
-  toggleBurger(){}
- 
+  toggleBurger() {}
 }
