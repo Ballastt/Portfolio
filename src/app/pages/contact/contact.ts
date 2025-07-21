@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss'
+  styleUrl: './contact.scss',
 })
 export class ContactComponent {
-  constructor() {
-    // Initialization logic can go here
-  }
+  isPrivacyHovered = false;
+  isPrivacyChecked = false;
 
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log(this.contactData);
+    }
+  }
 }
