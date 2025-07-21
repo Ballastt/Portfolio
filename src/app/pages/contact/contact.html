@@ -1,1 +1,68 @@
-<p>contact works!</p>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <input
+    [(ngModel)]="contactData.name"
+    type="text"
+    id="fname"
+    name="fname"
+    placeholder="Dein Name"
+    required
+    autocomplete="off"
+  />
+  <br />
+  <input
+    [(ngModel)]="contactData.email"
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Deine Email"
+    required
+    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+    autocomplete="off"
+  />
+  <br />
+
+  <textarea
+    #message="ngModel"
+    [(ngModel)]="contactData.message"
+    name="message"
+    placeholder="Deine Nachricht"
+    minlength="100"
+    required
+  ></textarea>
+
+  <div
+    class="checkbox-wrapper"
+    [class.hovered]="isPrivacyHovered"
+    [class.checked]="isPrivacyChecked"
+    (mouseenter)="isPrivacyHovered = true"
+    (mouseleave)="isPrivacyHovered = false"
+  >
+    <label class="custom-checkbox">
+      <div class="checkbox-circle-wrapper">
+        <span class="circle-bg" [class.visible]="isPrivacyHovered"></span>
+
+        <input
+          type="checkbox"
+          id="privacy"
+          name="privacy"
+          required
+          [(ngModel)]="isPrivacyChecked"
+        />
+        <span
+          class="checkbox-box"
+          [class.visible]="isPrivacyHovered && !isPrivacyChecked"
+        ></span>
+      </div>
+
+      Ich habe die
+      <a href="/privacy-policy" target="_blank" class="pp"
+        >Datenschutzerklärung</a
+      >
+      gelesen und stimme dem Verarbeiten meiner Daten zu.
+    </label>
+  </div>
+
+  <div class="btn-container">
+    <button class="btn-primary send-btn"><span>Abschicken</span></button>
+  </div>
+</form>
