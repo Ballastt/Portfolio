@@ -18,6 +18,8 @@ body {
   font-weight: 400;
   height: 100%;
   background-color: var(--color-background);
+  font-size: var(--font-size);
+  overflow-x: hidden;
 }
 
 html {
