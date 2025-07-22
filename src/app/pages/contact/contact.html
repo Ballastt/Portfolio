@@ -1,34 +1,118 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-  <input
-    [(ngModel)]="contactData.name"
-    type="text"
-    id="fname"
-    name="fname"
-    placeholder="Dein Name"
-    required
-    autocomplete="off"
-  />
+  <div class="form-field">
+    <div class="input-wrapper">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder=" "
+        required
+        autocomplete="off"
+        [(ngModel)]="contactData.name"
+        #name="ngModel"
+      />
+
+      <label for="name">Dein Name</label>
+
+      <span class="validation-icon">
+        <ng-container *ngIf="name.valid && (name.dirty || name.touched)">
+          <img src="assets/icons/validation_green.png" alt="Valid Icon" />
+        </ng-container>
+        <ng-container *ngIf="name.invalid && (name.dirty || name.touched)">
+          <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
+        </ng-container>
+      </span>
+    </div>
+
+    <span class="error" *ngIf="name.invalid && (name.dirty || name.touched)">
+      Der Name ist erforderlich.
+    </span>
+  </div>
+
   <br />
-  <input
-    [(ngModel)]="contactData.email"
-    type="email"
-    id="email"
-    name="email"
-    placeholder="Deine Email"
-    required
-    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-    autocomplete="off"
-  />
+  <div class="form-field">
+    <div class="input-wrapper">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        autocomplete="off"
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        placeholder=" "
+        [(ngModel)]="contactData.email"
+        #email="ngModel"
+      />
+
+      <label for="email">Deine Email</label>
+
+      <span class="validation-icon">
+        <ng-container *ngIf="email.valid && (email.dirty || email.touched)">
+          <img src="assets/icons/validation_green.png" alt="Valid Icon" />
+        </ng-container>
+        <ng-container *ngIf="email.invalid && (email.dirty || email.touched)">
+          <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
+        </ng-container>
+      </span>
+    </div>
+
+    <span
+      class="error"
+      *ngIf="email.errors?.['required'] && (email.dirty || email.touched)"
+    >
+      Die Email ist erforderlich.
+    </span>
+    <span
+      class="error"
+      *ngIf="email.errors?.['pattern'] && (email.dirty || email.touched)"
+    >
+      Gib eine gültige E-Mail-Adresse ein.
+    </span>
+  </div>
+
   <br />
 
-  <textarea
-    #message="ngModel"
-    [(ngModel)]="contactData.message"
-    name="message"
-    placeholder="Deine Nachricht"
-    minlength="100"
-    required
-  ></textarea>
+  <div class="form-field">
+    <div class="input-wrapper">
+      <textarea
+        id="message"
+        name="message"
+        placeholder=" "
+        minlength="100"
+        required
+        [(ngModel)]="contactData.message"
+        #message="ngModel"
+      ></textarea>
+
+      <label for="message">Deine Nachricht</label>
+
+      <span class="validation-icon-textarea">
+        <ng-container
+          *ngIf="message.valid && (message.dirty || message.touched)"
+        >
+          <img src="assets/icons/validation_green.png" alt="Valid Icon" />
+        </ng-container>
+        <ng-container
+          *ngIf="message.invalid && (message.dirty || message.touched)"
+        >
+          <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
+        </ng-container>
+      </span>
+    </div>
+
+    <span
+      class="error"
+      *ngIf="message.errors?.['required'] && (message.dirty || message.touched)"
+    >
+      Die Nachricht ist erforderlich.
+    </span>
+    <span
+      class="error"
+      *ngIf="message.errors?.['minlength'] && (message.dirty || message.touched)"
+    >
+      Die Nachricht muss mindestens 100 Zeichen lang sein.
+    </span>
+  </div>
 
   <div
     class="checkbox-wrapper"
