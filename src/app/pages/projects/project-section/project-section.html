@@ -1,0 +1,29 @@
+<section
+  class="single-project"
+  *ngFor="let project of projects; let i = index"
+  [ngClass]="{ 'reverse': project.reverseLayout }"
+>
+  <article class="project">
+    <figure class="img">
+      <img [src]="project.imgSrc" [alt]="project.imgAlt" />
+    </figure>
+
+    <div class="content">
+      <span aria-hidden="true">{{ project.id }}</span>
+      <div class="project-details">
+        <h2>{{ project.title }}</h2>
+        <span class="tech" aria-label="Verwendete Technologien">{{ project.tech.join(' | ') }}</span>
+        <p>{{ project.description }}</p>
+        <a
+          class="btn-primary"
+          [href]="project.githubUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="'Projekt ' + project.title + ' auf GitHub öffnen'"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </article>
+</section>
