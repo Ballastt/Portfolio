@@ -13,12 +13,45 @@ export class ProjectSection {
       id: '01/04',
       title: 'Join',
       imgSrc: 'assets/imgs/join_grey.png',
-      imgAlt: 'Image of Join Project',
+      imgAlt: 'Screenshot of Join Project',
       tech: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and rop functions, assign users and categories',
+        'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
       githubUrl: 'https://github.com/Ballastt/Join',
-      reverseLayout: false
-    }
+      reverseLayout: false,
+    },
+    {
+      id: '02/04',
+      title: 'El Pollo Loco',
+      imgSrc: 'assets/imgs/elpollo_loco.png',
+      imgAlt: 'Screenshot of the jump-n-run Game El Pollo Loco',
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      description:
+        'Ein simples Jump-and-Run Spiel basierend auf dem Paradigma der Objektorientierung. Hilf Pepe Münzen und Tabasco-Flaschen ein zu sammeln um seine Gegner zu besiegen',
+      githubUrl: 'https://github.com/Ballastt/El-pollo-loco',
+      reverseLayout: true,
+    },
+    {
+      id: '03/04',
+      title: 'DABubble',
+      imgSrc: 'assets/imgs/DAbubble.png',
+      imgAlt: 'Screenshot of DABubble-Website',
+      tech: ['Firebase', 'Angular', 'TypeScript'],
+      description:
+        'Diese App ist ein Slack-Klon. Die App revolutioniert Team-Kommunikation und Zusammenarbeit mit ihrem intuitivem Interface, Nachrichtenaustausch in Real-Time und robuster Channel Organisation.',
+      githubUrl: ' ',
+      reverseLayout: false,
+    },
+    {
+      id: '04/04',
+      title: 'Pokédex',
+      imgSrc: 'assets/imgs/pokedex.png',
+      imgAlt: 'Screenshot of Pokemon-Website',
+      tech: ['HTML', 'CSS', 'JavaScript', 'API'],
+      description:
+        'Eine simple Bibliothek, die auf der PokéAPI basiert. Stellt Pokemon Informationen zur Verfügung und katalogisiert diese.',
+      githubUrl: 'https://github.com/Ballastt/Join',
+      reverseLayout: true,
+    },
   ];
 }
