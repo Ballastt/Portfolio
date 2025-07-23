@@ -6,11 +6,12 @@ import { AboutComponent } from "./pages/about/about";
 import { Skills } from "./pages/skills/skills";
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from "./pages/projects/projects";
+import { References } from "./references/references";
 
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, AboveTheFold, AboutComponent, Skills, CommonModule, ProjectsComponent],
+  imports: [Header, Footer, AboveTheFold, AboutComponent, Skills, CommonModule, ProjectsComponent, References],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
