@@ -61,4 +61,7 @@
 h1 {
   font-weight: 800;
   font-size: 60px;
+  &:hover {
+    color: var(--color-highlight);
+  }
 }
