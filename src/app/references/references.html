@@ -1,0 +1,33 @@
+<div class="wrapper-references">
+  <div class="header">
+    <h1>Referenzen</h1>
+    <span
+      >Ich arbeite genauso gerne selbständig, als auch im Team.<br />Das sagen
+      meine bisherigen Projektkollegen über mich.</span
+    >
+  </div>
+  <div class="content">
+    <section
+      class="reference-box"
+      *ngFor="let reference of references; let i = index"
+      [attr.aria-labelledby]="'ref-title-' + i"
+    >
+      <article class="reference-article">
+        <figure>
+          <img [src]="reference.imgSrc" [alt]="reference.imgAlt" />
+        </figure>
+
+        <div class="reference-details">
+          <h2 id="'ref-title-' + i">{{ reference.name }}</h2>
+          <span> {{ reference.role }} </span>
+          <p>{{ reference.text }}</p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="scroll-left">
+    <a href="#contact">
+      <img src="assets/icons/arrow-left2.png" alt="Scroll Down to the left" />
+    </a>
+  </div>
+</div>
