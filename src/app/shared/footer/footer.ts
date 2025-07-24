@@ -10,4 +10,5 @@ import { ContactComponent } from '../../pages/contact/contact';
 export class Footer {
   currentYear = new Date().getFullYear();
   
+  
 }

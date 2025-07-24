@@ -84,6 +84,41 @@ app-footer {
   }
 }
 
+.arrow {
+  display: block;
+  width: 0.2em;
+  height: 3em;
+  bottom: 15%;
+  right: 5%;
+  position: absolute;
+  background: white;
+  transition: height 0.35s;
+}
+
+.arrow:hover {
+  height: 4em;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 0.2em;
+  background: white;
+  top: 0;
+  left: 55%;
+  transform-origin: left center;
+}
+
+.arrow::before {
+  transform: translateX(-0%) rotate(45deg);
+}
+
+.arrow::after {
+  transform: translateX(-10%) rotate(-220deg);
+}
+
 .legal {
   display: flex;
   justify-content: flex-end;
@@ -92,22 +127,6 @@ app-footer {
   > a {
     color: white;
   }
-}
-
-.arrow {
-  position: absolute;
-  right: 40px;
-  bottom: 140px;
-  z-index: 1000;
-}
-
-.arrow img {
-  width: 40px;
-  transition: transform 0.3s ease;
-}
-
-.arrow:hover img {
-  transform: scaleY(1.5);
 }
 
 .legal a {
