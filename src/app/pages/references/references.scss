@@ -9,8 +9,8 @@
 }
 
 .wrapper-references {
-    position: relative;
-    height: 70vh;
+  position: relative;
+  height: 70vh;
 }
 
 .content {
@@ -30,26 +30,30 @@
   }
 }
 
-figure, h2{
-    margin: 0;
-    text-align: center;
-}
-
 .reference-details {
-    text-align: center;
-    >span {
-        margin-top: 4px;
-        margin-bottom: 3rem;
-        font-size: 16px;
-    }
+  text-align: center;
+  > span {
+    margin-top: 4px;
+    margin-bottom: 3rem;
+    font-size: 16px;
+  }
 }
 
 .scroll-left {
-    display: flex;
-    justify-content: flex-end;
-    height: 10px;
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
+  display: flex;
+  
+  justify-content: flex-end;
+  height: 10px;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
 }
 
+h2 {
+  margin: 0;
+}
+
+figure {
+  text-align: center;
+  margin: 0;
+}
