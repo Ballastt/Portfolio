@@ -27,32 +27,6 @@
   }
 }
 
-.social-media {
-  width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 44px;
-}
-
-.icon-link {
-  display: inline-block;
-  padding: 12px;
-
-  img {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-.social-media .icon-link img {
-  transition: transform 0.3s ease;
-}
-
-.social-media .icon-link:hover img {
-  transform: translateY(-16px);
-}
-
 app-footer {
   display: block;
 }
@@ -92,7 +66,7 @@ app-footer {
   right: 5%;
   position: absolute;
   background: white;
-  transition: height 0.35s;
+  transition: height 0.15s;
 }
 
 .arrow:hover {
@@ -107,7 +81,7 @@ app-footer {
   height: 0.2em;
   background: white;
   top: 0;
-  left: 55%;
+  left: 58%;
   transform-origin: left center;
 }
 

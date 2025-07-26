@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ContactComponent } from '../../pages/contact/contact';
+import { FooterSocialMedia } from '../footer-social-media/footer-social-media';
 
 @Component({
   selector: 'app-footer',
-  imports: [ContactComponent],
+  imports: [ContactComponent, FooterSocialMedia],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
