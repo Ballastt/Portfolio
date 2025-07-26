@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" [class.fixed]="!isOverlay" [class.overlay]="isOverlay">
   <img src="assets/imgs/mylogo.png" alt="Website-Logo" />
 
   <div class="right-header">
@@ -19,10 +19,19 @@
     </div>
 
     <img
+      *ngIf="!isOverlay"
       class="burger"
-      src="assets/icons/burger_header.png"
-      alt="Menu"
-      (click)="toggleBurger()"
+      src="assets/icons/burger/1.png"
+      alt="Menü öffnen"
+      (click)="toggleBurger.emit()"
+    />
+
+    <img
+      *ngIf="isOverlay"
+      class="close"
+      src="assets/icons/burger/5.png"
+      alt="Menü schließen"
+      (click)="toggleBurger.emit()"
     />
   </div>
 </div>
