@@ -32,10 +32,12 @@ export class App {
 
     openMenu() {
     this.burgerMenuOpen = true;
+    document.body.style.overflow = 'hidden';
   }
 
   closeMenu() {
     this.burgerMenuOpen = false;
+    document.body.style.overflow = '';
   }
 
 }
