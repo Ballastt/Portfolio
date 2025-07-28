@@ -1,8 +1,8 @@
 .angled-footer {
   position: relative;
-  bottom: 0;
   width: 100vw;
-  height: 1050px;
+  margin-left: calc(-50vw + 50%);
+  min-height: 1050px;
   background-color: black;
   color: white;
   clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
