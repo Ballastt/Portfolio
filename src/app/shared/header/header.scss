@@ -2,31 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  max-width: 1440px;
   width: 100%;
-  max-width: 1920px;
+
+  padding: 0 7vw;
+
   height: 80px;
   background-color: var(--color-background);
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 4px;
-  padding: 20px 100px;
   z-index: 5;
 
   &.fixed {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
   }
   &.overlay {
     position: sticky;
     top: 0;
-    z-index: 100; /* bleibt beim Scrollen oben im Overlay */
+    z-index: 100;
     background-color: var(--color-background);
-  }
-
-  > img {
-    width: 48px;
-    height: 48px;
   }
 
   > a {
@@ -35,11 +34,21 @@
   }
 }
 
+.left-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  > img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .right-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 200px;
+  padding: 1rem;
   gap: 50px;
 }
 
