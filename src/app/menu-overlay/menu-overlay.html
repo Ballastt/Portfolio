@@ -1,10 +1,41 @@
+<app-header
+  [isOverlay]="isOverlay"
+  (toggleBurger)="onToggleBurger()"
+></app-header>
+
 <div class="menu-overlay">
   <section class="content">
-    <h1 class="nav-heading" (click)="activeSection = 'about'">Über Mich</h1>
-    <h1 class="nav-heading" (click)="activeSection = 'skills'">Meine Skills</h1>
-    <h1 class="nav-heading" (click)="activeSection = 'portfolio'">Portfolio</h1>
+    <h1
+      class="nav-heading"
+      [class.active]="activeSection === 'about'"
+      (click)="navigate('about')"
+    >
+      Über Mich
+    </h1>
+    <h1
+      class="nav-heading"
+      [class.active]="activeSection === 'skills'"
+      (click)="navigate('skills')"
+    >
+      Meine Skills
+    </h1>
+    <h1
+      class="nav-heading"
+      [class.active]="activeSection === 'portfolio'"
+      (click)="navigate('Portfolio')"
+    >
+      Portfolio
+    </h1>
   </section>
   <section class="footer">
-    
+    <div class="left-wrapper">
+      <h2>Sag Hi!</h2>
+      <address href="mailto:birgit.leitner&#64;yahoo.de">
+        birgit.leitner&#64;yahoo.de
+      </address>
+    </div>
+    <div class="right-wrapper">
+      <app-footer-social-media></app-footer-social-media>
+    </div>
   </section>
 </div>
