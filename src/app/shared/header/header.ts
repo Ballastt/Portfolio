@@ -16,6 +16,5 @@ export class Header {
 
   setLang(lang: string) {
     this.activeLang = lang;
-
   }
 }
