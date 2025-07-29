@@ -1,9 +1,9 @@
 <div class="app-container">
   <app-header
-    *ngIf="!burgerMenuOpen"
-    [isOverlay]="false"
-    (toggleBurger)="openMenu()"
+    [isOverlay]="burgerMenuOpen"
+    (toggleBurger)="toggleMenu()"
   ></app-header>
+
   <app-menu-overlay
     *ngIf="burgerMenuOpen"
     (close)="closeMenu()"
