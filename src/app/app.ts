@@ -30,16 +30,13 @@ export class App {
 
   burgerMenuOpen = false;
 
-    openMenu() {
-    this.burgerMenuOpen = true;
-    document.body.style.overflow = 'hidden';
+  toggleMenu() {
+    this.burgerMenuOpen = !this.burgerMenuOpen;
+    document.body.style.overflow = this.burgerMenuOpen ? 'hidden' : '';
   }
 
   closeMenu() {
     this.burgerMenuOpen = false;
     document.body.style.overflow = '';
   }
-
 }
-  
-
