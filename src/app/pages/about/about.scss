@@ -15,7 +15,8 @@ h1 {
 }
 
 .about-me {
-  width: 700px;
+  display: flex;
+  width: 100%;
   font-size: 22px;
   > p {
     margin-top: 32px;
