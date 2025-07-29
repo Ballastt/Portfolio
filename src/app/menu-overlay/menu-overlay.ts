@@ -1,22 +1,22 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FooterSocialMedia } from '../shared/footer-social-media/footer-social-media';
-import { Header } from '../shared/header/header';
+
 
 @Component({
   selector: 'app-menu-overlay',
   standalone: true,
-  imports: [FooterSocialMedia, Header],
+  imports: [FooterSocialMedia],
   templateUrl: './menu-overlay.html',
   styleUrls: ['./menu-overlay.scss'],
 })
 export class MenuOverlay {
   activeSection: string = '';
   navigateTo: string = '';
-  @Input() isOverlay = false; // von außen gesetzt
-  @Output() close = new EventEmitter<void>(); // Schließen-Signal
+  @Input() isOverlay = true; 
+  @Output() close = new EventEmitter<void>(); 
 
   onToggleBurger() {
-    this.close.emit(); // nach außen weitergeben
+    this.close.emit(); 
   }
 
   navigate(sectionId: string): void {
