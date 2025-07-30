@@ -1,13 +1,12 @@
 .scroll-right {
-  padding-left: 100px;
-  padding-top: 80px;
+  padding-left: 60px;
 }
 
 .header-portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   > h1:hover {
     color: var(--color-highlight);
   }
