@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  ViewChildren,
+  ElementRef,
+  AfterViewInit,
+  QueryList,
+  ChangeDetectorRef,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,7 +14,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './project-section.html',
   styleUrl: './project-section.scss',
 })
-export class ProjectSection {
+export class ProjectSection implements AfterViewInit {
+  constructor(private cdr: ChangeDetectorRef) {}
+  @ViewChildren('projectRef') projectRefs!: QueryList<ElementRef>;
+
+  inViewStates: boolean[] = [];
+
   projects = [
     {
       id: '01/04',
@@ -54,4 +66,24 @@ export class ProjectSection {
       reverseLayout: true,
     },
   ];
+
+  ngAfterViewInit() {
+    this.inViewStates = Array(this.projects.length).fill(false);
+
+    this.projectRefs.forEach((ref, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          this.inViewStates[index] = entry.isIntersecting;
+          // Wenn du eine Animation triggern willst, kannst du auch hier detectChanges aufrufen:
+          this.cdr.detectChanges();
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(ref.nativeElement);
+    });
+
+    // Wichtig: initial nach Setup aufrufen
+    this.cdr.detectChanges();
+  }
 }
