@@ -1,18 +1,34 @@
 <section
+  #projectRef
   class="single-project"
   *ngFor="let project of projects; let i = index"
-  [ngClass]="{ 'reverse': project.reverseLayout }"
+  [ngClass]="{ reverse: project.reverseLayout }"
 >
   <article class="project">
-    <figure class="img">
+    <figure class="img-wrapper">
       <img [src]="project.imgSrc" [alt]="project.imgAlt" />
+      <div class="img-overlay">
+        <img
+          src="assets/icons/arrow-projects-1.png"
+          class="arrow-icon arrow-small"
+          [class.visible]="!inViewStates[i]"
+          alt="Arrow small"
+        />
+        <img
+          src="assets/icons/arrow-projects-2.png"
+          class="arrow-icon arrow-large"
+          [class.visible]="inViewStates[i]"
+          alt="Arrow large"
+        />
+      </div>
     </figure>
-
+    <span aria-hidden="true" class="project-id">{{ project.id }}</span>
     <div class="content">
-      <span aria-hidden="true">{{ project.id }}</span>
       <div class="project-details">
         <h2>{{ project.title }}</h2>
-        <span class="tech" aria-label="Verwendete Technologien">{{ project.tech.join(' | ') }}</span>
+        <span class="tech" aria-label="Verwendete Technologien">{{
+          project.tech.join(" | ")
+        }}</span>
         <p>{{ project.description }}</p>
         <a
           class="btn-primary"
