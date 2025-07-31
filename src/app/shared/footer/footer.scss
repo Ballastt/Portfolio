@@ -58,19 +58,32 @@ app-footer {
   }
 }
 
+.arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 15%;
+  right: 2%;
+  width: 5em;
+  height: 6em;
+  cursor: pointer;
+}
+
+.arrow-wrapper:hover .arrow {
+  height: 4em;
+}
+
 .arrow {
   display: block;
   width: 0.2em;
-  height: 3em;
-  bottom: 15%;
-  right: 5%;
+  height: 2.6em;
+  bottom: 0%;
+  right: 40%;
   position: absolute;
   background: white;
-  transition: height 0.15s;
-}
-
-.arrow:hover {
-  height: 4em;
+  transition: height 0.35s;
+  cursor: pointer;
 }
 
 .arrow::before,
@@ -81,7 +94,7 @@ app-footer {
   height: 0.2em;
   background: white;
   top: 0;
-  left: 58%;
+  left: 69%;
   transform-origin: left center;
 }
 
