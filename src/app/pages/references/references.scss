@@ -6,6 +6,9 @@
   > span {
     text-wrap: wrap;
   }
+  > h1:hover {
+    color: var(--color-highlight);
+  }
 }
 
 .wrapper-references {
@@ -51,14 +54,7 @@
   }
 }
 
-.scroll-left {
-  display: flex;
-  justify-content: flex-end;
-  height: 10px;
-  position: absolute;
-  bottom: 5%;
-  right: 10%;
-}
+
 
 h2 {
   margin: 0;
