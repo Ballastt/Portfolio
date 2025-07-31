@@ -1,9 +1,9 @@
 .scroll-left {
-  height: 200px;
+  
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-right: 50px;
+  align-items: center;
+  height: 200px;
+  
 }
 
 .skills-container {
@@ -169,4 +169,8 @@
     transform: translateX(0) scaleX(1);
     opacity: 1;
   }
+}
+
+#skills {
+  scroll-margin-top: 67px; /* Höhe deines Headers oder gewünschter Abstand */
 }
