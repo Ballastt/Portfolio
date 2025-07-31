@@ -1,6 +1,9 @@
 .scroll-right {
   padding-left: 60px;
   display: flex;
+  height: 270px;
+  box-sizing: border-box;
+  padding-top: 40px;
 }
 
 .header-portfolio {
@@ -13,3 +16,6 @@
   }
 }
 
+#projects {
+  scroll-margin-top: 65px; 
+}
