@@ -13,6 +13,7 @@
     position: relative;
 
     img {
+      filter: grayscale(100%);
       transition: filter 0.4s ease, transform 0.4s ease;
     }
 
@@ -31,25 +32,15 @@
       padding-right: 2rem;
       transition: opacity 0.4s ease;
 
-      // Flex zentriert das Pfeil-Image vertikal
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 2rem;
-
-      .arrow-small {
-        position: absolute;
-        right: -36px; 
-        top: 50%;
-        transform: translateY(-50%) scale(1) rotate(0deg);
-        transform-origin: center center;
-        transition: transform 0.4s ease;
-        opacity: 1;
-        pointer-events: none;
-      }
-
+      .arrow-small,
       .arrow-large {
-        opacity: 1;
+        position: absolute;
+        top: 50%;
+        right: -40px; // oder left: -36px bei reverse
+        transform-origin: center center;
+        pointer-events: none;
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.2s ease;
       }
     }
   }
@@ -59,35 +50,49 @@
     padding-top: 40px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
-  // === HOVER-ANIMATION ===
   &:hover {
     .img-wrapper img {
       transform: scale(1.02);
+      filter: grayscale(0%);
     }
-
     .img-wrapper .img-overlay {
       opacity: 1;
     }
 
     .arrow-small {
+      transform: translateY(-50%) scale(0) rotate(0deg);
       opacity: 0;
+      z-index: 1;
     }
 
     .arrow-large {
+      transform: translateY(-50%) scale(1) rotate(0deg);
       opacity: 1;
-      transform: translateY(-50%) scale(1) rotate(100deg);
-      transition: transform 0.4s ease, opacity 0.4s ease;
+      z-index: 2;
     }
 
     .content {
       opacity: 1;
       pointer-events: auto;
       transform: translateY(0);
+      transition-delay: 0.2s;
     }
   }
+}
+
+.arrow-small {
+  transform: translateY(-50%) scale(1) rotate(0deg);
+  opacity: 1;
+  z-index: 2;
+}
+
+.arrow-large {
+  transform: translateY(-50%) scale(0.5) rotate(120deg);
+  opacity: 0;
+  z-index: 1;
 }
 
 .project-id {
@@ -113,11 +118,23 @@
   }
 }
 
-// Wenn reverseLayout === true
+// Reverse Variante
 .reverse .project {
   flex-direction: row-reverse;
 
+  .img-wrapper .img-overlay {
+    .arrow-small {
+      right: auto;
+      left: -36px;
+    }
+    .arrow-large {
+      right: auto;
+      left: -40px;
+    }
+  }
+
   .project-id {
     left: 0;
+    right: auto;
   }
 }
