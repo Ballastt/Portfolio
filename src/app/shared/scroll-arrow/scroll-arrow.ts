@@ -1,9 +1,16 @@
-import { AfterViewInit, Component, ElementRef, ViewChild, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
+  Input,
+} from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-scroll-arrow',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './scroll-arrow.html',
   styleUrl: './scroll-arrow.scss',
 })
@@ -15,6 +22,8 @@ export class ScrollArrow implements AfterViewInit {
   currentFrame = 1;
   private observer!: IntersectionObserver;
   private hasAnimated = false;
+
+  
 
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver(
@@ -39,15 +48,14 @@ export class ScrollArrow implements AfterViewInit {
     const frames = [1, 2, 3];
     let i = 0;
 
-    const animate = () => {
-      if (i < frames.length) {
-        this.currentFrame = frames[i];
-        i++;
-        setTimeout(animate, 420);
-      }
-    };
+    const intervalId = setInterval(() => {
+      this.currentFrame = frames[i];
+      i++;
 
-    animate();
+      if (i >= frames.length) {
+        clearInterval(intervalId);
+      }
+    }, 420);
   }
 
   resetArrow() {
