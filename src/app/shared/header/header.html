@@ -1,39 +1,39 @@
 <div class="header" [class.fixed]="!isOverlay" [class.overlay]="isOverlay">
-  <div class="left-header">
-    <img src="assets/imgs/mylogo.png" alt="Website-Logo" />
-  </div>
-
-  <div class="right-header">
-    <div class="lang-toggle">
-      <span
-        class="lang"
-        [class.active]="activeLang === 'de'"
-        (click)="setLang('de')"
-        >DE</span
-      >
-      <span class="divider">|</span>
-      <span
-        class="lang"
-        [class.active]="activeLang === 'en'"
-        (click)="setLang('en')"
-        >EN</span
-      >
+  <div class="header-inner">
+    <div class="left-header">
+      <img src="assets/imgs/mylogo.png" alt="Website-Logo" />
     </div>
 
-    <img
-      *ngIf="!isOverlay"
-      class="burger"
-      src="assets/icons/burger/1.png"
-      alt="Menü öffnen"
-      (click)="toggleBurger.emit()"
-    />
+    <div class="right-header">
+      <div class="lang-toggle">
+        <span
+          class="lang"
+          [class.active]="activeLang === 'de'"
+          (click)="setLang('de')"
+        >DE</span>
+        <span class="divider">|</span>
+        <span
+          class="lang"
+          [class.active]="activeLang === 'en'"
+          (click)="setLang('en')"
+        >EN</span>
+      </div>
 
-    <img
-      *ngIf="isOverlay"
-      class="close"
-      src="assets/icons/burger/5.png"
-      alt="Menü schließen"
-      (click)="toggleBurger.emit()"
-    />
+      <img
+        *ngIf="!isOverlay"
+        class="burger"
+        src="assets/icons/burger/1.png"
+        alt="Menü öffnen"
+        (click)="toggleBurger.emit()"
+      />
+
+      <img
+        *ngIf="isOverlay"
+        class="close"
+        src="assets/icons/burger/5.png"
+        alt="Menü schließen"
+        (click)="toggleBurger.emit()"
+      />
+    </div>
   </div>
 </div>

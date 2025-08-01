@@ -1,13 +1,10 @@
+@use "breakpoints" as bp;
+
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  max-width: 1440px;
+  justify-content: center;
   width: 100%;
-
-  padding: 0;
-
   height: 80px;
   background-color: var(--color-background);
   font-size: 20px;
@@ -32,6 +29,16 @@
     color: var(--color-text);
     padding: 8px 16px;
   }
+
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 80px;
 }
 
 .left-header {
@@ -41,6 +48,11 @@
   > img {
     width: 48px;
     height: 48px;
+
+    @media (max-width: bp.$breakpoint-xs){
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 
@@ -52,7 +64,8 @@
   gap: 50px;
 }
 
-.burger, .close {
+.burger,
+.close {
   cursor: pointer;
 }
 
@@ -64,6 +77,10 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+
+  @media (max-width: bp.$breakpoint-xs) {
+    font-size: 14px;
+  }
 }
 
 .lang {
@@ -85,7 +102,6 @@
   transition: opacity 0.2s ease;
 }
 
-/* Nur auf nicht-aktiven Sprachen sichtbar machen */
 .lang:not(.active):hover::after {
   opacity: 1;
 }
@@ -97,4 +113,11 @@
 
 .lang.active {
   border: 3px solid var(--color-highlight);
+}
+
+.burger {
+  @media (max-width: bp.$breakpoint-xs) {
+    height: 24px;
+    width: auto;
+  }
 }

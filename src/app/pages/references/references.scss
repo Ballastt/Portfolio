@@ -1,3 +1,5 @@
+@use "breakpoints" as bp;
+
 .header {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,14 @@
   margin-bottom: 32px;
   > span {
     text-wrap: wrap;
+    @media (max-width: bp.$breakpoint-xs) {
+      text-align: center;
+    }
+  }
+  > h1 {
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 30px;
+    }
   }
   > h1:hover {
     color: var(--color-highlight);
@@ -14,6 +24,14 @@
 .wrapper-references {
   position: relative;
   height: 70vh;
+  @media (max-width: bp.$breakpoint-xs) {
+    height: auto;
+  }
+  > a {
+    @media (max-width: bp.$breakpoint-xs) {
+      display: none;
+    }
+  }
 }
 
 .content {
@@ -21,6 +39,10 @@
   max-width: 1920px;
   padding: 50px 100px;
   gap: 2rem;
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
 
 .reference-box {
@@ -53,8 +75,6 @@
     font-size: 16px;
   }
 }
-
-
 
 h2 {
   margin: 0;

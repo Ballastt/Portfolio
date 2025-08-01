@@ -1,20 +1,38 @@
+@use "breakpoints" as bp;
+
 .single-project {
   display: flex;
   padding: 60px;
   position: relative;
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
 
 .project {
   display: flex;
   gap: 3rem;
   position: relative;
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    padding: 1rem;
+  }
 
   .img-wrapper {
     position: relative;
+    @media (max-width: bp.$breakpoint-xs) {
+      left: -5rem;
+      padding: 0.5rem;
+    }
 
     img {
       filter: grayscale(100%);
       transition: filter 0.4s ease, transform 0.4s ease;
+      @media (max-width: bp.$breakpoint-xs) {
+        width: 17rem;
+        height: auto;
+      }
     }
 
     .img-overlay {
@@ -31,6 +49,11 @@
       align-items: center;
       padding-right: 2rem;
       transition: opacity 0.4s ease;
+      @media (max-width: bp.$breakpoint-xs) {
+        border: 3px solid black;
+        width: 15rem;
+        bottom: 0rem;
+      }
 
       .arrow-small,
       .arrow-large {
@@ -41,6 +64,11 @@
         pointer-events: none;
         transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
           opacity 0.2s ease;
+
+        @media (max-width: bp.$breakpoint-xs) {
+          top: 100%;
+          right: 100px;
+        }
       }
     }
   }
@@ -51,6 +79,9 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
+    @media (max-width: bp.$breakpoint-xs) {
+      padding: 0;
+    }
   }
 
   &:hover {
@@ -101,6 +132,10 @@
   top: -18px;
   font-size: 40px;
   font-weight: 700;
+  @media (max-width: bp.$breakpoint-xs) {
+    left: -1rem;
+    font-size: 32px;
+  }
 }
 
 .project-details {
@@ -108,6 +143,10 @@
     font-weight: 800;
     font-size: 44px;
     margin-bottom: 0.2em;
+    @media (max-width: bp.$breakpoint-xs) {
+      margin: 0;
+      margin-bottom: 0.4rem;
+    }
   }
   > span {
     font-size: 1.5rem;
@@ -115,6 +154,9 @@
   }
   > p {
     font-size: var(--font-base);
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -136,5 +178,12 @@
   .project-id {
     left: 0;
     right: auto;
+  }
+}
+
+.section-wrapper {
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    padding: 1rem;
   }
 }

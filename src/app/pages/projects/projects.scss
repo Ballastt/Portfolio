@@ -1,21 +1,37 @@
+@use "breakpoints" as bp;
+
 .scroll-right {
   padding-left: 60px;
   display: flex;
   height: 270px;
   box-sizing: border-box;
   padding-top: 40px;
+  @media (max-width: bp.$breakpoint-xs) {
+    display: none;
+  }
 }
 
 .header-portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+ 
+  > h1 {
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 40px;
+      margin-top: 0;
+    }
+  }
   > h1:hover {
     color: var(--color-highlight);
+  }
+  > span {
+    @media (max-width: bp.$breakpoint-xs) {
+      text-align: center;
+    }
   }
 }
 
 #projects {
-  scroll-margin-top: 65px; 
+  scroll-margin-top: 65px;
 }

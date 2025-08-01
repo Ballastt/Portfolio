@@ -1,9 +1,12 @@
+@use "breakpoints" as bp;
+
 .scroll-left {
-  
   display: flex;
   align-items: center;
   height: 200px;
-  
+  @media (max-width: bp.$breakpoint-xs) {
+    display: none;
+  }
 }
 
 .skills-container {
@@ -13,6 +16,10 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  @media (max-width: bp.$breakpoint-xs) {
+    padding-top: 2rem;
+  }
+
 }
 
 .skills-grid {
@@ -23,6 +30,11 @@
   gap: 80px;
   padding: 40px 40px;
   margin: 0 auto;
+  @media (max-width: bp.$breakpoint-xs) {
+    grid-template-columns: 50px 50px;
+    padding: 2rem;
+    gap: 3.5rem;
+  }
 }
 
 .skill {
@@ -35,6 +47,9 @@
   > span {
     font-weight: 700;
     font-size: 18px;
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 1rem;
+    }
   }
   &:hover {
     color: var(--color-highlight);
@@ -47,6 +62,19 @@
   justify-content: center;
   font-size: 22px;
   gap: 16px;
+  @media (max-width: bp.$breakpoint-xs) {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  > img {
+    @media (max-width: bp.$breakpoint-xs) {
+      height: 40px;
+      width: auto;
+    }
+  }
+  > span {
+    text-align: center;
+  }
 }
 
 .underline-slide {
@@ -82,8 +110,15 @@
   height: 85vh;
   width: 90%;
   border-bottom: 6px solid black;
+  @media (max-width: bp.$breakpoint-xs) {
+    border-bottom: 3px solid black;
+    height: auto;
+  }
   > h1 {
     text-align: center;
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 1.7rem;
+    }
   }
   > h1:hover {
     color: var(--color-highlight);
@@ -138,6 +173,10 @@
   transition: transform 0.3s ease;
   animation: none;
   will-change: transform;
+  @media (max-width: bp.$breakpoint-xs) {
+    height: 40px;
+    width: auto;
+  }
 }
 
 .skill:hover img {

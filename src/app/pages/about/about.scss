@@ -1,3 +1,5 @@
+@use "breakpoints" as bp;
+
 .content {
   display: flex;
   flex-direction: column;
@@ -5,12 +7,21 @@
   height: 80vh;
   padding-left: 90px;
   padding-top: 150px;
+
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 0;
+    height: auto;
+  }
 }
 
 h1 {
   margin: 0;
   &:hover {
     color: var(--color-highlight);
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    font-size: 50px;
+    text-align: center;
   }
 }
 
@@ -20,6 +31,11 @@ h1 {
   height: 70vh;
   font-size: 22px;
   gap: 100px;
+  @media (max-width: bp.$breakpoint-xs) {
+    height: fit-content;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
   > p {
     margin-top: 32px;
   }
@@ -30,9 +46,19 @@ h1 {
   display: flex;
   align-items: center;
   gap: 16px;
+  height: 50px;
+  @media (max-width: bp.$breakpoint-xs) {
+    gap: 1rem;
+    font-size: 1.2rem;
+    width: 90%;
+  }
   > img {
     width: 40px;
     height: 40px;
+    @media (max-width: bp.$breakpoint-xs) {
+      width: 32px;
+      height: auto;
+    }
   }
 }
 
@@ -40,12 +66,26 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 42px;
+  width: 100%;
   font-size: 24px;
   transition: all 0.15s;
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 90%;
+  }
 }
 
 .left-wrapper {
   width: 50%;
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 100%;
+    padding: 1rem;
+  }
+  > p {
+    @media (max-width: bp.$breakpoint-xs) {
+      padding-bottom: 1rem;
+      width: 90%;
+    }
+  }
 }
 .right-wrapper {
   display: flex;
@@ -60,10 +100,15 @@ h1 {
   width: 424px;
   height: fit-content;
   box-sizing: border-box;
+
   > img {
     display: block;
     height: 50vh;
     width: auto;
+    @media (max-width: bp.$breakpoint-xs) {
+      height: 20vh;
+      padding-top: 4rem;
+    }
   }
   &::after {
     content: "";
@@ -76,6 +121,10 @@ h1 {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
+    @media (max-width: bp.$breakpoint-xs) {
+      top: 2rem;
+      left: 1rem;
+    }
   }
 
   &:hover::after {
