@@ -1,0 +1,12 @@
+.legal {
+    max-width: 1000px;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: justify;
+    > h3 {
+        border-bottom: 3px solid var(--color-highlight);
+        padding-bottom: 0.4rem;
+        display: block;
+        
+    }
+}
