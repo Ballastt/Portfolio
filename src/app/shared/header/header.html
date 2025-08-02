@@ -10,17 +10,28 @@
           class="lang"
           [class.active]="activeLang === 'de'"
           (click)="setLang('de')"
-        >DE</span>
+          >DE</span
+        >
         <span class="divider">|</span>
         <span
           class="lang"
           [class.active]="activeLang === 'en'"
           (click)="setLang('en')"
-        >EN</span>
+          >EN</span
+        >
       </div>
 
       <img
-        *ngIf="!isOverlay"
+        *ngIf="showBackButton"
+        class="back"
+        src="assets/icons/back-arrow.png"
+        alt="Zurück zur Startseite"
+        (click)="goHome()"
+      />
+      
+
+      <img
+        *ngIf="!showBackButton && !isOverlay"
         class="burger"
         src="assets/icons/burger/1.png"
         alt="Menü öffnen"
@@ -28,7 +39,7 @@
       />
 
       <img
-        *ngIf="isOverlay"
+        *ngIf="!showBackButton && isOverlay"
         class="close"
         src="assets/icons/burger/5.png"
         alt="Menü schließen"
