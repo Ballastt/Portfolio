@@ -1,27 +1,13 @@
 import { Component, signal } from '@angular/core';
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { Header } from './shared/header/header';
-import { Footer } from './shared/footer/footer';
-import { AboveTheFold } from './pages/above-the-fold/above-the-fold';
-import { AboutComponent } from './pages/about/about';
-import { Skills } from './pages/skills/skills';
-import { CommonModule } from '@angular/common';
-import { ProjectsComponent } from './pages/projects/projects';
-import { References } from './pages/references/references';
 import { MenuOverlay } from './menu-overlay/menu-overlay';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    Header,
-    Footer,
-    AboveTheFold,
-    AboutComponent,
-    Skills,
-    CommonModule,
-    ProjectsComponent,
-    References,
-    MenuOverlay,
-  ],
+  imports: [RouterModule, Header, MenuOverlay, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -29,6 +15,17 @@ export class App {
   protected readonly title = signal('portfolio');
 
   burgerMenuOpen = false;
+  showBackButton = false;
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        const url = event.urlAfterRedirects;
+        this.showBackButton =
+          url.includes('/datenschutz') || url.includes('/privacy');
+      });
+  }
 
   toggleMenu() {
     this.burgerMenuOpen = !this.burgerMenuOpen;
