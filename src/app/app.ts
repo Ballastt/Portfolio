@@ -4,10 +4,11 @@ import { filter } from 'rxjs/operators';
 import { Header } from './shared/header/header';
 import { MenuOverlay } from './menu-overlay/menu-overlay';
 import { CommonModule } from '@angular/common';
+import { Footer } from './shared/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, Header, MenuOverlay, CommonModule],
+  imports: [RouterModule, Header, MenuOverlay, CommonModule, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
