@@ -4,33 +4,43 @@
   display: flex;
   padding: 60px;
   position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
-    padding: 1rem;
+    width: 100%;
+    height: 600px;
+    padding: 0.5rem;;
+    outline: 2px solid var(--color-highlight);
   }
 }
 
 .project {
   display: flex;
-  gap: 3rem;
   position: relative;
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.3rem;
+    min-width: 340px;
+    height: 600px;
   }
 
   .img-wrapper {
     position: relative;
     @media (max-width: bp.$breakpoint-xs) {
-      left: -5rem;
-      padding: 0.5rem;
+      
+      width: 70%;
+      height: auto;
+      margin: 0;
     }
 
     img {
       filter: grayscale(100%);
       transition: filter 0.4s ease, transform 0.4s ease;
       @media (max-width: bp.$breakpoint-xs) {
-        width: 17rem;
+        padding-top: 2rem;
+        width: 140%;
         height: auto;
       }
     }
@@ -51,8 +61,10 @@
       transition: opacity 0.4s ease;
       @media (max-width: bp.$breakpoint-xs) {
         border: 3px solid black;
-        width: 15rem;
-        bottom: 0rem;
+        width: 18.8rem;
+        bottom: -2rem;
+        top: 2.6rem;
+        left: 0.2rem;
       }
 
       .arrow-small {
@@ -87,11 +99,15 @@
   .content {
     flex-direction: column;
     padding-top: 40px;
+    padding-left: 3rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.4s ease;
     @media (max-width: bp.$breakpoint-xs) {
-      padding: 0;
+      padding-top: 3rem;
+      padding-left: 0;
+      height: auto;
+      width: 100%;
     }
   }
 
@@ -144,7 +160,7 @@
   font-size: 40px;
   font-weight: 700;
   @media (max-width: bp.$breakpoint-xs) {
-    left: -1rem;
+    padding-bottom: 0.5rem;
     font-size: 32px;
   }
 }
@@ -157,14 +173,16 @@
     @media (max-width: bp.$breakpoint-xs) {
       margin: 0;
       margin-bottom: 0.4rem;
+      font-size: 32px;
     }
   }
   > span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--color-highlight);
   }
   > p {
     font-size: var(--font-base);
+    padding-right: 2rem;
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 1rem;
     }
@@ -174,6 +192,10 @@
 // Reverse Variante
 .reverse .project {
   flex-direction: row-reverse;
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    width: 100%;
+  }
 
   .img-overlay {
     position: absolute;
@@ -243,8 +265,12 @@
 }
 
 .section-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.7rem;
+    
   }
 }

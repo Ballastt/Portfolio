@@ -17,7 +17,10 @@
   align-items: center;
   box-sizing: border-box;
   @media (max-width: bp.$breakpoint-xs) {
-    padding-top: 2rem;
+    margin-top: 2rem;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 4rem;
   }
 
 }
@@ -74,6 +77,11 @@
   }
   > span {
     text-align: center;
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 1rem;
+      width: 90%;
+      text-align: justify;
+    }
   }
 }
 

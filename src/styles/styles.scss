@@ -1,11 +1,8 @@
 @use "variables";
 @use "fonts";
+@use "breakpoints" as bp;
 
-app-root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+
 
 body {
   padding: 0;
@@ -16,19 +13,28 @@ body {
   max-width: 1920px;
   font-family: var(--font-base);
   font-weight: 400;
-  height: auto;
   height: 100%;
+  width: 100%;
   background-color: var(--color-background);
   font-size: var(--font-size);
   overflow-x: hidden;
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 100%;
+  }
 }
 
 html {
-  height: auto;
+  height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
   text-decoration: none;
   color: var(--color-highlight);
 }
+
+
+

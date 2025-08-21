@@ -11,6 +11,10 @@
   font-weight: 600;
   letter-spacing: 4px;
   z-index: 5;
+  box-sizing: border-box;
+  @media (max-width: bp.$breakpoint-xs) {
+    height: 60px;
+  }
 
   &.fixed {
     position: fixed;
@@ -38,6 +42,9 @@
   width: 100%;
   max-width: 1440px;
   height: 80px;
+  @media (max-width: bp.$breakpoint-xs) {
+    height: 60px;
+  }
 }
 
 .left-header {
@@ -45,6 +52,10 @@
   align-items: center;
   padding: 1rem;
   padding-left: 3rem;
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 0.5rem;
+    padding-left: 1.3rem;
+  }
   > img {
     width: 48px;
     height: 48px;
@@ -62,6 +73,9 @@
   justify-content: space-between;
   padding: 1rem;
   gap: 50px;
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 0.5rem;
+  }
 }
 
 .burger,
@@ -129,9 +143,7 @@
   padding-right: 3rem;
 }
 
-
 .right-header img {
-
   .tooltip-text {
     visibility: hidden;
     opacity: 0;

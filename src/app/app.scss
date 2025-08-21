@@ -1,5 +1,7 @@
+@use "breakpoints" as bp;
+
 .app-container {
   max-width: 1440px;
-  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
