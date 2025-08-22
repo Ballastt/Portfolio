@@ -13,7 +13,7 @@
   <div class="arrow-wrapper">
     <a href="#top" class="arrow"> </a>
   </div>
-
+  <app-footer-social-media></app-footer-social-media>
   <div class="footer-bottom">
     <div class="copyright">
       <div class="logo">
@@ -21,9 +21,11 @@
       </div>
       <p>&copy; {{ currentYear }} Birgit Leitner</p>
     </div>
-    <app-footer-social-media></app-footer-social-media>
-  </div>
-  <div class="legal">
-    <a [routerLink]="['/', currentLang, 'datenschutz']">Datenschutzerklärung</a>
+    <div class="legal">
+      <a [routerLink]="['/', currentLang, 'datenschutz']"
+        >Datenschutzerklärung</a
+      >
+    </div>
+    
   </div>
 </section>
