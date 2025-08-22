@@ -6,7 +6,6 @@ import { AboutComponent } from '../pages/about/about';
 import { Skills } from '../pages/skills/skills';
 import { References } from '../pages/references/references';
 import { ProjectsComponent } from '../pages/projects/projects';
-import { Footer } from '../shared/footer/footer';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,8 +18,8 @@ import { CommonModule } from '@angular/common';
     Skills,
     References,
     ProjectsComponent,
-    Footer,
-    CommonModule
+
+    CommonModule,
   ],
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
