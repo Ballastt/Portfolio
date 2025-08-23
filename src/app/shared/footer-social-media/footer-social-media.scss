@@ -1,17 +1,21 @@
 @use "breakpoints" as bp;
 
 .social-media {
-  min-width: 350px;
+  max-width: 1850px;
+  min-width: auto;
+  height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 45px;
+  justify-content: flex-end;
+  gap: 2rem;
+  height: 140px;
+  box-sizing: border-box;
+  margin-inline-end: 2.7rem;
+  
   @media (max-width: bp.$breakpoint-xs) {
     width: 100%;
     padding-right: 0;
     justify-content: center;
-    
-    
   }
 }
 

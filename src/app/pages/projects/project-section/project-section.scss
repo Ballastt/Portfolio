@@ -11,25 +11,34 @@
     flex-direction: column;
     width: 100%;
     height: 600px;
-    padding: 0.5rem;;
+    padding: 0.5rem;
     outline: 2px solid var(--color-highlight);
+  }
+  @media (max-width: bp.$breakpoint-md) {
+    flex-direction: column;
+    width: 100%;
   }
 }
 
 .project {
   display: flex;
   position: relative;
+  align-items: center;
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     padding: 0.3rem;
     min-width: 340px;
     height: 600px;
   }
+  @media (max-width: bp.$breakpoint-md) {
+    flex-direction: column;
+    height: fit-content;
+    min-width: 620px;
+  }
 
   .img-wrapper {
     position: relative;
     @media (max-width: bp.$breakpoint-xs) {
-      
       width: 70%;
       height: auto;
       margin: 0;
@@ -163,6 +172,9 @@
     padding-bottom: 0.5rem;
     font-size: 32px;
   }
+  @media (max-width: bp.$breakpoint-md) {
+    top: -2.4rem;
+  }
 }
 
 .project-details {
@@ -175,11 +187,19 @@
       margin-bottom: 0.4rem;
       font-size: 32px;
     }
+    @media (max-width: bp.$breakpoint-md) {
+      font-size: 3.5rem;
+      margin: 0;
+    }
   }
   > span {
     font-size: 1.2rem;
     color: var(--color-highlight);
+    @media (max-width: bp.$breakpoint-md) {
+      font-size: 1.6rem;
+    }
   }
+
   > p {
     font-size: var(--font-base);
     padding-right: 2rem;
@@ -193,6 +213,10 @@
 .reverse .project {
   flex-direction: row-reverse;
   @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    width: 100%;
+  }
+  @media (max-width: bp.$breakpoint-md) {
     flex-direction: column;
     width: 100%;
   }
@@ -271,6 +295,9 @@
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     padding: 0.7rem;
-    
+  }
+  @media (max-width: bp.$breakpoint-md) {
+    flex-direction: column;
+    width: 100%;
   }
 }

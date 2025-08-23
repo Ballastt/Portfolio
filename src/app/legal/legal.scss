@@ -1,12 +1,16 @@
+@use "breakpoints" as bp;
+
 .legal {
-    max-width: 1000px;
-    padding-top: 100px;
-    margin: 0 auto;
-    text-align: justify;
-    > h3 {
-        border-bottom: 3px solid var(--color-highlight);
-        padding-bottom: 0.4rem;
-        display: block;
-        
-    }
+  max-width: 1000px;
+  padding-top: 100px;
+  margin: 0 auto;
+  text-align: justify;
+  @media (max-width: bp.$breakpoint-md) {
+    padding: 2rem;
+  }
+  > h3 {
+    border-bottom: 3px solid var(--color-highlight);
+    padding-bottom: 0.4rem;
+    display: block;
+  }
 }
