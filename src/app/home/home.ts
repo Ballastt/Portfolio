@@ -7,6 +7,7 @@ import { Skills } from '../pages/skills/skills';
 import { References } from '../pages/references/references';
 import { ProjectsComponent } from '../pages/projects/projects';
 import { CommonModule } from '@angular/common';
+import { Footer } from '../shared/footer/footer';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ import { CommonModule } from '@angular/common';
     Skills,
     References,
     ProjectsComponent,
-
+    Footer,
     CommonModule,
   ],
   templateUrl: './home.html',
