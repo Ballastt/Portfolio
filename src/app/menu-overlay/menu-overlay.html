@@ -2,24 +2,50 @@
   <section class="content">
     <h1
       class="nav-heading"
+      [ngClass]="{ pressed: pressedHeadings['about'] }"
+      (mousedown)="setPressed('about', true)"
+      (mouseup)="setPressed('about', false)"
+      (mouseleave)="setPressed('about', false)"
       [class.active]="activeSection === 'about'"
-      (click)="navigate('about')"
+      (click)="goTo('about')"
     >
       Über Mich
+      <span class="border top"></span>
+      <span class="border right"></span>
+      <span class="border bottom"></span>
+      <span class="border left"></span>
     </h1>
+
     <h1
       class="nav-heading"
+      [ngClass]="{ pressed: pressedHeadings['skills'] }"
+      (mousedown)="setPressed('skills', true)"
+      (mouseup)="setPressed('skills', false)"
+      (mouseleave)="setPressed('skills', false)"
       [class.active]="activeSection === 'skills'"
-      (click)="navigate('skills')"
+      (click)="goTo('skills')"
     >
       Meine Skills
+      <span class="border top"></span>
+      <span class="border right"></span>
+      <span class="border bottom"></span>
+      <span class="border left"></span>
     </h1>
+
     <h1
       class="nav-heading"
-      [class.active]="activeSection === 'portfolio'"
-      (click)="navigate('Portfolio')"
+      [ngClass]="{ pressed: pressedHeadings['projects'] }"
+      (mousedown)="setPressed('projects', true)"
+      (mouseup)="setPressed('projects', false)"
+      (mouseleave)="setPressed('projects', false)"
+      [class.active]="activeSection === 'projects'"
+      (click)="goTo('projects')"
     >
       Portfolio
+      <span class="border top"></span>
+      <span class="border right"></span>
+      <span class="border bottom"></span>
+      <span class="border left"></span>
     </h1>
   </section>
   <section class="footer">
