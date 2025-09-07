@@ -2,6 +2,7 @@
 
 .angled-footer {
   position: relative;
+  max-width: 1960px;
   width: 100%;
   min-height: 1150px;
   background-color: black;
@@ -231,3 +232,5 @@ app-footer {
 .legal a:hover::after {
   width: calc(100% - 2.6em);
 }
+
+
