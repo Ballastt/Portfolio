@@ -20,60 +20,89 @@
   padding-top: 100px;
   flex: 1;
   > h1 {
-    margin: 40px;
-    font-weight: 770;
+    margin: 30px;
     font-size: 5rem;
   }
 }
 
 .nav-heading {
   position: relative;
+  display: inline-block;
+  padding: 16px 32px;
   cursor: pointer;
-  padding-bottom: 8px;
-  transition: border 0.3s ease;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    transition: all 0.35s ease;
-  }
+.nav-heading .border {
+  position: absolute;
+  background: black;
+  transition: all 0.35s ease;
+}
 
-  // L-förmiger Startzustand
-  &::before {
-    width: 4px;
-    height: 48px;
-    left: -5%;
-    bottom: -20%;
-  }
+/* --- Startzustand: L unten links --- */
+.border.left {
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 48px; /* kleines Stück hoch */
+}
 
-  &::after {
-    height: 4px;
-    width: 32px;
-    left: -5%;
-    bottom: -20%;
-  }
+.border.bottom {
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 32px; /* kleines Stück nach rechts */
+}
 
-  // 🔁 Hover-Zustand
-  &:hover::before {
-    height: 0; // vertikale Linie verschwindet
-  }
+.border.top,
+.border.right {
+  width: 0;
+  height: 0; /* unsichtbar */
+}
 
-  &:hover::after {
-    width: 50%; // z. B. nur rechte Hälfte unterstreichen
-    left: 55%; // verschieben nach rechts
-  }
+/* --- Hover: animiertes Verhalten wie bei dir --- */
+.nav-heading:hover .border.left {
+  height: 0; /* fährt ein */
+}
 
-  // Optional: aktiver Zustand
-  &.active::after {
-    width: 50%;
-    left: 55%;
-  }
+.nav-heading:hover .border.bottom {
+  width: 50%; /* wächst zur Hälfte */
+  left: 50%;
+}
 
-  &.active::before {
-    height: 0;
-  }
+.nav-heading:hover .border.right {
+  right: 0;
+  bottom: 50%;
+  width: 4px;
+  height: 0; /* optional noch unsichtbar */
+}
+
+/* --- Pressed: komplettes Rechteck --- */
+.nav-heading.pressed .border.left {
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.nav-heading.pressed .border.right {
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.nav-heading.pressed .border.bottom {
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+
+.nav-heading.pressed .border.top {
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
 }
 
 .footer {
@@ -108,8 +137,4 @@
     padding: 8px;
     font-style: normal;
   }
-}
-
-.right-wrapper {
-  padding-bottom: 30px;
 }
