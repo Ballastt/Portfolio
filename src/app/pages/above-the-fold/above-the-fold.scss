@@ -1,20 +1,15 @@
 @use "breakpoints" as bp;
 
 .atf {
-  /* 1. Positionierung & Display */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  /* 2. Box-Modell */
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  padding-top: 200px;
+  padding-top: 180px;
   box-sizing: border-box;
-  flex: 1;
 
-  /* 3. Visuelles */
   background-color: var(--color-background);
 
   @media (max-width: bp.$breakpoint-xs) {
@@ -98,7 +93,6 @@
 }
 
 .side-pieces {
-  height: 300px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -117,7 +111,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 150px;
+  margin-top: 80px;
+  margin-bottom: 220px;
   transform-origin: bottom;
   transform: rotate(-90deg);
 
