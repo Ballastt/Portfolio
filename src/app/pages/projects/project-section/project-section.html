@@ -1,8 +1,8 @@
 <div class="section-wrapper">
+  @for (project of projects; track project.id) {
   <section
     #projectRef
     class="single-project"
-    *ngFor="let project of projects; let i = index"
     [ngClass]="{ reverse: project.reverseLayout }"
   >
     <article class="project">
@@ -88,4 +88,5 @@
       </div>
     </article>
   </section>
+  }
 </div>
