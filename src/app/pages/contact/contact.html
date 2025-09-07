@@ -15,18 +15,20 @@
       <label for="name">Dein Name</label>
 
       <span class="validation-icon">
-        <ng-container *ngIf="name.valid && (name.dirty || name.touched)">
+        @if (name.valid && (name.dirty || name.touched)) {
+        <ng-container>
           <img src="assets/icons/validation_green.png" alt="Valid Icon" />
         </ng-container>
-        <ng-container *ngIf="name.invalid && (name.dirty || name.touched)">
+        } @if (name.invalid && (name.dirty || name.touched)) {
+        <ng-container>
           <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         </ng-container>
+        }
       </span>
     </div>
-
-    <span class="error" *ngIf="name.invalid && (name.dirty || name.touched)">
-      Der Name ist erforderlich.
-    </span>
+    @if (name.invalid && (name.dirty || name.touched)) {
+    <span class="error"> Der Name ist erforderlich. </span>
+    }
   </div>
 
   <br />
@@ -47,27 +49,21 @@
       <label for="email">Deine Email</label>
 
       <span class="validation-icon">
-        <ng-container *ngIf="email.valid && (email.dirty || email.touched)">
+        @if (email.valid && (email.dirty || email.touched)) {
+        <ng-container>
           <img src="assets/icons/validation_green.png" alt="Valid Icon" />
         </ng-container>
-        <ng-container *ngIf="email.invalid && (email.dirty || email.touched)">
+        } @if (email.invalid && (email.dirty || email.touched)) {
+        <ng-container>
           <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         </ng-container>
+        }
       </span>
     </div>
 
-    <span
-      class="error"
-      *ngIf="email.errors?.['required'] && (email.dirty || email.touched)"
-    >
-      Die Email ist erforderlich.
-    </span>
-    <span
-      class="error"
-      *ngIf="email.errors?.['pattern'] && (email.dirty || email.touched)"
-    >
-      Gib eine gültige E-Mail-Adresse ein.
-    </span>
+    @if (email.invalid && (email.dirty || email.touched)) {
+    <span class="error"> Die Email ist erforderlich. </span>
+    } 
   </div>
 
   <br />
@@ -87,31 +83,25 @@
       <label for="message">Deine Nachricht</label>
 
       <span class="validation-icon-textarea">
-        <ng-container
-          *ngIf="message.valid && (message.dirty || message.touched)"
-        >
+        @if (message.valid && (message.dirty || message.touched)) {
+        <ng-container>
           <img src="assets/icons/validation_green.png" alt="Valid Icon" />
         </ng-container>
-        <ng-container
-          *ngIf="message.invalid && (message.dirty || message.touched)"
-        >
+        } @if (message.invalid && (message.dirty || message.touched)) {
+        <ng-container>
           <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         </ng-container>
+        }
       </span>
     </div>
 
-    <span
-      class="error"
-      *ngIf="message.errors?.['required'] && (message.dirty || message.touched)"
-    >
-      Die Nachricht ist erforderlich.
-    </span>
-    <span
-      class="error"
-      *ngIf="message.errors?.['minlength'] && (message.dirty || message.touched)"
-    >
+    @if (message.errors?.['required'] && (message.dirty || message.touched)) {
+    <span class="error"> Die Nachricht ist erforderlich. </span>
+    } @if (message.errors?.['minlength'] && (message.dirty || message.touched)){
+    <span class="error">
       Die Nachricht muss mindestens 100 Zeichen lang sein.
     </span>
+    }
   </div>
 
   <div
