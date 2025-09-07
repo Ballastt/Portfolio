@@ -1,17 +1,11 @@
-<app-header
-  [isOverlay]="burgerMenuOpen"
-  (toggleBurger)="toggleMenu()"
-></app-header>
-
+@if (burgerMenuOpen) {
 <app-menu-overlay
-  *ngIf="burgerMenuOpen"
+  (navigate)="scrollToSection($event)"
   (close)="closeMenu()"
 ></app-menu-overlay>
+}
 <app-above-the-fold></app-above-the-fold>
-<app-about></app-about>
+<app-about id="about"></app-about>
 <app-skills></app-skills>
 <app-projects></app-projects>
 <app-references></app-references>
-<app-footer></app-footer>
-
-
