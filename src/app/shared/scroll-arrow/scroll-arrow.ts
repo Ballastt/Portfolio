@@ -24,8 +24,6 @@ export class ScrollArrow implements AfterViewInit {
   private observer!: IntersectionObserver;
   private hasAnimated = false;
 
-  
-
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver(
       ([entry]) => {
@@ -34,7 +32,7 @@ export class ScrollArrow implements AfterViewInit {
           this.hasAnimated = true;
           this.animateArrow();
         } else if (!entry.isIntersecting) {
-          this.resetArrow(); // wenn weggescrollt wird, zurücksetzen
+          this.resetArrow(); 
         }
       },
       {
