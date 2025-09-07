@@ -4,11 +4,12 @@
     [showBackButton]="showBackButton"
     (toggleBurger)="toggleMenu()"
   ></app-header>
-  <app-menu-overlay
-    *ngIf="burgerMenuOpen"
-    (close)="closeMenu()"
-  ></app-menu-overlay>
-
+  @if (burgerMenuOpen) {
+  <app-menu-overlay (close)="closeMenu()"></app-menu-overlay>
+  }
   <router-outlet></router-outlet>
 </div>
 
+@if (showFooter) {    
+<app-footer></app-footer>
+}
