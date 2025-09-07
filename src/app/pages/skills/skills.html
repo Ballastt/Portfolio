@@ -8,10 +8,12 @@
     <h1>Meine <br />Fähigkeiten</h1>
 
     <div class="skills-grid">
-      <div class="skill" *ngFor="let skill of skills">
+      @for (skill of skills; track $index) {
+      <div class="skill">
         <img [src]="skill.img" [alt]="skill.name" />
         <span>{{ skill.name }} </span>
       </div>
+      }
     </div>
     <div class="rtl-wrapper">
       <img
