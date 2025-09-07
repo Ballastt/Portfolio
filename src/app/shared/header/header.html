@@ -61,25 +61,18 @@
         alt="Zurück zur Startseite"
         (click)="goHome()"
       />
-      } @if (!showBackButton && !isOverlay) {
-      <img
-        class="burger"
-        src="assets/icons/burger/1.png"
-        alt="Menü öffnen"
-        (click)="toggleBurger.emit()"
-      />
-      } @if (!showBackButton && isOverlay) {
-      <img
-        class="burger"
-        src="assets/icons/burger/1.png"
-        alt="Menü öffnen"
-        (click)="toggleBurger.emit()"
-      />
-      } @if (!showBackButton && isOverlay) {
+      } @else if (isOverlay) {
       <img
         class="close"
         src="assets/icons/burger/5.png"
         alt="Menü schließen"
+        (click)="toggleBurger.emit()"
+      />
+      } @else {
+      <img
+        class="burger"
+        src="assets/icons/burger/1.png"
+        alt="Menü öffnen"
         (click)="toggleBurger.emit()"
       />
       }
