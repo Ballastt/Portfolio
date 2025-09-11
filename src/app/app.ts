@@ -8,15 +8,14 @@ import { Footer } from './shared/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, Header, MenuOverlay, CommonModule, Footer],
+  imports: [RouterModule, MenuOverlay, CommonModule, Header, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrls: ['./app.scss'],
 })
 export class App {
-  protected readonly title = signal('portfolio');
-
   burgerMenuOpen = false;
   showBackButton = false;
+  showFooter = true;
 
   constructor(private router: Router) {
     this.router.events
@@ -25,6 +24,17 @@ export class App {
         const url = event.urlAfterRedirects;
         this.showBackButton =
           url.includes('/datenschutz') || url.includes('/privacy');
+
+        // Footer nur anzeigen, wenn NICHT auf diesen Routen
+        const hiddenFooterRoutes = ['/datenschutz', '/privacy'];
+        this.showFooter = !hiddenFooterRoutes.some((route) =>
+          url.includes(route)
+        );
+
+        // Scroll nur für Datenschutz / Privacy nach oben
+        if (url.includes('/datenschutz') || url.includes('/privacy')) {
+          window.scrollTo(0, 0); // setzt den Viewport an den Seitenanfang
+        }
       });
   }
 
@@ -36,5 +46,32 @@ export class App {
   closeMenu() {
     this.burgerMenuOpen = false;
     document.body.style.overflow = '';
+  }
+
+  scrollToSection(section: 'about' | 'skills' | 'projects') {
+    const el = document.getElementById(section);
+    if (!el) return;
+
+    // Unterschiedliche Offsets für jede Sektion
+    let headerOffset = 0;
+    switch (section) {
+      case 'about':
+        headerOffset = 120; // z.B. 120px von oben
+        break;
+      case 'skills':
+        headerOffset = -100;
+        break;
+      case 'projects':
+        headerOffset = -100;
+        break;
+    }
+
+    const elementPosition = el.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
   }
 }
