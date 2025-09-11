@@ -7,16 +7,18 @@
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  @media (max-width: bp.$breakpoint-xs) {
-    flex-direction: column;
-    width: 100%;
-    height: 600px;
-    padding: 0.5rem;
-    outline: 2px solid var(--color-highlight);
-  }
+
   @media (max-width: bp.$breakpoint-md) {
     flex-direction: column;
     width: 100%;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0rem;
+    outline: 2px solid var(--color-highlight);
+    margin-bottom: 1rem;
   }
 }
 
@@ -24,23 +26,24 @@
   display: flex;
   position: relative;
   align-items: center;
+
+  @media (max-width: bp.$breakpoint-md) {
+    flex-direction: column;
+    height: fit-content;
+    min-width: 620px;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     padding: 0.3rem;
     min-width: 340px;
     height: 600px;
   }
-  @media (max-width: bp.$breakpoint-md) {
-    flex-direction: column;
-    height: fit-content;
-    min-width: 620px;
-  }
 
   .img-wrapper {
     position: relative;
     @media (max-width: bp.$breakpoint-xs) {
-      width: 70%;
-      height: auto;
+      width: 100%;
+      height: fit-content;
       margin: 0;
     }
 
@@ -48,8 +51,8 @@
       filter: grayscale(100%);
       transition: filter 0.4s ease, transform 0.4s ease;
       @media (max-width: bp.$breakpoint-xs) {
-        padding-top: 2rem;
-        width: 140%;
+        padding-top: 4rem;
+        width: 100%;
         height: auto;
       }
     }
@@ -70,10 +73,10 @@
       transition: opacity 0.4s ease;
       @media (max-width: bp.$breakpoint-xs) {
         border: 3px solid black;
-        width: 18.8rem;
-        bottom: -2rem;
-        top: 2.6rem;
-        left: 0.2rem;
+        width: 19.5rem;
+        bottom: -0.7rem;
+        top: 4.5rem;
+        left: -0.3rem;
       }
 
       .arrow-small {
@@ -85,6 +88,9 @@
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
           opacity 0.2s ease;
         transition-delay: 0.4s;
+        @media (max-width: bp.$breakpoint-xs) {
+          display: none;
+        }
       }
 
       .arrow-large {
@@ -168,12 +174,14 @@
   top: -18px;
   font-size: 40px;
   font-weight: 700;
-  @media (max-width: bp.$breakpoint-xs) {
-    padding-bottom: 0.5rem;
-    font-size: 32px;
-  }
+
   @media (max-width: bp.$breakpoint-md) {
     top: -2.4rem;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    padding-right: 0.3rem;
+    font-size: 32px;
+    top: 0;
   }
 }
 
@@ -182,14 +190,15 @@
     font-weight: 800;
     font-size: 44px;
     margin-bottom: 0.2em;
+
+    @media (max-width: bp.$breakpoint-md) {
+      font-size: 3.5rem;
+      margin: 0;
+    }
     @media (max-width: bp.$breakpoint-xs) {
       margin: 0;
       margin-bottom: 0.4rem;
       font-size: 32px;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      font-size: 3.5rem;
-      margin: 0;
     }
   }
   > span {
@@ -212,11 +221,12 @@
 // Reverse Variante
 .reverse .project {
   flex-direction: row-reverse;
-  @media (max-width: bp.$breakpoint-xs) {
+
+  @media (max-width: bp.$breakpoint-md) {
     flex-direction: column;
     width: 100%;
   }
-  @media (max-width: bp.$breakpoint-md) {
+  @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     width: 100%;
   }
@@ -235,6 +245,13 @@
     align-items: center;
     padding-right: 2rem;
     transition: opacity 0.4s ease;
+    @media (max-width: bp.$breakpoint-xs) {
+      border: 3px solid black;
+      width: 19.5rem;
+      bottom: -0.6rem;
+      top: 4.5rem;
+      left: -0.3rem;
+    }
   }
 
   .img-wrapper .img-overlay {
@@ -242,11 +259,18 @@
       right: auto;
       left: -36px;
       transform: translateY(-50%) scale(1) rotate(0deg);
+      @media (max-width: bp.$breakpoint-xs) {
+        display: none;
+      }
     }
     .arrow-large {
       right: auto;
       left: -40px;
       transform: translateY(-50%) scale(0.9) rotate(0deg);
+      @media (max-width: bp.$breakpoint-xs) {
+        top: 100%;
+        left: 150px;
+      }
     }
   }
 
@@ -292,12 +316,13 @@
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  @media (max-width: bp.$breakpoint-xs) {
-    flex-direction: column;
-    padding: 0.7rem;
-  }
+
   @media (max-width: bp.$breakpoint-md) {
     flex-direction: column;
     width: 100%;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    padding: 0.7rem;
   }
 }
