@@ -1,3 +1,5 @@
+@use "breakpoints" as bp;
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -19,9 +21,21 @@
   text-align: center;
   padding-top: 100px;
   flex: 1;
+  @media (max-width: bp.$breakpoint-md) {
+    justify-content: center;
+  }
+
   > h1 {
     margin: 30px;
     font-size: 5rem;
+    @media (max-width: bp.$breakpoint-md) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: bp.$breakpoint-xs) {
+      padding: 12px 24px;
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -124,6 +138,10 @@
   justify-content: center;
   padding-bottom: 30px;
   padding-left: 100px;
+  @media (max-width: bp.$breakpoint-md) {
+    padding-left: 30px;
+    padding-bottom: 40px;
+  }
   > h2 {
     font-size: 72px;
     font-family: var(--font-base);
