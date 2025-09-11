@@ -12,11 +12,12 @@
 
   background-color: var(--color-background);
 
-  @media (max-width: bp.$breakpoint-xs) {
-    padding-top: clamp(120px, calc(80px + 10vh), 200px);
-  }
   @media (max-width: bp.$breakpoint-md) {
     width: 100%;
+  }
+
+  @media (max-width: bp.$breakpoint-xs) {
+    padding-top: clamp(120px, calc(80px + 10vh), 200px);
   }
 }
 
@@ -24,10 +25,12 @@
   display: flex;
   width: 100%;
   justify-content: center;
+
+  @media (max-width: bp.$breakpoint-md) {
+  }
+
   @media (max-width: bp.$breakpoint-xs) {
     padding-right: 2rem;
-  }
-  @media (max-width: bp.$breakpoint-md) {
   }
 
   > h1 {
@@ -36,14 +39,15 @@
     margin: 0;
     line-height: 110px;
     text-align: center;
+    @media (max-width: bp.$breakpoint-md) {
+      font-size: 80px;
+      line-height: 90px;
+    }
+
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 42px;
       word-break: break-all;
       line-height: 50px;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      font-size: 80px;
-      line-height: 90px;
     }
   }
 }
@@ -61,15 +65,16 @@
     color: var(--color-highlight);
     font-size: 40px;
 
+    @media (max-width: bp.$breakpoint-md) {
+      margin: 0;
+      font-size: 2rem;
+    }
+
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 22px;
       margin-top: 8px;
       line-height: 50px;
       margin-bottom: -2rem;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      margin: 0;
-      font-size: 2rem;
     }
   }
 }
@@ -98,12 +103,13 @@
   justify-content: space-between;
   padding-top: 40px;
 
-  @media (max-width: bp.$breakpoint-xs) {
-    padding-top: 60px;
-  }
   @media (max-width: bp.$breakpoint-md) {
     padding-top: 0;
     height: auto;
+  }
+
+  @media (max-width: bp.$breakpoint-xs) {
+    padding-top: 60px;
   }
 }
 
@@ -116,22 +122,25 @@
   transform-origin: bottom;
   transform: rotate(-90deg);
 
-  @media (max-width: bp.$breakpoint-xs) {
-    margin-bottom: 170px;
-  }
   @media (max-width: bp.$breakpoint-md) {
     padding-top: 2rem;
-
     margin-bottom: 230px;
+  }
+
+  @media (max-width: bp.$breakpoint-xs) {
+    margin-bottom: 210px;
+    margin-top: -20px;
   }
   > a {
     color: black;
     font-size: 20px;
-    @media (max-width: bp.$breakpoint-xs) {
-      font-size: 1rem;
-    }
+
     @media (max-width: bp.$breakpoint-md) {
       font-size: 1.4rem;
+    }
+
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 1rem;
     }
   }
 }
