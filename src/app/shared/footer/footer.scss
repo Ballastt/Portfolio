@@ -79,10 +79,7 @@ app-footer {
       }
     }
     @media (max-width: bp.$breakpoint-xs) {
-      height: 28px;
-      width: 28px;
-      top: -100%;
-      left: 15px;
+      display: none;
     }
   }
   > p {
