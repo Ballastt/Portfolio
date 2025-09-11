@@ -5,7 +5,7 @@
     (toggleBurger)="toggleMenu()"
   ></app-header>
   @if (burgerMenuOpen) {
-  <app-menu-overlay (close)="closeMenu()"></app-menu-overlay>
+  <app-menu-overlay (close)="closeMenu()" (navigate)="scrollToSection($event)"></app-menu-overlay>
   }
   <router-outlet></router-outlet>
 </div>
