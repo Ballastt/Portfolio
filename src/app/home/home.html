@@ -1,11 +1,10 @@
 @if (burgerMenuOpen) {
 <app-menu-overlay
-  (navigate)="scrollToSection($event)"
   (close)="closeMenu()"
 ></app-menu-overlay>
 }
 <app-above-the-fold></app-above-the-fold>
 <app-about id="about"></app-about>
-<app-skills></app-skills>
-<app-projects></app-projects>
+<app-skills id="skills"></app-skills>
+<app-projects id="projects"></app-projects>
 <app-references></app-references>
