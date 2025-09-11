@@ -128,7 +128,7 @@
   }
 
   @media (max-width: bp.$breakpoint-xs) {
-    margin-bottom: 210px;
+    margin-bottom: 170px;
     margin-top: -20px;
   }
   > a {
@@ -172,6 +172,7 @@
     @media (max-width: bp.$breakpoint-xs) {
       margin-top: 106px;
       font-size: 18px;
+      height: 130px;
     }
   }
 }
