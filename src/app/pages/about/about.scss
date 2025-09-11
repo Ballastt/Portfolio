@@ -70,7 +70,7 @@
 
   @media (max-width: bp.$breakpoint-md) {
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   @media (max-width: bp.$breakpoint-xs) {
@@ -121,8 +121,8 @@
     @media (max-width: bp.$breakpoint-md) {
       padding-left: 1rem;
       margin-top: 0;
-      font-size: 1.2rem;
-      line-height: 1.7rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
     }
 
     @media (max-width: bp.$breakpoint-xs) {
