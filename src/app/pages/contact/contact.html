@@ -1,113 +1,92 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" id="contact">
+<form [formGroup]="applyForm" (ngSubmit)="onSubmit()" id="contact">
+  <!-- NAME -->
   <div class="form-field">
     <div class="input-wrapper">
       <input
         type="text"
-        name="name"
         id="name"
         placeholder=" "
-        required
+        formControlName="name"
         autocomplete="off"
-        [(ngModel)]="contactData.name"
-        #name="ngModel"
       />
-
       <label for="name">Dein Name</label>
 
       <span class="validation-icon">
-        @if (name.valid && (name.dirty || name.touched)) {
-        <ng-container>
+        @if (applyForm.get('name')?.valid && applyForm.get('name')?.touched) {
           <img src="assets/icons/validation_green.png" alt="Valid Icon" />
-        </ng-container>
-        } @if (name.invalid && (name.dirty || name.touched)) {
-        <ng-container>
+        }
+        @if (applyForm.get('name')?.invalid && applyForm.get('name')?.touched) {
           <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
-        </ng-container>
         }
       </span>
     </div>
-    @if (name.invalid && (name.dirty || name.touched)) {
-    <span class="error"> Der Name ist erforderlich. </span>
+    @if (applyForm.get('name')?.hasError('required') && applyForm.get('name')?.touched) {
+      <span class="error"> Der Name ist erforderlich. </span>
     }
   </div>
 
-  <br />
+  <!-- EMAIL -->
   <div class="form-field">
     <div class="input-wrapper">
       <input
         type="email"
-        name="email"
         id="email"
-        required
-        autocomplete="off"
-        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         placeholder=" "
-        [(ngModel)]="contactData.email"
-        #email="ngModel"
+        formControlName="email"
+        autocomplete="off"
       />
-
       <label for="email">Deine Email</label>
 
       <span class="validation-icon">
-        @if (email.valid && (email.dirty || email.touched)) {
-        <ng-container>
+        @if (applyForm.get('email')?.valid && applyForm.get('email')?.touched) {
           <img src="assets/icons/validation_green.png" alt="Valid Icon" />
-        </ng-container>
-        } @if (email.invalid && (email.dirty || email.touched)) {
-        <ng-container>
+        }
+        @if (applyForm.get('email')?.invalid && applyForm.get('email')?.touched) {
           <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
-        </ng-container>
         }
       </span>
     </div>
-
-    @if (email.invalid && (email.dirty || email.touched)) {
-    <span class="error"> Die Email ist erforderlich. </span>
-    } 
+    @if (applyForm.get('email')?.hasError('required') && applyForm.get('email')?.touched) {
+      <span class="error"> Die Email ist erforderlich. </span>
+    }
+    @if (applyForm.get('email')?.hasError('email') && applyForm.get('email')?.touched) {
+      <span class="error"> Bitte eine gültige Email eingeben. </span>
+    }
   </div>
 
-  <br />
-
+  <!-- MESSAGE -->
   <div class="form-field">
     <div class="input-wrapper">
       <textarea
         id="message"
-        name="message"
         placeholder=" "
-        minlength="100"
-        required
-        [(ngModel)]="contactData.message"
-        #message="ngModel"
+        formControlName="message"
       ></textarea>
-
       <label for="message">Deine Nachricht</label>
 
       <span class="validation-icon-textarea">
-        @if (message.valid && (message.dirty || message.touched)) {
-        <ng-container>
+        @if (applyForm.get('message')?.valid && applyForm.get('message')?.touched) {
           <img src="assets/icons/validation_green.png" alt="Valid Icon" />
-        </ng-container>
-        } @if (message.invalid && (message.dirty || message.touched)) {
-        <ng-container>
+        }
+        @if (applyForm.get('message')?.invalid && applyForm.get('message')?.touched) {
           <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
-        </ng-container>
         }
       </span>
     </div>
 
-    @if (message.errors?.['required'] && (message.dirty || message.touched)) {
-    <span class="error"> Die Nachricht ist erforderlich. </span>
-    } @if (message.errors?.['minlength'] && (message.dirty || message.touched)){
-    <span class="error">
-      Die Nachricht muss mindestens 100 Zeichen lang sein.
-    </span>
+    @if (applyForm.get('message')?.hasError('required') && applyForm.get('message')?.touched) {
+      <span class="error"> Die Nachricht ist erforderlich. </span>
+    }
+    @if (applyForm.get('message')?.hasError('minlength') && applyForm.get('message')?.touched) {
+      <span class="error"> Die Nachricht muss mindestens 100 Zeichen lang sein. </span>
     }
   </div>
 
+  <!-- PRIVACY -->
   <div
     class="checkbox-wrapper"
     [class.hovered]="isPrivacyHovered"
-    [class.checked]="isPrivacyChecked"
+    [class.checked]="applyForm.get('privacy')?.value"
     (mouseenter)="isPrivacyHovered = true"
     (mouseleave)="isPrivacyHovered = false"
   >
@@ -118,25 +97,25 @@
         <input
           type="checkbox"
           id="privacy"
-          name="privacy"
-          required
-          [(ngModel)]="isPrivacyChecked"
+          formControlName="privacy"
         />
-        <span
-          class="checkbox-box"
-          [class.visible]="isPrivacyHovered && !isPrivacyChecked"
+        <span class="checkbox-box"
+          [class.visible]="isPrivacyHovered && !applyForm.get('privacy')?.value"
         ></span>
       </div>
-
       Ich habe die
-      <a href="/privacy-policy" target="_blank" class="pp"
-        >Datenschutzerklärung</a
-      >
+      <a href="/privacy-policy" target="_blank" class="pp">Datenschutzerklärung</a>
       gelesen und stimme dem Verarbeiten meiner Daten zu.
     </label>
+    @if (applyForm.get('privacy')?.hasError('required') && applyForm.get('privacy')?.touched) {
+      <span class="error"> Bitte Datenschutzerklärung akzeptieren. </span>
+    }
   </div>
 
+  <!-- SUBMIT -->
   <div class="btn-container">
-    <button class="btn-primary send-btn"><span>Abschicken</span></button>
+    <button class="btn-primary send-btn" [disabled]="applyForm.invalid">
+      <span>Abschicken</span>
+    </button>
   </div>
 </form>
