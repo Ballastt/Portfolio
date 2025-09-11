@@ -137,6 +137,10 @@ app-footer {
   width: 5em;
   height: 6em;
   cursor: pointer;
+  @media (max-width: bp.$breakpoint-md) {
+    right: 0.2rem;
+  }
+
   @media (max-width: bp.$breakpoint-xs) {
     bottom: 3rem;
     right: 0rem;
@@ -190,6 +194,10 @@ app-footer {
   margin-bottom: 10px;
   height: 30px;
   position: relative;
+  @media (max-width: bp.$breakpoint-md) {
+    margin-right: 30px;
+  }
+
   @media (max-width: bp.$breakpoint-xs) {
     margin: 0;
     width: 100%;
