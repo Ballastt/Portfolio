@@ -14,6 +14,12 @@
   @media (max-width: bp.$breakpoint-md) {
     margin-inline-end: 1rem;
   }
+  @media (max-width: bp.$breakpoint-sm) {
+    justify-content: center;
+    height: 180px;
+    margin-inline-end: 0rem;
+    gap: 1.5rem;
+  }
 
   @media (max-width: bp.$breakpoint-xs) {
     justify-content: center;

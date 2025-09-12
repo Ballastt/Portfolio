@@ -8,15 +8,15 @@ form {
   height: 100%;
   width: 100%;
   margin-bottom: 2rem;
-  @media (max-width: bp.$breakpoint-xs) {
-    
-  }
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
   position: relative;
+  @media (max-width: bp.$breakpoint-sm) {
+    width: 90%;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     width: 90%;
     padding: 0 1rem;
@@ -41,6 +41,9 @@ form {
   box-sizing: border-box;
   outline: none;
   border-radius: 0;
+  @media (max-width: bp.$breakpoint-sm) {
+    width: 100%;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     width: 100%;
   }

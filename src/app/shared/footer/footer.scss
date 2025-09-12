@@ -11,6 +11,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @media (max-width: bp.$breakpoint-sm) {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
   @media (max-width: bp.$breakpoint-xs) {
     height: auto;
     width: 100%;
@@ -24,6 +27,9 @@
   justify-content: center;
   margin-left: 44px;
   margin-bottom: 20px;
+  @media (max-width: bp.$breakpoint-sm) {
+    margin-left: 1rem;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     margin-left: 1rem;
     width: 350px;
@@ -54,6 +60,9 @@ app-footer {
 .copyright {
   position: relative;
   padding-left: 32px;
+  @media (max-width: bp.$breakpoint-sm) {
+    padding-left: 0rem;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     padding-left: 0rem;
   }
@@ -87,7 +96,6 @@ app-footer {
     margin: 0;
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 0.9rem;
-      
     }
   }
 }
@@ -96,8 +104,6 @@ app-footer {
   display: flex;
   justify-content: space-between;
   @media (max-width: bp.$breakpoint-xs) {
-    
-    
   }
 }
 
@@ -107,6 +113,9 @@ app-footer {
   align-items: center;
   > h3 {
     color: var(--color-highlight);
+    @media (max-width: bp.$breakpoint-sm) {
+      font-size: 1.4rem;
+    }
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 1.2rem;
       text-align: center;
@@ -114,6 +123,10 @@ app-footer {
   }
   > span {
     padding-bottom: 26px;
+    @media (max-width: bp.$breakpoint-sm) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 0.9rem;
       text-align: center;
@@ -136,7 +149,10 @@ app-footer {
   @media (max-width: bp.$breakpoint-md) {
     right: 0.2rem;
   }
-
+  @media (max-width: bp.$breakpoint-sm) {
+    bottom: 15%;
+    
+  }
   @media (max-width: bp.$breakpoint-xs) {
     bottom: 5rem;
     right: 0rem;
@@ -192,6 +208,10 @@ app-footer {
   position: relative;
   @media (max-width: bp.$breakpoint-md) {
     margin-right: 30px;
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    margin-right: 1rem;
+    width: 100%;
   }
 
   @media (max-width: bp.$breakpoint-xs) {

@@ -35,8 +35,10 @@
   @media (max-width: bp.$breakpoint-md) {
     font-size: 1.4rem;
   }
-
-  
+  @media (max-width: bp.$breakpoint-sm) {
+    font-size: 1.2rem;
+    height: 60px;
+  }
 }
 
 .btn-primary:hover {
@@ -69,12 +71,7 @@
 h1 {
   font-weight: 800;
   font-size: 60px;
-
-  @media (max-width: bp.$breakpoint-md) {
-    font-size: 50px;
-  }
-  
-  @media (max-width: bp.$breakpoint-xs) {
-    font-size: 40px;
-  }
+  @media (max-width: bp.$breakpoint-md) {font-size: 50px;}
+  @media (max-width: bp.$breakpoint-sm) {font-size: 40px;}
+  @media (max-width: bp.$breakpoint-xs) {font-size: 40px;}
 }
