@@ -16,9 +16,8 @@
   }
 
   @media (max-width: bp.$breakpoint-xs) {
-    width: 100%;
-    padding-right: 0;
     justify-content: center;
+    height: 200px;
   }
 }
 

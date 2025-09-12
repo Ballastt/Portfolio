@@ -9,13 +9,11 @@
   height: 100dvh;
   padding-top: 180px;
   box-sizing: border-box;
-
   background-color: var(--color-background);
-
-  @media (max-width: bp.$breakpoint-md) {
-    width: 100%;
+  @media (min-width: bp.$breakpoint-xl) and (max-height: 900px) {
+    padding-top: 80px;
   }
-
+  
   @media (max-width: bp.$breakpoint-xs) {
     padding-top: clamp(120px, calc(80px + 10vh), 200px);
   }
@@ -30,7 +28,7 @@
   }
 
   @media (max-width: bp.$breakpoint-xs) {
-    padding-right: 2rem;
+    
   }
 
   > h1 {
@@ -45,8 +43,7 @@
     }
 
     @media (max-width: bp.$breakpoint-xs) {
-      font-size: 42px;
-      word-break: break-all;
+      font-size: 36px;
       line-height: 50px;
     }
   }

@@ -6,7 +6,6 @@
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
-  box-sizing: border-box;
 
   @media (max-width: bp.$breakpoint-md) {
     flex-direction: column;
@@ -18,7 +17,6 @@
     height: fit-content;
     padding: 1rem 0rem;
     outline: 2px solid var(--color-highlight);
-    margin-bottom: 1rem;
   }
 }
 
@@ -26,17 +24,13 @@
   display: flex;
   position: relative;
   align-items: center;
+  box-sizing: border-box;
 
   @media (max-width: bp.$breakpoint-md) {
     flex-direction: column;
-    height: fit-content;
-    min-width: 620px;
   }
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
-    padding: 0.3rem;
-    min-width: 340px;
-    height: 600px;
   }
 
   .img-wrapper {
@@ -80,10 +74,10 @@
       }
       @media (max-width: bp.$breakpoint-xs) {
         border: 3px solid black;
-        width: 19.5rem;
         bottom: -0.7rem;
         top: 4.5rem;
-        left: -0.3rem;
+        left: 0rem;
+        right: 0rem;
       }
 
       .arrow-small {
@@ -195,13 +189,23 @@
     top: -2.4rem;
   }
   @media (max-width: bp.$breakpoint-xs) {
-    padding-right: 0.3rem;
     font-size: 32px;
     top: 0;
   }
 }
 
 .project-details {
+  box-sizing: border-box;
+
+  @media (max-width: bp.$breakpoint-md) {
+    max-width: 100%;
+    padding: 0 2rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
   > h2 {
     font-weight: 800;
     font-size: 44px;
@@ -274,10 +278,10 @@
 
     @media (max-width: bp.$breakpoint-xs) {
       border: 3px solid black;
-      width: 19.5rem;
-      bottom: -0.6rem;
+      bottom: -0.7rem;
       top: 4.5rem;
-      left: -0.3rem;
+      left: 0rem;
+      right: 0rem;
     }
   }
 

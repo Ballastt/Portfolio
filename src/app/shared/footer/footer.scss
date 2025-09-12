@@ -16,7 +16,6 @@
     width: 100%;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
   }
-  
 }
 
 .content {
@@ -87,8 +86,8 @@ app-footer {
     width: 200px;
     margin: 0;
     @media (max-width: bp.$breakpoint-xs) {
-      font-size: 1rem;
-      margin-left: -0.9rem;
+      font-size: 0.9rem;
+      
     }
   }
 }
@@ -96,9 +95,9 @@ app-footer {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-
   @media (max-width: bp.$breakpoint-xs) {
-    text-align: center;
+    
+    
   }
 }
 
@@ -139,7 +138,7 @@ app-footer {
   }
 
   @media (max-width: bp.$breakpoint-xs) {
-    bottom: 3rem;
+    bottom: 5rem;
     right: 0rem;
   }
 }
@@ -202,11 +201,6 @@ app-footer {
   > a {
     color: white;
     position: absolute;
-
-    @media (max-width: bp.$breakpoint-xs) {
-      font-size: 1rem;
-      margin-right: 1rem;
-    }
   }
 }
 
@@ -218,6 +212,8 @@ app-footer {
   font-weight: 400;
   transform: font-weight 0.1s ease-out;
   @media (max-width: bp.$breakpoint-xs) {
+    font-size: 0.9rem;
+    margin-right: 0.7rem;
   }
 }
 
@@ -240,5 +236,3 @@ app-footer {
 .legal a:hover::after {
   width: calc(100% - 2.6em);
 }
-
-
