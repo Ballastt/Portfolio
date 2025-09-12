@@ -15,6 +15,11 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  @media (max-width: bp.$breakpoint-sm) {
+    height: fit-content;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+
   @media (max-width: bp.$breakpoint-xs) {
     height: 100%;
     width: 100%;
@@ -34,6 +39,11 @@
   @media (max-width: bp.$breakpoint-md) {
     grid-template-columns: 70px 70px 70px 70px;
   }
+  @media (max-width: bp.$breakpoint-sm) {
+    grid-template-columns: 70px 70px;
+    padding: 2rem;
+    gap: 4rem;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     grid-template-columns: 50px 50px;
     padding: 2rem;
@@ -51,7 +61,8 @@
   > img {
     height: 60px;
     width: auto;
-    @media (max-width: bp.$breakpoint-md) {
+    @media (max-width: bp.$breakpoint-sm) {
+      height: 50px;
      
     }
   }
@@ -84,6 +95,12 @@
     width: 90%;
     margin-left: 2rem;
   }
+  @media (max-width: bp.$breakpoint-sm) {
+    font-size: 1.4rem;
+    margin-left: 0;
+    width: 90%;
+    padding: 2rem 1rem 1rem 1rem;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     font-size: 1.2rem;
     margin-left: 0;
@@ -99,6 +116,11 @@
     @media (max-width: bp.$breakpoint-md) {
       font-size: 1.4rem;
       width: 80%;
+      text-align: justify;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      font-size: 1.2rem;
+      width: 90%;
       text-align: justify;
     }
 
@@ -157,6 +179,10 @@
     @media (max-width: bp.$breakpoint-md) {
       font-size: 3rem;
       margin-top: 3.6rem;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      font-size: 2rem;
+      margin-top: 5.8rem;
     }
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 1.6rem;
