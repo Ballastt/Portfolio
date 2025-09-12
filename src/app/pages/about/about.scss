@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: flex-start;
   height: 90vh;
-  padding-left: 90px;
+  margin-left: 90px;
   padding-top: 10px;
 
   @media (max-width: bp.$breakpoint-md) {
@@ -17,6 +17,7 @@
     padding: 0;
     height: fit-content;
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -24,7 +25,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   @media (max-width: bp.$breakpoint-md) {
     padding: 1rem;
     height: fit-content;
@@ -112,7 +112,7 @@
 .left-wrapper {
   width: 50%;
   @media (max-width: bp.$breakpoint-xs) {
-    width: 100%;
+    width: 90%;
     padding: 1rem;
   }
   > p {
@@ -126,7 +126,7 @@
     }
 
     @media (max-width: bp.$breakpoint-xs) {
-      width: 90%;
+    
       font-size: 1rem;
       padding: 0;
     }
@@ -136,18 +136,10 @@
 .right-wrapper {
   display: flex;
   padding-top: 2rem;
-  padding-left: 70px;
-  width: 50%;
 
   @media (max-width: bp.$breakpoint-md) {
-    padding-left: 2rem;
-    padding-top: 0;
-    align-items: flex-start;
-  }
-
-  @media (max-width: bp.$breakpoint-xs) {
-    margin: 0 auto;
-    padding-left: 0;
+    padding: 0;
+    justify-content: center;
   }
 }
 
@@ -156,15 +148,15 @@
   display: inline-block;
   height: fit-content;
   box-sizing: border-box;
+  width: 350px;
   @media (max-width: bp.$breakpoint-md) {
     width: 100%;
   }
 
   @media (max-width: bp.$breakpoint-xs) {
     width: 300px;
-    height: 300px;
-   
-    display: block;
+    height: 350px;
+    display: flex;
   }
 
   > img {
@@ -178,9 +170,10 @@
     }
 
     @media (max-width: bp.$breakpoint-xs) {
-      width: 200px;
-      height: 300px;
-      
+      height: 100%;
+      width: 100%;
+      object-fit:scale-down;
+     
     }
   }
   &::after {
@@ -202,8 +195,10 @@
     }
 
     @media (max-width: bp.$breakpoint-xs) {
-      top: 2rem;
+      top: 1rem;
       left: 1rem;
+      bottom: -1rem;
+      right: 1rem;
     }
   }
 
