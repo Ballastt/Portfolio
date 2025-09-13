@@ -4,8 +4,6 @@
   display: flex;
   align-items: center;
   height: 200px;
-  @media (max-width: bp.$breakpoint-xs) {
-  }
 }
 
 .skills-container {
@@ -15,6 +13,10 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  @media (max-width: bp.$breakpoint-md) {
+    height: 100%;
+    padding: 0;
+  }
   @media (max-width: bp.$breakpoint-sm) {
     height: fit-content;
     padding: 2rem 1rem 1rem 1rem;
@@ -37,7 +39,7 @@
   margin: 0 auto;
 
   @media (max-width: bp.$breakpoint-md) {
-    grid-template-columns: 70px 70px 70px 70px;
+    grid-template-columns: 70px 70px 70px;
   }
   @media (max-width: bp.$breakpoint-sm) {
     grid-template-columns: 70px 70px;
@@ -91,9 +93,9 @@
   padding-top: 2rem;
 
   @media (max-width: bp.$breakpoint-md) {
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     width: 90%;
-    margin-left: 2rem;
+    margin-left: 0;
   }
   @media (max-width: bp.$breakpoint-sm) {
     font-size: 1.4rem;
@@ -178,7 +180,7 @@
 
     @media (max-width: bp.$breakpoint-md) {
       font-size: 3rem;
-      margin-top: 3.6rem;
+      margin-top: 4.9rem;
     }
     @media (max-width: bp.$breakpoint-sm) {
       font-size: 2rem;

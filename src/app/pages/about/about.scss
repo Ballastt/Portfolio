@@ -10,6 +10,8 @@
 
   @media (max-width: bp.$breakpoint-md) {
     padding: 0.6rem;
+    margin: 0;
+    height: fit-content;
   }
 
   @media (max-width: bp.$breakpoint-sm) {
@@ -33,6 +35,8 @@
   @media (max-width: bp.$breakpoint-md) {
     padding: 1rem;
     height: fit-content;
+    width: 100%;
+    text-align: center;
   }
 
   @media (max-width: bp.$breakpoint-sm) {
@@ -59,6 +63,8 @@
   font-size: 22px;
   gap: 100px;
   @media (max-width: bp.$breakpoint-md) {
+    height: fit-content;
+    flex-direction: column-reverse;
     gap: 0;
   }
 
@@ -66,7 +72,6 @@
     height: fit-content;
     flex-direction: column-reverse;
     gap: 40px;
-    font-size: 1.4rem;
     padding-bottom: 2rem;
   }
 
@@ -123,22 +128,18 @@
   width: 100%;
   font-size: 24px;
   transition: all 0.15s;
-
   @media (max-width: bp.$breakpoint-md) {
-    margin-top: 2rem;
-    justify-content: flex-end;
+    width: 100%;
   }
 
   @media (max-width: bp.$breakpoint-sm) {
     width: 90%;
     margin-top: 24px;
-    justify-content: center;
   }
 
   @media (max-width: bp.$breakpoint-xs) {
     width: 90%;
     margin-top: 24px;
-    justify-content: center;
   }
 }
 
@@ -188,7 +189,6 @@
     padding: 0;
     justify-content: center;
   }
- 
 }
 
 .portrait {
@@ -198,13 +198,14 @@
   box-sizing: border-box;
   width: 350px;
   @media (max-width: bp.$breakpoint-md) {
-    width: 100%;
+    width: 320px;
+    height: fit-content;
+    padding-bottom: 2rem;
   }
 
   @media (max-width: bp.$breakpoint-sm) {
     width: 300px;
     height: 400px;
-    
   }
 
   @media (max-width: bp.$breakpoint-xs) {
@@ -226,15 +227,13 @@
     @media (max-width: bp.$breakpoint-sm) {
       height: 100%;
       width: 100%;
-      object-fit:cover;
-      
+      object-fit: cover;
     }
 
     @media (max-width: bp.$breakpoint-xs) {
       height: 100%;
       width: 100%;
-      object-fit:scale-down;
-     
+      object-fit: scale-down;
     }
   }
   &::after {
@@ -250,16 +249,22 @@
     pointer-events: none;
     @media (max-width: bp.$breakpoint-md) {
       top: 0.7rem;
-      left: -0.7rem;
+      left: -1rem;
       right: 0.7rem;
-      bottom: -0.7rem;
+      bottom: 0.7rem;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      top: 0.7rem;
+      left: -1.2rem;
+      bottom: 1.1rem;
+      right: 0.7rem;
     }
 
     @media (max-width: bp.$breakpoint-xs) {
-      top: 1rem;
-      left: 1rem;
-      bottom: -1rem;
-      right: 1rem;
+      top: 0.7rem;
+      left: 2rem;
+      bottom: 1.1rem;
+      right: 3.7rem;
     }
   }
 

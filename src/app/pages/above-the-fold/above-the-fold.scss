@@ -35,7 +35,7 @@
     line-height: 110px;
     text-align: center;
     @media (max-width: bp.$breakpoint-md) {
-      font-size: 80px;
+      font-size: 70px;
       line-height: 90px;
     }
 
@@ -148,7 +148,7 @@
     font-size: 20px;
 
     @media (max-width: bp.$breakpoint-md) {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
 
     @media (max-width: bp.$breakpoint-sm) {
