@@ -1,8 +1,9 @@
 <div class="scroll-arrow" #arrowRef>
   <img
-    [src]="'assets/icons/' + arrowPrefix + '-' + currentFrame + '.png'"
+    [src]="'assets/icons/arrow-' + direction + '-' + currentFrame + '.png'"
     alt="Scroll-Arrow"
-    [ngClass]="{ 'special-style': isSpecial }"
-    class="arrow-leftside"
+    [ngClass]="[
+      direction === 'left' ? 'arrow-left' : 'arrow-right',
+    ]"
   />
 </div>
