@@ -9,7 +9,9 @@
   height: 100dvh;
   padding-top: 180px;
   box-sizing: border-box;
+
   background-color: var(--color-background);
+  
 
   @media (min-width: bp.$breakpoint-xl) and (max-height: 900px) {
     padding-top: 80px;
@@ -34,6 +36,9 @@
     margin: 0;
     line-height: 110px;
     text-align: center;
+    @media (max-width: bp.$breakpoint-lg) {
+      font-size: 80px;
+    }
     @media (max-width: bp.$breakpoint-md) {
       font-size: 70px;
       line-height: 90px;
@@ -67,12 +72,14 @@
   > h1 {
     color: var(--color-highlight);
     font-size: 40px;
-
+    @media (max-width: bp.$breakpoint-lg) {
+      margin: 0;
+      font-size: 2.3rem;
+    }
     @media (max-width: bp.$breakpoint-md) {
       margin: 0;
       font-size: 2rem;
     }
-
     @media (max-width: bp.$breakpoint-sm) {
       font-size: 28px;
       margin-top: 8px;
@@ -100,6 +107,9 @@
   background-color: black;
   width: 50%;
   margin: 0 2rem;
+  @media (max-width: bp.$breakpoint-lg) {
+    width: 40%;
+  }
   @media (max-width: bp.$breakpoint-md) {
     width: 30%;
   }
@@ -125,7 +135,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 220px;
   transform-origin: bottom;
   transform: rotate(-90deg);
@@ -165,7 +175,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 30px;
   width: 100px;
   position: relative;
   @media (max-width: bp.$breakpoint-md) {

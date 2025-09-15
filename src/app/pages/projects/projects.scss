@@ -2,11 +2,20 @@
 
 .scroll-right {
   display: flex;
-  height: 220px;
+  justify-content: center;
+  height: 260px;
   width: 100%;
-
+  @media (max-width: bp.$breakpoint-md) {
+    height: 140px;
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    height: 120px;
+  }
   @media (max-width: bp.$breakpoint-xs) {
-    display: none;
+    height: 100px;
+  }
+  > a {
+    width: 90%;
   }
 }
 
@@ -20,6 +29,7 @@
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 40px;
       text-align: center;
+      margin: 0;
     }
   }
   > h1:hover {

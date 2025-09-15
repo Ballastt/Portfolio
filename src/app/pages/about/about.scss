@@ -7,24 +7,19 @@
   height: 90vh;
   margin-left: 90px;
   padding-top: 10px;
-
+  @media (max-width: bp.$breakpoint-lg){
+    margin: 0;
+    height: 100vh;
+    padding: 0 2rem;
+  }
   @media (max-width: bp.$breakpoint-md) {
     padding: 0.6rem;
-    margin: 0;
     height: fit-content;
   }
-
-  @media (max-width: bp.$breakpoint-sm) {
-    margin: 0;
-    height: fit-content;
-  }
-
   @media (max-width: bp.$breakpoint-xs) {
     display: block;
     padding: 0;
-    height: fit-content;
     width: 100%;
-    margin: 0;
   }
 }
 
@@ -62,6 +57,9 @@
   height: 70vh;
   font-size: 22px;
   gap: 100px;
+  @media (max-width: bp.$breakpoint-lg){
+    gap: 70px;
+  }
   @media (max-width: bp.$breakpoint-md) {
     height: fit-content;
     flex-direction: column-reverse;
@@ -71,14 +69,12 @@
   @media (max-width: bp.$breakpoint-sm) {
     height: fit-content;
     flex-direction: column-reverse;
-    gap: 40px;
     padding-bottom: 2rem;
   }
 
   @media (max-width: bp.$breakpoint-xs) {
     height: fit-content;
     flex-direction: column-reverse;
-    gap: 20px;
   }
   > p {
     margin-top: 32px;

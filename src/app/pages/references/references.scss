@@ -39,11 +39,7 @@
     height: auto;
     width: 100%;
   }
-  > a {
-    @media (max-width: bp.$breakpoint-xs) {
-      display: none;
-    }
-  }
+  
 }
 
 .content {

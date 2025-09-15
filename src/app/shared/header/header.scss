@@ -26,6 +26,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
     background-color: var(--color-background);
   }
 
@@ -51,18 +52,26 @@
   display: flex;
   align-items: center;
   padding: 1rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
+  @media (max-width: bp.$breakpoint-md) {
+    padding-left: 1.5rem;
+  }
+
   @media (max-width: bp.$breakpoint-xs) {
-    padding: 0.5rem;
     padding-left: 1.3rem;
   }
   > svg {
     width: 108px;
     height: auto;
 
+    @media (max-width: bp.$breakpoint-md) {
+      width: 72px;
+      height: auto;
+    }
+
     @media (max-width: bp.$breakpoint-xs) {
-      width: 32px;
-      height: 32px;
+      width: 42px;
+      height: auto;
     }
   }
 }
@@ -81,6 +90,10 @@
 .burger,
 .close {
   cursor: pointer;
+  @media (max-width: bp.$breakpoint-xs) {
+    height: 24px;
+    width: auto;
+  }
 }
 
 .lang-toggle {
@@ -168,4 +181,9 @@
   }
 }
 
+.logo {
+  @media (max-width: bp.$breakpoint-xs) {
+    font-size: 108px;
+  }
+}
 
