@@ -15,8 +15,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './scroll-arrow.scss',
 })
 export class ScrollArrow implements AfterViewInit {
-  @Input() arrowPrefix = 'arrow-right'; 
-  @Input() isSpecial = false;
+  @Input() arrowPrefix = 'arrow'; 
+  @Input() direction: 'left' | 'right' = 'right';
 
   @ViewChild('arrowRef') arrowRef!: ElementRef;
 
