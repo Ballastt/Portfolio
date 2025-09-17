@@ -2,41 +2,65 @@
 
 .scroll-arrow {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: bp.$breakpoint-sm) {
-    width: 80%;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    padding-right: 2rem;
-  }
-}
-
-/* Styling für alle Arrows */
-.scroll-arrow img {
-  width: 500px;
   height: auto;
-  @media (max-width: bp.$breakpoint-xs) {
-    width: 100%;
-  }
-}
+  width: 100%;
 
-/* Nur Pfeile nach rechts */
-.scroll-arrow img.arrow-right {
-  transform: rotate(0deg);
-  margin-left: 10px;
   @media (max-width: bp.$breakpoint-sm) {
-    padding-left: 10rem;
-    width: 100%;
   }
   @media (max-width: bp.$breakpoint-xs) {
-    width: 80%;
   }
 }
 
-/* Nur Pfeile nach links */
-.scroll-arrow img.arrow-left {
-  transform: rotate(0deg);
-  margin-right: 10px;
+.scroll-arrow img {
+  width: 100%;
+  max-width: 1000px; // maximum size
+  min-width: 148px; // minimum size
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+
+  @media (max-width: bp.$breakpoint-lg) {
+  }
+  @media (max-width: bp.$breakpoint-md) {
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    max-width: 480px;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    max-width: 450px;
+  }
 }
 
+.scroll-arrow img.arrow-right {
+  padding-top: 2rem;
+  padding-left: 7rem;
+  @media (max-width: bp.$breakpoint-lg) {
+    padding-top: 2rem;
+    padding-left: 4rem;
+  }
+  @media (max-width: bp.$breakpoint-md) {
+    padding-top: 1rem;
+    padding-left: 4rem;
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    padding-left: 3rem;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    padding-left: 3rem;
+  }
+}
+
+.scroll-arrow img.arrow-left {
+  padding-right: 6rem;
+  @media (max-width: bp.$breakpoint-lg) {
+    padding-top: 1rem;
+    padding-right: 5rem;
+  }
+  @media (max-width: bp.$breakpoint-md) {
+    padding-right: 4rem;
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    padding-right: 3rem;
+  }
+}
