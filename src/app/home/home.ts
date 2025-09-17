@@ -6,6 +6,7 @@ import { Skills } from '../pages/skills/skills';
 import { References } from '../pages/references/references';
 import { ProjectsComponent } from '../pages/projects/projects';
 import { CommonModule } from '@angular/common';
+import { ScrollArrow } from "../shared/scroll-arrow/scroll-arrow";
 
 @Component({
   standalone: true,
@@ -18,7 +19,8 @@ import { CommonModule } from '@angular/common';
     References,
     ProjectsComponent,
     CommonModule,
-  ],
+    ScrollArrow
+],
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
 })
