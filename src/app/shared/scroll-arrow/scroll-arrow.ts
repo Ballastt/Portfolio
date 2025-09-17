@@ -15,8 +15,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './scroll-arrow.scss',
 })
 export class ScrollArrow implements AfterViewInit {
-  @Input() arrowPrefix = 'arrow'; 
+  @Input() arrowPrefix = 'arrow';
   @Input() direction: 'left' | 'right' = 'right';
+  @Input() target = '';
+  @Input() offset = 0;
 
   @ViewChild('arrowRef') arrowRef!: ElementRef;
 
@@ -32,11 +34,11 @@ export class ScrollArrow implements AfterViewInit {
           this.hasAnimated = true;
           this.animateArrow();
         } else if (!entry.isIntersecting) {
-          this.resetArrow(); 
+          this.resetArrow();
         }
       },
       {
-        threshold: 0.3,
+        threshold: 1,
       }
     );
 
@@ -60,5 +62,15 @@ export class ScrollArrow implements AfterViewInit {
   resetArrow() {
     this.currentFrame = 1;
     this.hasAnimated = false;
+  }
+
+  scrollToSection(event?: Event) {
+    event?.preventDefault();
+
+    const el = document.getElementById(this.target);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - this.offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   }
 }
