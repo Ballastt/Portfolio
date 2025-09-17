@@ -1,27 +1,11 @@
 @use "breakpoints" as bp;
 
-.scroll-right {
-  display: flex;
-  justify-content: center;
-  height: 260px;
-  width: 100%;
-  @media (max-width: bp.$breakpoint-md) {
-    height: 140px;
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    height: 120px;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    height: 100px;
-  }
-  > a {
-    width: 90%;
-  }
-}
-
 .header-portfolio {
   display: flex;
   flex-direction: column;
+  @media (max-width: bp.$breakpoint-xs) {
+    padding-top: 0.6rem;
+  }
 
   > h1 {
     text-align: center;
