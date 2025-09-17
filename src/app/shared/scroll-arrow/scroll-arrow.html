@@ -1,9 +1,9 @@
 <div class="scroll-arrow" #arrowRef>
-  <img
-    [src]="'assets/icons/arrow-' + direction + '-' + currentFrame + '.png'"
-    alt="Scroll-Arrow"
-    [ngClass]="[
-      direction === 'left' ? 'arrow-left' : 'arrow-right',
-    ]"
-  />
+  <a (click)="scrollToSection($event); $event.preventDefault()">
+    <img
+      [src]="'assets/icons/arrow-' + direction + '-' + currentFrame + '.png'"
+      alt="Scroll-Arrow"
+      [ngClass]="[direction === 'left' ? 'arrow-left' : 'arrow-right']"
+    />
+  </a>
 </div>
