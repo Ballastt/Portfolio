@@ -1,11 +1,5 @@
 @use "breakpoints" as bp;
 
-.scroll-left {
-  display: flex;
-  align-items: center;
-  height: 200px;
-}
-
 .skills-container {
   width: 100%;
   height: auto;
@@ -15,7 +9,9 @@
   justify-content: flex-start;
   padding-top: 1rem;
   box-sizing: border-box;
-
+  @media (max-width: bp.$breakpoint-lg) {
+    padding: 0;
+  }
   @media (max-width: bp.$breakpoint-md) {
     padding-bottom: 1rem;
   }
@@ -24,6 +20,7 @@
   }
   @media (max-width: bp.$breakpoint-xs) {
     padding-bottom: 2rem;
+    padding-top: 0;
   }
 }
 
@@ -63,6 +60,9 @@
   > img {
     height: 60px;
     width: auto;
+    @media (max-width: bp.$breakpoint-md) {
+      height: 50px;
+    }
     @media (max-width: bp.$breakpoint-sm) {
       height: 50px;
     }
@@ -71,7 +71,7 @@
     font-weight: 700;
     font-size: 18px;
     @media (max-width: bp.$breakpoint-md) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     @media (max-width: bp.$breakpoint-xs) {
@@ -89,7 +89,7 @@
   justify-content: center;
   font-size: 22px;
   gap: 16px;
-  padding-top: 2rem;
+  padding: 2rem;
   @media (max-width: bp.$breakpoint-lg) {
     padding: 2rem 2rem;
   }
@@ -179,9 +179,13 @@
   }
   > h1 {
     text-align: center;
+    padding-bottom: 1rem;
+    @media (max-width: bp.$breakpoint-lg) {
+      font-size: 3rem;
+    }
 
     @media (max-width: bp.$breakpoint-md) {
-      font-size: 3rem;
+      font-size: 2.7rem;
     }
     @media (max-width: bp.$breakpoint-sm) {
       font-size: 2rem;
@@ -207,6 +211,10 @@
   height: 88%; /* hier Länge der Linie */
   width: 6px;
   background-color: black;
+  @media (max-width: bp.$breakpoint-lg) {
+    top: 9%;
+    height: 91%;
+  }
   @media (max-width: bp.$breakpoint-md) {
     top: 8%;
     height: 92%;
@@ -231,6 +239,10 @@
   height: 88%; /* Länge */
   width: 6px;
   background-color: black;
+  @media (max-width: bp.$breakpoint-lg) {
+    top: 9%;
+    height: 91%;
+  }
   @media (max-width: bp.$breakpoint-md) {
     top: 8%;
     height: 92%;
@@ -253,8 +265,13 @@
   top: 12%;
   left: 0;
   height: 6px; /* Höhe der Linie (Border-Dicke) */
-  width: 35%; /* Länge der linken Linie */
+  max-width: 35%;
+  width: 30%; /* Länge der linken Linie */
   background-color: black;
+  @media (max-width: bp.$breakpoint-lg) {
+    top: 9%;
+    width: 28%;
+  }
   @media (max-width: bp.$breakpoint-md) {
     top: 8%;
     width: 25%;
@@ -275,8 +292,12 @@
   top: 12%;
   right: 0;
   height: 6px;
-  width: 35%; /* Länge der rechten Linie */
+  width: 30%; /* Länge der rechten Linie */
   background-color: black;
+  @media (max-width: bp.$breakpoint-lg) {
+    top: 9%;
+    width: 28%;
+  }
   @media (max-width: bp.$breakpoint-md) {
     top: 8%;
     width: 25%;
@@ -295,10 +316,8 @@
   animation: none;
   will-change: transform;
   @media (max-width: bp.$breakpoint-md) {
-    
   }
   @media (max-width: bp.$breakpoint-sm) {
-    
   }
   @media (max-width: bp.$breakpoint-xs) {
     height: 40px;
