@@ -5,9 +5,14 @@
 }
 <app-above-the-fold></app-above-the-fold>
 <app-about id="about"></app-about>
-<app-scroll-arrow direction="left"></app-scroll-arrow>
+
+<app-scroll-arrow direction="left" target="skills" [offset]="80"></app-scroll-arrow>
+
 <app-skills id="skills"></app-skills>
-<app-scroll-arrow direction="right"></app-scroll-arrow>
+
+<app-scroll-arrow direction="right" target="projects" [offset]="80"></app-scroll-arrow>
+
 <app-projects id="projects"></app-projects>
 <app-references></app-references>
-<app-scroll-arrow direction="left"></app-scroll-arrow>
+
+<app-scroll-arrow direction="left" target="footer" [offset]="10"></app-scroll-arrow>
