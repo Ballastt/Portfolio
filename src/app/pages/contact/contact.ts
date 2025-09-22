@@ -1,39 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss',
+  styleUrls: ['./contact.scss'],
 })
 export class ContactComponent {
   isPrivacyHovered = false;
-  isPrivacyChecked = false;
+  mailTest = false; // false = Formular soll abgeschickt werden
+
+  http = inject(HttpClient);
 
   applyForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    message: new FormControl('', [
-      Validators.required,
-      Validators.minLength(100),
-    ]),
-    privacy: new FormControl(false, [Validators.requiredTrue]),
+    name: new FormControl<string>('', [Validators.required, Validators.minLength(2)]),
+    email: new FormControl<string>('', [Validators.required, Validators.email]),
+    message: new FormControl<string>('', [Validators.required, Validators.minLength(100)]),
+    privacy: new FormControl<boolean>(false, [Validators.requiredTrue]),
   });
 
+  post = {
+    endPoint: 'https://birgit-leitner.at/sendMail.php',
+    options: {
+      headers: { 'Content-Type': 'application/json' },
+      responseType: 'text' as const,
+    },
+  };
+
   onSubmit() {
-    if (this.applyForm.valid) {
-      console.log(this.applyForm.value);
-      // Here you can handle the form submission, e.g., send data to a server
+    if (this.applyForm.valid && !this.mailTest) {
+      const payload = this.applyForm.value;
+      this.http.post(this.post.endPoint, payload, this.post.options).subscribe({
+        next: () => {
+          this.applyForm.reset();
+          alert('Formular erfolgreich abgeschickt!');
+        },
+        error: (err) => console.error('Fehler beim Absenden:', err),
+      });
     } else {
       this.applyForm.markAllAsTouched();
-      console.log('Form is invalid');
+      console.log('Formular ist ungültig');
     }
   }
 }
