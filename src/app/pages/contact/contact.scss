@@ -199,7 +199,7 @@ form {
   flex-shrink: 0;
 }
 
-/* Kreis hinter der Checkbox */
+
 .circle-bg {
   position: absolute;
   top: 50%;
@@ -218,7 +218,7 @@ form {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Verstecke native Checkbox */
+
 .checkbox-circle-wrapper input[type="checkbox"] {
   opacity: 0;
   width: 100%;
@@ -246,20 +246,19 @@ form {
   background-color: var(--color-highlight);
 }
 
-/* Default state (unchecked + no hover) */
+
 .checkbox-circle-wrapper .checkbox-box {
   background-color: transparent; /* or whatever default */
   background-image: none;
   transition: background-color 0.3s ease;
 }
 
-/* Hovered (checked or unchecked) */
+
 .checkbox-wrapper.hovered .checkbox-circle-wrapper .checkbox-box {
   background-color: var(--color-highlight);
   background-image: none;
 }
 
-/* Checked but NOT hovered */
 .checkbox-wrapper.checked:not(.hovered)
   .checkbox-circle-wrapper
   input[type="checkbox"]:checked
@@ -277,5 +276,5 @@ form {
 }
 
 #contact {
-  scroll-margin-top: 100px; /* Höhe deines Headers oder gewünschter Abstand */
+  scroll-margin-top: 100px; 
 }
