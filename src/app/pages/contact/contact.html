@@ -1,5 +1,4 @@
 <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" id="contact">
-  <!-- NAME -->
   <div class="form-field">
     <div class="input-wrapper">
       <input
@@ -25,7 +24,6 @@
     }
   </div>
 
-  <!-- EMAIL -->
   <div class="form-field">
     <div class="input-wrapper">
       <input
@@ -54,7 +52,6 @@
     }
   </div>
 
-  <!-- MESSAGE -->
   <div class="form-field">
     <div class="input-wrapper">
       <textarea
@@ -82,7 +79,6 @@
     }
   </div>
 
-  <!-- PRIVACY -->
   <div
     class="checkbox-wrapper"
     [class.hovered]="isPrivacyHovered"
@@ -112,7 +108,7 @@
     }
   </div>
 
-  <!-- SUBMIT -->
+
   <div class="btn-container">
     <button class="btn-primary send-btn" [disabled]="applyForm.invalid">
       <span>Abschicken</span>
