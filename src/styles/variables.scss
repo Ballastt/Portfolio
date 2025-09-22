@@ -88,7 +88,7 @@ h1 {
     color: #000;
   }
 
-  p.blink {
+  p.blink, h2.blink {
     animation: blink 3s infinite ease-in-out;
     color: white;
   }
