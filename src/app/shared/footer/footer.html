@@ -42,15 +42,19 @@
           font-size="88"
           text-anchor="middle"
         >
-          <tspan fill="var(--fg)">[</tspan>
-          <tspan fill="var(--color-highlight4)">B</tspan>
-          
-          <tspan fill="var(--fg)">L</tspan>
-          <tspan fill="var(--fg)">]</tspan>
+          <tspan class="bracket" fill="var(--bg)">[</tspan>
+          <tspan fill="var(--bg)" dy="-10" font-size="80">B</tspan>
+          <tspan fill="var(--bg)" dx="-10" dy="20" font-size="80">L</tspan>
+          <tspan fill="var(--fg)" font-size="120" dx="-120" dy="-15">/</tspan>
+          <tspan class="bracket" fill="var(--bg)" dx="30" dy="10">]</tspan>
         </text>
       </svg>
-
       <p>&copy; {{ currentYear }} Birgit Leitner</p>
+    </div>
+    <div class="mobile-email mobile-only" aria-hidden="false">
+      <a href="mailto:deine-mail&#64;example.com"
+        >birgit.leitner&#64;yahoo.de</a
+      >
     </div>
     <div class="legal">
       <a [routerLink]="['/', currentLang, 'datenschutz']"
