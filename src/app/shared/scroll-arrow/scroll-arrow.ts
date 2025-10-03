@@ -56,7 +56,7 @@ export class ScrollArrow implements AfterViewInit {
       if (i >= frames.length) {
         clearInterval(intervalId);
       }
-    }, 420);
+    }, 180);
   }
 
   resetArrow() {
