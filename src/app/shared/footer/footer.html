@@ -10,46 +10,51 @@
 
     <app-contact></app-contact>
   </div>
-  <div class="arrow-wrapper">
-    <a href="#top" class="arrow"> </a>
-  </div>
+
   <app-footer-social-media></app-footer-social-media>
-  <div class="footer-bottom">
-    <div class="copyright">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 320 140"
-        class="logo"
-      >
-        <style>
-          :root {
-            --bg: #fffcf3;
-            --fg: #0a0a0a;
-          }
-          .logo-text {
-            font-family: var(--font-base);
-            font-weight: 900;
-            letter-spacing: 6px;
-            dominant-baseline: middle;
-          }
-        </style>
-        <rect width="100%" height="100%" fill="var(--bg)" />
-        <text
-          x="52%"
-          y="52%"
-          class="logo-text"
-          fill="var(--fg)"
-          font-size="88"
-          text-anchor="middle"
+  <div class="footer-wrapper">
+    <div class="footer-bottom">
+      <div class="copyright">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 140"
+          class="logo"
         >
-          <tspan class="bracket" fill="var(--bg)">[</tspan>
-          <tspan fill="var(--bg)" dy="-10" font-size="80">B</tspan>
-          <tspan fill="var(--bg)" dx="-10" dy="20" font-size="80">L</tspan>
-          <tspan fill="var(--fg)" font-size="120" dx="-120" dy="-15">/</tspan>
-          <tspan class="bracket" fill="var(--bg)" dx="30" dy="10">]</tspan>
-        </text>
-      </svg>
-      <p>&copy; {{ currentYear }} Birgit Leitner</p>
+          <style>
+            :root {
+              --bg: #fffcf3;
+              --fg: #0a0a0a;
+            }
+            .logo-text {
+              font-family: var(--font-base);
+              font-weight: 900;
+              letter-spacing: 6px;
+              dominant-baseline: middle;
+            }
+          </style>
+          <rect width="100%" height="100%" fill="var(--bg)" />
+          <text
+            x="52%"
+            y="52%"
+            class="logo-text"
+            fill="var(--fg)"
+            font-size="88"
+            text-anchor="middle"
+          >
+            <tspan class="bracket" fill="var(--bg)">[</tspan>
+            <tspan fill="var(--bg)" dy="-10" font-size="80">B</tspan>
+            <tspan fill="var(--bg)" dx="-10" dy="20" font-size="80">L</tspan>
+            <tspan fill="var(--fg)" font-size="120" dx="-120" dy="-15">/</tspan>
+            <tspan class="bracket" fill="var(--bg)" dx="30" dy="10">]</tspan>
+          </text>
+        </svg>
+        <p>&copy; {{ currentYear }} Birgit Leitner</p>
+      </div>
+      <div class="arrow-wrapper1">
+        <div class="arrow-wrapper">
+          <a href="#top" class="arrow"> </a>
+        </div>
+      </div>
     </div>
     <div class="mobile-email mobile-only" aria-hidden="false">
       <a href="mailto:deine-mail&#64;example.com"
