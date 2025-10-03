@@ -1,5 +1,7 @@
 <div class="scroll-arrow" #arrowRef>
-  <a (click)="scrollToSection($event); $event.preventDefault()">
+  <a href="#" 
+     class="arrow-link"
+     (click)="scrollToSection($event); $event.preventDefault()">
     <img
       [src]="'assets/icons/arrow-' + direction + '-' + currentFrame + '.png'"
       alt="Scroll-Arrow"
