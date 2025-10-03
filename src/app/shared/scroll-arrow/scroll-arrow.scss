@@ -2,24 +2,40 @@
 
 .scroll-arrow {
   display: flex;
-  height: auto;
+  justify-content: center;
   width: 100%;
+}
 
-  @media (max-width: bp.$breakpoint-sm) {
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-  }
+.arrow-link {
+  display: flex;
+  max-width: 100%;
+  text-decoration: none;
 }
 
 .scroll-arrow img {
-  width: 100%;
-  max-width: 1000px; // maximum size
-  min-width: 148px; // minimum size
-  height: auto;
-  box-sizing: border-box;
+  height: fit-content;      
+  max-width: 100%;        // More reasonable maximum size
+  min-width: 120px;         // Smaller minimum size
   margin: 0 auto;
-  display: block;
+ 
+  box-sizing: border-box;
 
+  @media (max-width: bp.$breakpoint-lg) {
+  }
+  @media (max-width: bp.$breakpoint-md) {
+    padding-right: 3rem;
+    max-width: 700px;
+   
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    max-width: 480px;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    max-width: 300px;
+  }
+}
+
+.arrow-left {
   @media (max-width: bp.$breakpoint-lg) {
   }
   @media (max-width: bp.$breakpoint-md) {
@@ -28,39 +44,20 @@
     max-width: 480px;
   }
   @media (max-width: bp.$breakpoint-xs) {
-    max-width: 450px;
+    padding-right: 8rem
   }
 }
 
-.scroll-arrow img.arrow-right {
-  padding-top: 2rem;
-  padding-left: 7rem;
+.arrow-right {
   @media (max-width: bp.$breakpoint-lg) {
-    padding-top: 2rem;
-    padding-left: 4rem;
   }
   @media (max-width: bp.$breakpoint-md) {
-    padding-top: 1rem;
-    padding-left: 4rem;
   }
   @media (max-width: bp.$breakpoint-sm) {
-    padding-left: 3rem;
+    max-width: 480px;
   }
   @media (max-width: bp.$breakpoint-xs) {
-    padding-left: 3rem;
+    padding-left: 8rem
   }
-}
 
-.scroll-arrow img.arrow-left {
-  padding-right: 6rem;
-  @media (max-width: bp.$breakpoint-lg) {
-    padding-top: 1rem;
-    padding-right: 5rem;
-  }
-  @media (max-width: bp.$breakpoint-md) {
-    padding-right: 4rem;
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    padding-right: 3rem;
-  }
 }

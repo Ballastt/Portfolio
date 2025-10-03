@@ -1,14 +1,13 @@
 @use "breakpoints" as bp;
 
 .social-media {
-  max-width: 1850px;
-  min-width: auto;
+  width: 100%;  
+  max-width: 1440px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
-  height: 140px;
   box-sizing: border-box;
   margin-inline-end: 0.7rem;
   @media (max-width: bp.$breakpoint-md) {
@@ -25,6 +24,13 @@
     justify-content: center;
     height: 110px;
   }
+}
+
+.sm-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .icon-link {

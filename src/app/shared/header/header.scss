@@ -53,24 +53,23 @@
   align-items: center;
   padding: 1rem;
   padding-left: 1rem;
+  height: 50px;
+  width: 100px;
   @media (max-width: bp.$breakpoint-md) {
     padding-left: 1.5rem;
   }
 
   @media (max-width: bp.$breakpoint-xs) {
-    padding-left: 1.3rem;
+    padding: 0;
+    padding-left: 0.5rem;
+    
   }
   > svg {
-    width: 108px;
+    width: 100px;
     height: auto;
 
     @media (max-width: bp.$breakpoint-md) {
       width: 72px;
-      height: auto;
-    }
-
-    @media (max-width: bp.$breakpoint-xs) {
-      width: 42px;
       height: auto;
     }
   }
@@ -106,7 +105,7 @@
   cursor: pointer;
 
   @media (max-width: bp.$breakpoint-xs) {
-    font-size: 14px;
+    display: none;
   }
 }
 
@@ -144,8 +143,9 @@
 
 .burger {
   @media (max-width: bp.$breakpoint-xs) {
-    height: 24px;
+    height: 32px;
     width: auto;
+    padding-right: 0.4rem;
   }
 }
 

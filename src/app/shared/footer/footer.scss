@@ -69,7 +69,7 @@ app-footer {
 
 .copyright {
   position: relative;
-  padding-left: 32px;
+  padding-left: 1rem;
   @media (max-width: bp.$breakpoint-lg) {
     padding-left: 1rem;
   }
@@ -77,10 +77,6 @@ app-footer {
   > .logo {
     height: auto;
     width: 90px;
-    top: -120%;
-    left: 20%;
-    position: absolute;
-    padding-left: 1rem;
     @media (max-width: bp.$breakpoint-lg) {
       padding-left: 0.4rem;
     }
@@ -102,7 +98,6 @@ app-footer {
     }
   }
   > p {
-    position: absolute;
     width: 200px;
     margin: 0;
     @media (max-width: bp.$breakpoint-xs) {
@@ -115,9 +110,18 @@ app-footer {
   fill: black;
 }
 
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     align-items: center;
@@ -160,13 +164,19 @@ app-footer {
   }
 }
 
-.arrow-wrapper {
+.arrow-wrapper1 {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%; 
+  max-width: 1440px;
+  position: relative;
+}
+
+.arrow-wrapper {
   position: absolute;
-  bottom: 17%;
-  right: 2%;
+  bottom: 220%;
+  right: -1%;
   width: 3em;
   height: 6em;
   cursor: pointer;
@@ -223,8 +233,6 @@ app-footer {
   display: flex;
   justify-content: flex-end;
   margin-right: 1.7rem;
-  margin-bottom: 10px;
-  height: 30px;
   position: relative;
   @media (max-width: bp.$breakpoint-md) {
     margin-right: 30px;
