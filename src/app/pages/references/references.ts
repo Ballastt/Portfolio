@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScrollArrow } from '../../shared/scroll-arrow/scroll-arrow';
 
 @Component({
   selector: 'app-references',
-  imports: [CommonModule, ScrollArrow],
+  imports: [CommonModule],
   templateUrl: './references.html',
   styleUrl: './references.scss',
 })
