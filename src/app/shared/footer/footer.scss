@@ -5,7 +5,7 @@
   max-width: 1960px;
   width: 100%;
   min-height: 1100px;
-  background-color: black;
+  background-color: var(--color-primary);
   color: white;
   clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
   display: flex;
@@ -77,6 +77,7 @@ app-footer {
   > .logo {
     height: auto;
     width: 90px;
+    display: block;
     @media (max-width: bp.$breakpoint-lg) {
       padding-left: 0.4rem;
     }
@@ -85,16 +86,6 @@ app-footer {
       position: static;
       width: 100px;
       height: auto;
-    }
-    > img {
-      height: 32px;
-      width: 32px;
-      position: absolute;
-      top: 13%;
-      left: 16%;
-      @media (max-width: bp.$breakpoint-xs) {
-        position: absolute;
-      }
     }
   }
   > p {
@@ -248,7 +239,7 @@ app-footer {
   }
   > a {
     color: white;
-    position: absolute;
+    position: static;
   }
 }
 

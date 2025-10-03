@@ -112,7 +112,7 @@
 .black-line {
   border: none;
   height: 3px;
-  background-color: black;
+  background-color: var(--color-primary);
   width: 50%;
   margin: 0 2rem;
   @media (max-width: bp.$breakpoint-lg) {
@@ -172,7 +172,7 @@
     margin-bottom: 170px;
   }
   > a {
-    color: black;
+    color: var(--color-primary);
     font-size: 20px;
 
     @media (max-width: bp.$breakpoint-md) {

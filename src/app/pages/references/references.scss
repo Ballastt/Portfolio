@@ -59,7 +59,7 @@
 }
 
 .reference-box {
-  border: 3px solid black;
+  border: 3px solid var(--color-primary);
   padding: 16px;
   width: auto;
   height: auto;
@@ -70,7 +70,7 @@
     width: 30px;
     height: auto;
     transition: color 0.3s ease, transform 0.3s ease;
-    color: black;
+    color: var(--color-primary);
   }
 
   &:hover {

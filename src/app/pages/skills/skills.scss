@@ -202,15 +202,14 @@
   }
 }
 
-/* linke Linie */
 .border::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 12%; /* hier Startpunkt der Linie */
-  height: 88%; /* hier Länge der Linie */
+  top: 12%; 
+  height: 88%; 
   width: 6px;
-  background-color: black;
+  background-color: var(--color-primary);
   @media (max-width: bp.$breakpoint-lg) {
     top: 9%;
     height: 91%;
@@ -230,15 +229,14 @@
   }
 }
 
-/* rechte Linie */
 .border::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 12%; /* Startpunkt */
-  height: 88%; /* Länge */
+  top: 12%; 
+  height: 88%; 
   width: 6px;
-  background-color: black;
+  background-color: var(--color-primary);
   @media (max-width: bp.$breakpoint-lg) {
     top: 9%;
     height: 91%;
@@ -258,16 +256,15 @@
   }
 }
 
-/* linke obere Linie */
 .border-top::before {
   content: "";
   position: absolute;
   top: 12%;
   left: 0;
-  height: 6px; /* Höhe der Linie (Border-Dicke) */
+  height: 6px; 
   max-width: 35%;
-  width: 30%; /* Länge der linken Linie */
-  background-color: black;
+  width: 30%; 
+  background-color: var(--color-primary);
   @media (max-width: bp.$breakpoint-lg) {
     top: 9%;
     width: 28%;
@@ -285,15 +282,14 @@
   }
 }
 
-/* rechte obere Linie */
 .border-top::after {
   content: "";
   position: absolute;
   top: 12%;
   right: 0;
   height: 6px;
-  width: 30%; /* Länge der rechten Linie */
-  background-color: black;
+  width: 30%; 
+  background-color: var(--color-primary);
   @media (max-width: bp.$breakpoint-lg) {
     top: 9%;
     width: 28%;
