@@ -38,7 +38,7 @@ export class ScrollArrow implements AfterViewInit {
         }
       },
       {
-        threshold: 1,
+        threshold: 0.3,
       }
     );
 
