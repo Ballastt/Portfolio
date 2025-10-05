@@ -1,16 +1,60 @@
 @use "breakpoints" as bp;
 
+.legal-page {
+  width: 100%;
+  background: var(--color-white);
+  padding-bottom: 1rem;
+  display: flow-root;
+}
+
+.legal-shell {
+  background: var(--color-white);
+}
+
 .legal {
   max-width: 1000px;
-  padding-top: 100px;
   margin: 0 auto;
+  padding-top: 50px;
   text-align: justify;
+  background-color: transparent;
   @media (max-width: bp.$breakpoint-md) {
     padding: 2rem;
   }
+}
+
+.legal-content {
+  margin-bottom: 0;
   > h3 {
     border-bottom: 3px solid var(--color-highlight);
     padding-bottom: 0.4rem;
     display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
   }
+  > h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  > h5 {
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  > p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  > ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    > li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+  }
+  > *:last-child { margin-bottom: 0; }
 }
+
+
