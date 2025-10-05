@@ -4,7 +4,7 @@
   position: relative;
   max-width: 1960px;
   width: 100%;
-  min-height: 1100px;
+  min-height: 1050px;
   background-color: var(--color-primary);
   color: white;
   clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
@@ -36,8 +36,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 3rem;
-  margin-bottom: 40px;
+  max-width: 1440px;
+  padding-left: 8vw;
+  padding-bottom: 2rem;
   @media (max-width: bp.$breakpoint-lg) {
   }
   @media (max-width: bp.$breakpoint-md) {
@@ -46,7 +47,7 @@
   }
 
   > p {
-    font-size: 72px;
+    font-size: 5rem;
     font-family: var(--font-base);
     font-weight: 800;
     margin: 0;
@@ -69,7 +70,8 @@ app-footer {
 
 .copyright {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.7rem;
+  padding-bottom: 1rem;
   @media (max-width: bp.$breakpoint-lg) {
     padding-left: 1rem;
   }
@@ -89,7 +91,8 @@ app-footer {
     }
   }
   > p {
-    width: 200px;
+    width: 400px;
+    font-size: 1.5rem;
     margin: 0;
     @media (max-width: bp.$breakpoint-xs) {
       display: none;
@@ -105,7 +108,17 @@ app-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+}
+
+.wrapper-legal-sm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  gap: 1rem;
+  padding-right: 1.7rem;
 }
 
 .footer-bottom {
@@ -155,23 +168,14 @@ app-footer {
   }
 }
 
-.arrow-wrapper1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; 
-  max-width: 1440px;
-  position: relative;
-}
-
 .arrow-wrapper {
   position: absolute;
-  bottom: 220%;
-  right: -1%;
+  bottom: 140%;
+  right: 0;
+  transform: translateX(-50%);
   width: 3em;
   height: 6em;
   cursor: pointer;
- 
   @media (max-width: bp.$breakpoint-sm) {
     bottom: 15%;
   }
@@ -223,8 +227,10 @@ app-footer {
 .legal {
   display: flex;
   justify-content: flex-end;
-  margin-right: 1.7rem;
+  font-size: 1rem;
   position: relative;
+  height: 40px;
+  width: 100%;
   @media (max-width: bp.$breakpoint-md) {
     margin-right: 30px;
   }
@@ -286,4 +292,23 @@ app-footer {
 
 .bracket {
   width: 100%;
+}
+
+.footer--compact {
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  min-height: auto;
+  padding-top: 3rem;
+  .content,
+  .form,
+  .arrow-wrapper1 {
+    display: none;
+  }
+  .footer-wrapper {
+    margin-top: 0;
+  }
+  background: var(--color-primary);
+  color: var(--color-white);
+  .legal a {
+    color: var(--color-white);
+  }
 }
