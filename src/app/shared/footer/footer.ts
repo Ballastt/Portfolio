@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { ContactComponent } from '../../pages/contact/contact';
 import { FooterSocialMedia } from '../footer-social-media/footer-social-media';
 import { RouterModule, Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { RouterModule, Router } from '@angular/router';
   styleUrl: './footer.scss',
 })
 export class Footer {
+  @Input() compact = false; // true for legal / privacy pages
   currentYear: number = new Date().getFullYear();
   currentLang: string = 'de';
 
