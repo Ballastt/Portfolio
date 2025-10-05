@@ -1,7 +1,9 @@
-<section class="angled-footer">
+<section class="angled-footer" [class.footer--compact]="compact">
+  @if (!compact) {
   <div class="content">
     <p class="blink">Sag Hi!</p>
   </div>
+  } @if (!compact) {
   <div class="form">
     <div class="text-container">
       <h3>Willst du über ein Projekt sprechen?</h3>
@@ -10,8 +12,8 @@
 
     <app-contact></app-contact>
   </div>
+  }
 
-  <app-footer-social-media></app-footer-social-media>
   <div class="footer-wrapper">
     <div class="footer-bottom">
       <div class="copyright">
@@ -50,21 +52,25 @@
         </svg>
         <p>&copy; {{ currentYear }} Birgit Leitner</p>
       </div>
-      <div class="arrow-wrapper1">
-        <div class="arrow-wrapper">
-          <a href="#top" class="arrow" aria-label="Scroll to top"> </a>
-        </div>
-      </div>
     </div>
+
     <div class="mobile-email mobile-only" aria-hidden="false">
       <a href="mailto:deine-mail&#64;example.com"
         >birgit.leitner&#64;yahoo.de</a
       >
     </div>
-    <div class="legal">
-      <a [routerLink]="['/', currentLang, 'datenschutz']"
-        >Datenschutzerklärung</a
-      >
+    <div class="wrapper-legal-sm">
+      <app-footer-social-media></app-footer-social-media>
+      <div class="legal">
+        <a [routerLink]="['/', currentLang, 'datenschutz']"
+          >Datenschutzerklärung</a
+        >
+      </div>
+      @if (!compact) {
+        <div class="arrow-wrapper">
+          <a href="#top" class="arrow" aria-label="Scroll to top"> </a>
+        </div>
+      }
     </div>
   </div>
 </section>
