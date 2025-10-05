@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Footer } from "../shared/footer/footer";
 
 @Component({
   selector: 'app-legal',
-  imports: [],
+  imports: [Footer],
   templateUrl: './legal.html',
   styleUrl: './legal.scss'
 })
