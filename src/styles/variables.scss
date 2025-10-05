@@ -3,6 +3,7 @@
 :root {
   --color-primary: black;
   --color-background: #fffcf3;
+  --color-white: white;
   --color-text: black;
   --color-highlight: #00bc8f;
   --color-highlight2: #4b47ff;
@@ -70,7 +71,7 @@
 
 h1 {
   font-weight: 800;
-  font-size: 60px;
+  font-size: 5rem;
   @media (max-width: bp.$breakpoint-md) {
     font-size: 50px;
   }
