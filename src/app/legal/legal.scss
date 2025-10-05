@@ -3,7 +3,7 @@
 .legal-page {
   width: 100%;
   background: var(--color-white);
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   display: flow-root;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .legal {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding-top: 50px;
   text-align: justify;
@@ -25,7 +25,6 @@
 .legal-content {
   margin-bottom: 0;
   > h3 {
-    border-bottom: 3px solid var(--color-highlight);
     padding-bottom: 0.4rem;
     display: block;
     font-size: 3rem;
@@ -37,6 +36,7 @@
     margin-bottom: 1rem;
   }
   > h5 {
+    color: var(--color-highlight);
     font-weight: 800;
     font-size: 1.6rem;
     margin-top: 1.5rem;
