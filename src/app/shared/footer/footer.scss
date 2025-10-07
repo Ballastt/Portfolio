@@ -7,10 +7,12 @@
   min-height: 1050px;
   background-color: var(--color-primary);
   color: white;
-  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 27%, 100% 100%, 0% 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: -8rem;
+  box-sizing: border-box;
   @media (max-width: bp.$breakpoint-lg) {
     min-height: 1050px;
     clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
@@ -226,7 +228,7 @@ app-footer {
 
 .legal {
   display: flex;
-  gap: 2.4rem;
+  gap: 1rem;
   font-size: 1rem;
   height: 50px;
   width: 100%;
