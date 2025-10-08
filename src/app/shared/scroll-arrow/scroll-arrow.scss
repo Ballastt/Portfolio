@@ -2,11 +2,11 @@
 
 .scroll-arrow {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center; 
-  width: 100%;
+  width: 90%;
   height: 240px;
-  margin: -3rem 0; // Use negative margins to pull elements closer
+  margin: -2rem 0; // Use negative margins to pull elements closer
   overflow: hidden;
   box-sizing: border-box;
   
@@ -57,7 +57,7 @@
 }
 
 .arrow-right {
-  padding-left: 2rem;
+  
   @media (max-width: bp.$breakpoint-xs) {
     padding-left: 2rem;
   }
