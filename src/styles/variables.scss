@@ -69,38 +69,3 @@
   transform: scale(1.05);
 }
 
-h1 {
-  font-weight: 800;
-  font-size: 5rem;
-  @media (max-width: bp.$breakpoint-md) {
-    font-size: 50px;
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    font-size: 40px;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: bp.$breakpoint-xs) {
-  h1.blink {
-    animation: blink 3s infinite ease-in-out;
-    color: #000;
-  }
-
-  p.blink, h2.blink {
-    animation: blink 3s infinite ease-in-out;
-    color: white;
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    color: inherit; 
-  }
-  50%, 80% {
-    color: var(--color-highlight);
-  }
-}
