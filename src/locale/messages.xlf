@@ -2,6 +2,323 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="de" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="legal.privacy.title" datatype="html">
+        <source>Datenschutzerklärung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.intro" datatype="html">
+        <source> In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">10,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.access" datatype="html">
+        <source> Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">17,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.contact.title" datatype="html">
+        <source>Kontakt mit uns</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.contact.text" datatype="html">
+        <source> Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">25,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.cookies.title" datatype="html">
+        <source>Cookies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.cookies.content" datatype="html">
+        <source> Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">34,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.title" datatype="html">
+        <source>Google Fonts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.intro" datatype="html">
+        <source> Unsere Website verwendet Schriftarten von „Google Fonts&quot;. Der Dienstanbieter dieser Funktion ist: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.provider" datatype="html">
+        <source><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/> Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">53,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.phone" datatype="html">
+        <source>Tel: +353 1 543 1000</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.usage" datatype="html">
+        <source> Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. Da Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner setzen oder analysieren. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">58,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.purpose" datatype="html">
+        <source> Die Nutzung von „Google-Fonts&quot; dient der Optimierung unserer Dienstleistung und der einheitlichen Darstellung von Inhalten. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">64,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.moreinfo" datatype="html">
+        <source> Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">70,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.link1" datatype="html">
+        <source><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://developers.google.com/fonts/faq&quot;&gt;"/> https://developers.google.com/fonts/faq <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">75,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.privacy" datatype="html">
+        <source> Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der Datenschutzerklärung entnehmen: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">81,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.link2" datatype="html">
+        <source><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://policies.google.com/privacy?hl=de&quot;&gt;"/> https://policies.google.com/privacy?hl=de <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> . <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">86,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.shield" datatype="html">
+        <source> Google verarbeitet die Daten auch in den USA, hat sich jedoch dem <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> EU-US Privacy-Shield unterworfen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">93,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.fonts.shieldlink" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.privacyshield.gov/EU-US-Framework&quot;&gt;"/> https://www.privacyshield.gov/EU-US-Framework <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">98,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.rights.title" datatype="html">
+        <source>Ihre Rechte als Betroffener</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.rights.intro" datatype="html">
+        <source> Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">104,106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.rights.list" datatype="html">
+        <source><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Auskunft<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Löschung der Daten<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Berichtigung der Daten<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Übertragbarkeit der Daten<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Wiederruf und Widerspruch zur Datenverarbeitung<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/><x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li&gt;"/>Einschränkung<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">108,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.rights.complaint" datatype="html">
+        <source> Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:birgit.leitner&amp;#64;yahoo.de&quot;
+              &gt;"/>birgit.leitner@yahoo.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+            &gt;"/> oder der Datenschutzbehörde zu beschweren. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">116,123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.contact.info.title" datatype="html">
+        <source>Sie erreichen uns unter folgenden Kontaktdaten:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.contact.info.details" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Webseitenbetreiber:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Birgit Leitner<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Telefonnummer:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> 06503664353<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Email:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:birgit.leitner&amp;#64;yahoo.de&quot;
+              &gt;"/>birgit.leitner@yahoo.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+            &gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">126,132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.privacy.source" datatype="html">
+        <source> Quelle: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b
+              &gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a
+                href=&quot;https://www.fairesrecht.at/kostenlos-datenschutzerklaerung-erstellen-generator.php&quot;
+                &gt;"/>Datenschutzgenerator Österreich DSGVO<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+              &gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b
+            &gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">134,142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.imprint.title" datatype="html">
+        <source>Impressum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">147,149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="legal.imprint.content" datatype="html">
+        <source> Hier steht der Inhalt des Impressums... </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">150,151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.title" datatype="html">
+        <source>Über mich</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.description" datatype="html">
+        <source> Hallo! Ich bin Birgit, eine leidenschaftliche Frontend Entwicklerin mit Erfahrung in HTML, CSS, JavaScript und Angular. Ich liebe es, kreative und benutzerfreundliche Webanwendungen zu entwickeln, die sowohl funktional als auch ästhetisch ansprechend sind. Meine Reise in die Welt der Webentwicklung begann vor einigen Jahren, und seitdem habe ich mich kontinuierlich weitergebildet und meine Fähigkeiten verbessert. Wenn du auf der Suche nach einer engagierten Entwicklerin bist, die dein Team bereichern kann, dann freue ich mich darauf, von dir zu hören! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">9,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.homeIcon" datatype="html">
+        <source>Home Icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.location" datatype="html">
+        <source>Wohnhaft in Wien</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.remoteIcon" datatype="html">
+        <source>Laptop Icon to indicate Remotness</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.remoteWork" datatype="html">
+        <source>Offen dafür remote zu arbeiten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.contactButton" datatype="html">
+        <source>Button um zum Kontaktformular zu scrollen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">40,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.contactButtonText" datatype="html">
+        <source>Schreib mir</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.portraitAlt" datatype="html">
+        <source>Foto von mir</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.html</context>
+          <context context-type="linenumber">51,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.imprint" datatype="html">
+        <source>Impressum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.privacy" datatype="html">
+        <source>Datenschutzerklärung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lang.select.german" datatype="html">
+        <source>Deutsch auswählen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lang.select.english" datatype="html">
+        <source>Select English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header.backToHome" datatype="html">
+        <source>Zurück zur Startseite</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.html</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header.closeMenu" datatype="html">
+        <source>Menü schließen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header.openMenu" datatype="html">
+        <source>Menü öffnen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
