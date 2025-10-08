@@ -2,24 +2,25 @@
   <section class="legal-page">
     <div class="legal">
       <div class="legal-content">
-        <h3>Datenschutzerklärung</h3>
+        @if (pageType === 'datenschutz') {
+        <h3 i18n="@@legal.privacy.title">Datenschutzerklärung</h3>
         <br />
-        <p>
+        <p i18n="@@legal.privacy.intro">
           In folgender Datenschutzerklärung informieren wir Sie über die
           wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite.
           Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage
           der gesetzlichen Bestimmungen (Datenschutzgrundverordnung,
           Telekommunikationsgesetz 2003).
         </p>
-        <p>
+        <p i18n="@@legal.privacy.access">
           Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese
           besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der
           Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein
           berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.
         </p>
-        <h5>Kontakt mit uns</h5>
+        <h5 i18n="@@legal.privacy.contact.title">Kontakt mit uns</h5>
         <p></p>
-        <p>
+        <p i18n="@@legal.privacy.contact.text">
           Wenn Sie uns, entweder über unser Kontaktformular auf unserer
           Webseite, oder per Email kontaktieren, dann werden die von Ihnen an
           uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den
@@ -27,8 +28,8 @@
           gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe
           Ihrer übermittelten Daten.
         </p>
-        <h5>Cookies</h5>
-        <p>
+        <h5 i18n="@@legal.privacy.cookies.title">Cookies</h5>
+        <p i18n="@@legal.privacy.cookies.content">
           Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um
           kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät
           abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies
@@ -41,45 +42,45 @@
           Deaktivierung von Cookies kann die Funktionalität unserer Website
           eingeschränkt sein.
         </p>
-        <h5>Google Fonts</h5>
-        <p>
-          Unsere Website verwendet Schriftarten von „Google Fonts“. Der
+        <h5 i18n="@@legal.privacy.fonts.title">Google Fonts</h5>
+        <p i18n="@@legal.privacy.fonts.intro">
+          Unsere Website verwendet Schriftarten von „Google Fonts". Der
           Dienstanbieter dieser Funktion ist:
         </p>
-        <ul>
+        <ul i18n="@@legal.privacy.fonts.provider">
           <li>
             Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland
           </li>
         </ul>
-        <p>Tel: +353 1 543 1000</p>
-        <p>
+        <p i18n="@@legal.privacy.fonts.phone">Tel: +353 1 543 1000</p>
+        <p i18n="@@legal.privacy.fonts.usage">
           Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und
           speichert diese in den Cache. Da Sie, als Besucher der Webseite, Daten
           des Dienstanbieters empfangen kann Google unter Umständen Cookies auf
           Ihrem Rechner setzen oder analysieren.
         </p>
-        <p>
-          Die Nutzung von „Google-Fonts“ dient der Optimierung unserer
+        <p i18n="@@legal.privacy.fonts.purpose">
+          Die Nutzung von „Google-Fonts" dient der Optimierung unserer
           Dienstleistung und der einheitlichen Darstellung von Inhalten. Dies
           stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f
           DSGVO dar.
         </p>
-        <p>
+        <p i18n="@@legal.privacy.fonts.moreinfo">
           Weitere Informationen zu Google Fonts erhalten Sie unter folgendem
           Link:
         </p>
-        <ul>
+        <ul i18n="@@legal.privacy.fonts.link1">
           <li>
             <a href="https://developers.google.com/fonts/faq">
               https://developers.google.com/fonts/faq
             </a>
           </li>
         </ul>
-        <p>
+        <p i18n="@@legal.privacy.fonts.privacy">
           Weitere Informationen über den Umgang mit Nutzerdaten von Google
           können Sie der Datenschutzerklärung entnehmen:
         </p>
-        <ul>
+        <ul i18n="@@legal.privacy.fonts.link2">
           <li>
             <a href="https://policies.google.com/privacy?hl=de">
               https://policies.google.com/privacy?hl=de
@@ -87,22 +88,22 @@
             .
           </li>
         </ul>
-        <p>
+        <p i18n="@@legal.privacy.fonts.shield">
           Google verarbeitet die Daten auch in den USA, hat sich jedoch dem
           <br />
           EU-US Privacy-Shield unterworfen.
         </p>
-        <p>
+        <p i18n="@@legal.privacy.fonts.shieldlink">
           <a href="https://www.privacyshield.gov/EU-US-Framework">
             https://www.privacyshield.gov/EU-US-Framework
           </a>
         </p>
-        <h5>Ihre Rechte als Betroffener</h5>
-        <p>
+        <h5 i18n="@@legal.privacy.rights.title">Ihre Rechte als Betroffener</h5>
+        <p i18n="@@legal.privacy.rights.intro">
           Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns
           gespeichert sind grundsätzlich ein Recht auf:
         </p>
-        <ul>
+        <ul i18n="@@legal.privacy.rights.list">
           <li>Auskunft</li>
           <li>Löschung der Daten</li>
           <li>Berichtigung der Daten</li>
@@ -110,7 +111,7 @@
           <li>Wiederruf und Widerspruch zur Datenverarbeitung</li>
           <li>Einschränkung</li>
         </ul>
-        <p>
+        <p i18n="@@legal.privacy.rights.complaint">
           Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße
           gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit
           sich bei uns
@@ -119,16 +120,18 @@
           >
           oder der Datenschutzbehörde zu beschweren.
         </p>
-        <h5>Sie erreichen uns unter folgenden Kontaktdaten:</h5>
-        <p>
+        <h5 i18n="@@legal.privacy.contact.info.title">
+          Sie erreichen uns unter folgenden Kontaktdaten:
+        </h5>
+        <p i18n="@@legal.privacy.contact.info.details">
           <b>Webseitenbetreiber:</b> Birgit Leitner<br />
-          <b>Telefonnummer:</b> 06503664353<br />
+          <b>Telefonnummer:</b> +43 650 366 4353<br />
           <b>Email:</b>
           <a href="mailto:birgit.leitner&#64;yahoo.de"
             >birgit.leitner&#64;yahoo.de</a
           >
         </p>
-        <p>
+        <p i18n="@@legal.privacy.source">
           Quelle:
           <b
             ><a
@@ -137,6 +140,50 @@
             ></b
           >
         </p>
+        } @if (pageType === 'impressum') {
+        <h3 i18n="@@legal.imprint.title">Impressum</h3>
+        <br />
+
+        <h5 i18n="@@legal.imprint.info.title">
+          Angaben gemäß § 25 Mediengesetz und § 5 E-Commerce-Gesetz (ECG)
+        </h5>
+
+        <div i18n="@@legal.imprint.contact.section">
+          <p><strong>Name:</strong> Birgit Leitner</p>
+          <p>
+            <strong>Adresse:</strong><br />
+            Große Neugasse 26/19<br />
+            1040 Wien<br />
+            Österreich
+          </p>
+          <p>
+            <strong>Kontakt:</strong><br />
+            E-Mail:
+            <a href="mailto:birgit.leitner&#64;yahoo.de"
+              >birgit.leitner&#64;yahoo.de</a
+            >
+          </p>
+        </div>
+
+        <h5 i18n="@@legal.imprint.website.title">Art der Website</h5>
+        <p i18n="@@legal.imprint.website.description">
+          Dies ist eine private, nicht-kommerzielle Website im Rahmen einer
+          Ausbildung (Portfolio-Projekt im Bereich Frontend Development).
+        </p>
+
+        <h5 i18n="@@legal.imprint.disclaimer.title">Haftungsausschluss</h5>
+        <div i18n="@@legal.imprint.disclaimer.content">
+          <p>
+            Diese Website dient ausschließlich der Präsentation von
+            Ausbildungsprojekten.
+          </p>
+          <p>
+            Für die Inhalte externer Links wird keine Haftung übernommen. Für
+            den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber
+            verantwortlich.
+          </p>
+        </div>
+        }
       </div>
     </div>
   </section>
