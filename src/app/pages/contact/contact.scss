@@ -143,15 +143,43 @@ form {
   }
 }
 
-.pp {
-  display: inline-block;
-  transition: transform 0.2s ease;
-  transform-origin: center;
-  color: var(--color-highlight);
+.custom-checkbox {
+  display: flex;
+  align-items: flex-start; // Align to top for multi-line text
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.4;
+  flex-wrap: wrap;
 }
 
+.checkbox-text {
+  flex: 1; 
+  flex-grow: 1; 
+  word-wrap: break-word;
+
+  .pp {
+    display: inline;
+    font-weight: 400;
+    transition: font-weight 0.2s ease;
+    position: relative;
+
+    // Reserve space for bold text
+    &::before {
+      content: "Datenschutzerklärung";
+      font-weight: 700;
+      position: absolute;
+      visibility: hidden;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: -1;
+      width: 200px;
+    }
+  }
+}
+
+.checkbox-wrapper:hover .pp,
 .pp:hover {
-  width: 200px;
   font-weight: 700;
 }
 
@@ -172,7 +200,6 @@ form {
   color: #bbbbbb;
   border: 4px solid #bbbbbb;
   white-space: nowrap;
-  transition: transform 0.2s ease;
   display: inline-block;
   transform-origin: center;
   @media (max-width: bp.$breakpoint-xs) {
@@ -182,23 +209,12 @@ form {
   }
 }
 
-.custom-checkbox {
-  flex-wrap: wrap;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  position: relative;
-  line-height: 1.4;
-}
-
 .checkbox-circle-wrapper {
   position: relative;
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
-
 
 .circle-bg {
   position: absolute;
@@ -217,7 +233,6 @@ form {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
 }
-
 
 .checkbox-circle-wrapper input[type="checkbox"] {
   opacity: 0;
@@ -246,13 +261,11 @@ form {
   background-color: var(--color-highlight);
 }
 
-
 .checkbox-circle-wrapper .checkbox-box {
   background-color: transparent; /* or whatever default */
   background-image: none;
   transition: background-color 0.3s ease;
 }
-
 
 .checkbox-wrapper.hovered .checkbox-circle-wrapper .checkbox-box {
   background-color: var(--color-highlight);
@@ -270,11 +283,6 @@ form {
   background-size: 120%;
 }
 
-.checkbox-wrapper:hover .pp {
-  width: 200px;
-  font-weight: 700;
-}
-
 #contact {
-  scroll-margin-top: 100px; 
+  scroll-margin-top: 100px;
 }
