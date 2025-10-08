@@ -1,11 +1,11 @@
 <div class="content" id="about">
   <div class="h1">
-    <h1 class="blink">Über mich</h1>
+    <h1 class="blink" i18n="@@about.title">Über mich</h1>
   </div>
 
   <div class="about-me">
     <div class="left-wrapper">
-      <p>
+      <p i18n="@@about.description">
         Hallo! Ich bin Birgit, eine leidenschaftliche Frontend Entwicklerin mit
         Erfahrung in HTML, CSS, JavaScript und Angular. Ich liebe es, kreative
         und benutzerfreundliche Webanwendungen zu entwickeln, die sowohl
@@ -16,29 +16,40 @@
         bereichern kann, dann freue ich mich darauf, von dir zu hören!
       </p>
       <div class="home">
-        <img src="assets/icons/home.png" alt="Home Icon" />
-        <p>Wohnhaft in Wien</p>
+        <img
+          src="assets/icons/home.png"
+          i18n-alt="@@about.homeIcon"
+          alt="Home Icon"
+        />
+        <p i18n="@@about.location">Wohnhaft in Wien</p>
       </div>
       <div class="remote">
         <img
           src="assets/icons/laptop.png"
+          i18n-alt="@@about.remoteIcon"
           alt="Laptop Icon to indicate Remotness"
         />
-        <p>Offen dafür remote zu arbeiten</p>
+        <p i18n="@@about.remoteWork">Offen dafür remote zu arbeiten</p>
       </div>
       <div class="btn-wrapper">
         <button
           class="btn-primary"
           [ngClass]="{ clicked: isClicked }"
           (click)="scrollToContact()"
+          i18n-aria-label="@@about.contactButton"
+          aria-label="Button um zum Kontaktformular zu scrollen"
         >
-          <span>Schreib mir</span>
+          <span i18n="@@about.contactButtonText">Schreib mir</span>
         </button>
       </div>
     </div>
     <div class="right-wrapper">
       <div class="portrait">
-        <img src="assets/imgs/1.jpg" alt="Foto von mir"/>
+        <img
+          src="assets/imgs/1.jpg"
+          i18n-alt="@@about.portraitAlt"
+          alt="Foto von mir"
+        />
       </div>
     </div>
   </div>
