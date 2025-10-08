@@ -1,27 +1,70 @@
-import { Component, Output, Input, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.html',
-  styleUrl: './header.scss',
+  styleUrls: ['./header.scss']
 })
-export class Header {
+export class Header implements OnInit {
   @Input() isOverlay = false;
   @Input() showBackButton = false;
   @Output() toggleBurger = new EventEmitter<void>();
 
   activeLang: string = 'de';
 
-  constructor(private router: Router) {}
-  goHome() {
-    this.router.navigate(['/de/home']);
+  constructor(@Inject(LOCALE_ID) private locale: string) {}
+
+  ngOnInit(): void {
+    // Set active language based on current locale
+    this.activeLang = this.locale === 'en' ? 'en' : 'de';
+    console.log('Current locale:', this.locale);
+    console.log('Active lang set to:', this.activeLang);
   }
 
-  setLang(lang: string) {
-    this.activeLang = lang;
+  setLang(lang: string): void {
+    console.log('setLang called with:', lang);
+    console.log('Current activeLang:', this.activeLang);
+    
+    if (lang === this.activeLang) {
+      console.log('Same language, not switching');
+      return;
+    }
+    
+    this.switchLanguage(lang);
+  }
+
+  private switchLanguage(lang: string): void {
+    const currentPath = window.location.pathname;
+    console.log('Current path:', currentPath);
+    
+    if (lang === 'de') {
+      // Switch to German (served from root)
+      if (currentPath.startsWith('/en')) {
+        const pathWithoutEn = currentPath.replace('/en', '');
+        const newPath = pathWithoutEn || '/';
+        console.log('Switching to German:', newPath);
+        window.location.href = newPath;
+      } else {
+        console.log('Already on German version');
+        window.location.href = '/';
+      }
+    } else {
+      // Switch to English (served from /en)
+      if (!currentPath.startsWith('/en')) {
+        const newPath = `/en${currentPath === '/' ? '' : currentPath}`;
+        console.log('Switching to English:', newPath);
+        window.location.href = newPath;
+      } else {
+        console.log('Already on English version');
+      }
+    }
+  }
+
+  goHome(): void {
+    const homeUrl = this.activeLang === 'en' ? '/en' : '/';
+    window.location.href = homeUrl;
   }
 }
