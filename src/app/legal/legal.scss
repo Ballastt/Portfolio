@@ -1,60 +1,62 @@
-@use "breakpoints" as bp;
-
-.legal-page {
-  width: 100%;
-  background: var(--color-white);
-  padding-bottom: 3rem;
-  display: flow-root;
-}
-
+/* legal.scss - Add these styles */
 .legal-shell {
-  background: var(--color-white);
-}
-
-.legal {
-  max-width: 900px;
-  margin: 0 auto;
-  padding-top: 50px;
-  text-align: justify;
-  background-color: transparent;
-  @media (max-width: bp.$breakpoint-md) {
-    padding: 2rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 100vh;
+  
+  .legal-page {
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure content stays above footer */
   }
-}
-
-.legal-content {
-  margin-bottom: 0;
-  > h3 {
-    padding-bottom: 0.4rem;
-    display: block;
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  > h4 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  > h5 {
-    color: var(--color-highlight);
-    font-weight: 800;
-    font-size: 1.6rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  > p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-  > ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    > li {
-      margin-bottom: 0.5rem;
-      line-height: 1.6;
+  
+  .legal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    .legal-content {
+      max-width: 900px;
+      width: 70%;
+      padding: 2rem;
+      padding-bottom: 15rem; /* Lots of space for angled footer */
+      background: var(--color-background, white); /* Ensure background color */
+      position: relative;
+      z-index: 2; /* Above footer */
+      > p {
+        text-align:justify;
+      }
+      > h3 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+      }
+      > h5 {
+        color: var(--color-highlight);
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 2rem 0 1rem 0;
+      }
     }
   }
-  > *:last-child { margin-bottom: 0; }
+  
+  /* Footer adjustments for legal pages */
+  app-footer {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-top: 0 !important; /* Remove negative margin */
+    position: relative;
+    z-index: 1; /* Below content */
+    
+    /* Ensure footer reaches edges */
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
-
-
