@@ -173,7 +173,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="legal.privacy.contact.info.details" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Webseitenbetreiber:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Birgit Leitner<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Telefonnummer:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> 06503664353<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Email:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:birgit.leitner&amp;#64;yahoo.de&quot;
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Webseitenbetreiber:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Birgit Leitner<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Telefonnummer:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> +43 650 366 4353<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Email:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:birgit.leitner&amp;#64;yahoo.de&quot;
               &gt;"/>birgit.leitner@yahoo.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
             &gt;"/></source>
         <context-group purpose="location">

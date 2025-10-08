@@ -431,7 +431,7 @@
             id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;" /> Birgit Leitner<x
             id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;" /><x id="START_BOLD_TEXT"
             ctype="x-b" equiv-text="&lt;b&gt;" />Telefonnummer:<x id="CLOSE_BOLD_TEXT" ctype="x-b"
-            equiv-text="&lt;/b&gt;" /> 06503664353<x id="LINE_BREAK" ctype="lb"
+            equiv-text="&lt;/b&gt;" /> +43 650 366 4353<x id="LINE_BREAK" ctype="lb"
             equiv-text="&lt;br /&gt;" /><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;" />
           Email:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;" /><x id="START_LINK"
             ctype="x-a"
@@ -443,7 +443,7 @@
             id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;" /> Birgit Leitner<x
             id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;" /><x id="START_BOLD_TEXT"
             ctype="x-b" equiv-text="&lt;b&gt;" />Phone number:<x id="CLOSE_BOLD_TEXT" ctype="x-b"
-            equiv-text="&lt;/b&gt;" /> 06503664353<x id="LINE_BREAK" ctype="lb"
+            equiv-text="&lt;/b&gt;" /> +43 650 366 4353<x id="LINE_BREAK" ctype="lb"
             equiv-text="&lt;br /&gt;" /><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;" />
           Email:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;" /><x id="START_LINK"
             ctype="x-a"
