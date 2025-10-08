@@ -12,15 +12,16 @@
 
       <span class="validation-icon">
         @if (applyForm.get('name')?.valid && applyForm.get('name')?.touched) {
-          <img src="assets/icons/validation_green.png" alt="Valid Icon" />
-        }
-        @if (applyForm.get('name')?.invalid && applyForm.get('name')?.touched) {
-          <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
+        <img src="assets/icons/validation_green.png" alt="Valid Icon" />
+        } @if (applyForm.get('name')?.invalid && applyForm.get('name')?.touched)
+        {
+        <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         }
       </span>
     </div>
-    @if (applyForm.get('name')?.hasError('required') && applyForm.get('name')?.touched) {
-      <span class="error"> Der Name ist erforderlich. </span>
+    @if (applyForm.get('name')?.hasError('required') &&
+    applyForm.get('name')?.touched) {
+    <span class="error"> Der Name ist erforderlich. </span>
     }
   </div>
 
@@ -37,18 +38,19 @@
 
       <span class="validation-icon">
         @if (applyForm.get('email')?.valid && applyForm.get('email')?.touched) {
-          <img src="assets/icons/validation_green.png" alt="Valid Icon" />
-        }
-        @if (applyForm.get('email')?.invalid && applyForm.get('email')?.touched) {
-          <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
+        <img src="assets/icons/validation_green.png" alt="Valid Icon" />
+        } @if (applyForm.get('email')?.invalid &&
+        applyForm.get('email')?.touched) {
+        <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         }
       </span>
     </div>
-    @if (applyForm.get('email')?.hasError('required') && applyForm.get('email')?.touched) {
-      <span class="error"> Die Email ist erforderlich. </span>
-    }
-    @if (applyForm.get('email')?.hasError('email') && applyForm.get('email')?.touched) {
-      <span class="error"> Bitte eine gültige Email eingeben. </span>
+    @if (applyForm.get('email')?.hasError('required') &&
+    applyForm.get('email')?.touched) {
+    <span class="error"> Die Email ist erforderlich. </span>
+    } @if (applyForm.get('email')?.hasError('email') &&
+    applyForm.get('email')?.touched) {
+    <span class="error"> Bitte eine gültige Email eingeben. </span>
     }
   </div>
 
@@ -62,20 +64,24 @@
       <label for="message">Deine Nachricht</label>
 
       <span class="validation-icon-textarea">
-        @if (applyForm.get('message')?.valid && applyForm.get('message')?.touched) {
-          <img src="assets/icons/validation_green.png" alt="Valid Icon" />
-        }
-        @if (applyForm.get('message')?.invalid && applyForm.get('message')?.touched) {
-          <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
+        @if (applyForm.get('message')?.valid &&
+        applyForm.get('message')?.touched) {
+        <img src="assets/icons/validation_green.png" alt="Valid Icon" />
+        } @if (applyForm.get('message')?.invalid &&
+        applyForm.get('message')?.touched) {
+        <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         }
       </span>
     </div>
 
-    @if (applyForm.get('message')?.hasError('required') && applyForm.get('message')?.touched) {
-      <span class="error"> Die Nachricht ist erforderlich. </span>
-    }
-    @if (applyForm.get('message')?.hasError('minlength') && applyForm.get('message')?.touched) {
-      <span class="error"> Die Nachricht muss mindestens 100 Zeichen lang sein. </span>
+    @if (applyForm.get('message')?.hasError('required') &&
+    applyForm.get('message')?.touched) {
+    <span class="error"> Die Nachricht ist erforderlich. </span>
+    } @if (applyForm.get('message')?.hasError('minlength') &&
+    applyForm.get('message')?.touched) {
+    <span class="error">
+      Die Nachricht muss mindestens 100 Zeichen lang sein.
+    </span>
     }
   </div>
 
@@ -90,24 +96,25 @@
       <div class="checkbox-circle-wrapper">
         <span class="circle-bg" [class.visible]="isPrivacyHovered"></span>
 
-        <input
-          type="checkbox"
-          id="privacy"
-          formControlName="privacy"
-        />
-        <span class="checkbox-box"
+        <input type="checkbox" id="privacy" formControlName="privacy" />
+        <span
+          class="checkbox-box"
           [class.visible]="isPrivacyHovered && !applyForm.get('privacy')?.value"
         ></span>
       </div>
-      Ich habe die
-      <a href="/privacy-policy" target="_blank" class="pp">Datenschutzerklärung</a>
-      gelesen und stimme dem Verarbeiten meiner Daten zu.
+      <div class="checkbox-text">
+        Ich habe die
+        <a href="/privacy-policy" target="_blank" class="pp"
+          >Datenschutzerklärung</a
+        >
+        gelesen und stimme dem Verarbeiten meiner Daten zu.
+      </div>
     </label>
-    @if (applyForm.get('privacy')?.hasError('required') && applyForm.get('privacy')?.touched) {
-      <span class="error"> Bitte Datenschutzerklärung akzeptieren. </span>
+    @if (applyForm.get('privacy')?.hasError('required') &&
+    applyForm.get('privacy')?.touched) {
+    <span class="error"> Bitte Datenschutzerklärung akzeptieren. </span>
     }
   </div>
-
 
   <div class="btn-container">
     <button class="btn-primary send-btn" [disabled]="applyForm.invalid">
