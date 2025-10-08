@@ -3,14 +3,9 @@ import { Legal } from './legal/legal';
 import { Home } from './home/home';
 
 export const routes: Routes = [
-  {
-    path: ':lang',
-    children: [
-      { path: 'home', component: Home }, // Hauptseite mit Inhalt
-      { path: 'datenschutz', component: Legal }, // Datenschutzseite
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-    ],
-  },
-  { path: '', redirectTo: 'de/home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'de/home' },
+  { path: '', component: Home },
+  { path: 'home', component: Home },
+  { path: 'datenschutz', component: Legal },
+  { path: 'impressum', component: Legal }, // For English version
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
