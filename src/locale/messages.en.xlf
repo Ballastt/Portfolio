@@ -483,6 +483,25 @@
           <context context-type="linenumber">134,142</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="legal.imprint.info.title">
+        <source>Angaben gemäß § 25 Mediengesetz und § 5 E-Commerce-Gesetz (ECG)</source>
+        <target>Information according to § 25 Media Act and § 5 E-Commerce Act (ECG)</target>
+      </trans-unit>
+
+      <trans-unit id="legal.imprint.contact.section">
+        <source>...</source>
+        <target><p><strong>Name:</strong> Birgit Leitner</p>...</target>
+      </trans-unit>
+
+      <trans-unit id="legal.imprint.website.title">
+        <source>Art der Website</source>
+        <target>Type of Website</target>
+      </trans-unit>
+
+      <trans-unit id="legal.imprint.disclaimer.title">
+        <source>Haftungsausschluss</source>
+        <target>Disclaimer</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
