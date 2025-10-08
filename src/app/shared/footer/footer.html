@@ -62,10 +62,8 @@
     <div class="wrapper-legal-sm">
       <app-footer-social-media></app-footer-social-media>
       <div class="legal">
-        <a [routerLink]="['/', currentLang, 'impressum']">Impressum</a> |
-        <a [routerLink]="['/', currentLang, 'datenschutz']"
-          >Datenschutzerklärung</a
-        >
+        <a [routerLink]="['/impressum']" i18n="@@footer.imprint">Impressum</a> |
+        <a [routerLink]="['/datenschutz']" i18n="@@footer.privacy">Datenschutzerklärung</a>
       </div>
       @if (!compact) {
         <div class="arrow-wrapper">
