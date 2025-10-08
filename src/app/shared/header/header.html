@@ -42,6 +42,8 @@
           class="lang"
           [class.active]="activeLang === 'de'"
           (click)="setLang('de')"
+          i18n-aria-label="@@lang.select.german"
+          aria-label="Deutsch auswählen"
           >DE</span
         >
         <span class="divider">|</span>
@@ -49,6 +51,8 @@
           class="lang"
           [class.active]="activeLang === 'en'"
           (click)="setLang('en')"
+          i18n-aria-label="@@lang.select.english"
+          aria-label="Select English"
           >EN</span
         >
       </div>
@@ -57,6 +61,7 @@
       <img
         class="back"
         src="assets/icons/back-arrow.png"
+        i18n-alt="@@header.backToHome"
         alt="Zurück zur Startseite"
         (click)="goHome()"
       />
@@ -64,6 +69,7 @@
       <img
         class="close"
         src="assets/icons/burger/5.png"
+        i18n-alt="@@header.closeMenu"
         alt="Menü schließen"
         (click)="toggleBurger.emit()"
       />
@@ -71,6 +77,7 @@
       <img
         class="burger"
         src="assets/icons/burger/1.png"
+        i18n-alt="@@header.openMenu"
         alt="Menü öffnen"
         (click)="toggleBurger.emit()"
       />
