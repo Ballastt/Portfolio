@@ -1,6 +1,7 @@
 <div class="app-container">
   <app-header
     [isOverlay]="burgerMenuOpen"
+    [isLegalPage]="isLegalPage"
     (toggleBurger)="toggleMenu()"
   ></app-header>
   @if (burgerMenuOpen) {
