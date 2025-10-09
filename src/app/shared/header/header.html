@@ -37,7 +37,7 @@
     </div>
 
     <div class="right-header">
-      <div class="lang-toggle">
+      <div class="lang-toggle" [style.display]="isLegalPage ? 'none' : 'flex'">
         <span
           class="lang"
           [class.active]="activeLang === 'de'"
