@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Footer } from '../shared/footer/footer';
+import { FooterLegalMobile } from '../shared/footer/footer-legal-mobile/footer-legal-mobile';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-legal',
   standalone: true,
-  imports: [Footer],
+  imports: [Footer, FooterLegalMobile],
   templateUrl: './legal.html',
   styleUrl: './legal.scss',
 })
