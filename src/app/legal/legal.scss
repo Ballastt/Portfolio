@@ -11,6 +11,17 @@
   min-height: 100vh;
   background-color: var(--color-white);
   
+  @media (max-width: bp.$breakpoint-xs) {
+    // Simplified mobile layout - no viewport tricks
+    position: static;
+    width: 100%;
+    margin: 0;
+    left: auto;
+    right: auto;
+    min-height: 100vh;
+    overflow-x: hidden; // Prevent horizontal overflow
+  }
+  
   .legal-page {
     width: 100%;
   }
@@ -19,6 +30,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      width: 100%;
+      padding: 0.5rem; // Reduced padding to prevent overflow
+      box-sizing: border-box; // Ensure padding is included in width calculation
+      justify-content: center;
+    }
     
     .legal-content {
       max-width: 900px;
@@ -30,7 +48,7 @@
       }
       > h3 {
         font-size: 3rem;
-        font-weight: 700;
+        font-weight: 800;
         margin: 0;
       }
       > h5 {
@@ -38,6 +56,43 @@
         font-size: 1.5rem;
         font-weight: 800;
         margin: 2rem 0 1rem 0;
+      }
+
+      // General mobile styles for all content types
+      @media (max-width: bp.$breakpoint-xs) {
+        width: 90%;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        
+        > h3 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        
+        > h5 {
+          font-size: 1.1rem;
+          margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        > p {
+          font-size: 0.9rem;
+          line-height: 1.6;
+          margin-bottom: 1rem;
+        }
+        
+        > ul {
+          padding-left: 1.2rem;
+          
+          li {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+          }
+        }
+        
+        a {
+          word-break: break-word;
+        }
       }
 
       // Specific styles for Datenschutz page
@@ -77,6 +132,29 @@
             font-size: 1.1rem;
           }
         }
+        
+        // Optimized breakpoint-xs styles for datenschutz
+        @media (max-width: bp.$breakpoint-xs) {
+          width: 95%;
+          padding: 0.75rem;
+          padding-bottom: 2rem; // Extra space for mobile footer
+          
+          > h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            word-break: break-all;
+          }
+          
+          > h5 {
+            font-size: 1rem;
+            margin: 1.2rem 0 0.6rem 0;
+          }
+          
+          > p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+          }
+        }
       }
 
       // Specific styles for Impressum page
@@ -109,19 +187,50 @@
           }
         }
 
+        // Enhanced breakpoint-xs styles for impressum
         @media (max-width: bp.$breakpoint-xs) {
-          width: 85%;
-          padding: 1rem;
+          width: 95%;
+          padding: 2rem 0 2rem 0; // Extra top/bottom padding for readability
           
           > h3 {
-            font-size: 1.75rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
           }
           
           > h5 {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            margin: 1.2rem 0 0.6rem 0;
+          }
+          
+          > p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+          }
+          
+          // Impressum-specific: Make contact info even more compact on mobile
+          div p {
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
           }
         }
       }
+    }
+  }
+
+  // Footer visibility controls
+  .footer-desktop {
+    display: block;
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      display: none; // Hide regular footer on mobile
+    }
+  }
+
+  .footer-mobile {
+    display: none; // Hide mobile footer by default
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      display: block; // Show mobile footer only on xs
     }
   }
 }
