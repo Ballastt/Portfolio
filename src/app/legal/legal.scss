@@ -1,4 +1,6 @@
-/* legal.scss - Add these styles */
+@use "breakpoints" as bp;
+
+/* legal.scss - Responsive styles for both page types */
 .legal-shell {
   width: 100vw;
   position: relative;
@@ -7,29 +9,24 @@
   margin-left: -50vw;
   margin-right: -50vw;
   min-height: 100vh;
+  background-color: var(--color-white);
   
   .legal-page {
     width: 100%;
-    position: relative;
-    z-index: 1; /* Ensure content stays above footer */
   }
   
   .legal {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
     
     .legal-content {
       max-width: 900px;
       width: 70%;
-      padding: 2rem;
-      padding-bottom: 15rem; /* Lots of space for angled footer */
-      background: var(--color-background, white); /* Ensure background color */
-      position: relative;
-      z-index: 2; /* Above footer */
+      padding: 5rem 2rem 6rem 2rem;
+   
       > p {
-        text-align:justify;
+        text-align: justify;
       }
       > h3 {
         font-size: 3rem;
@@ -42,21 +39,89 @@
         font-weight: 800;
         margin: 2rem 0 1rem 0;
       }
+
+      // Specific styles for Datenschutz page
+      &.content-datenschutz {
+        // Add specific styles for privacy policy if needed
+        
+        // Mobile styles for Datenschutz
+        @media (max-width: 768px) {
+          width: 90%;
+          padding: 1rem;
+          padding-bottom: 10rem;
+          
+          > h3 {
+            font-size: 2rem;
+          }
+          
+          > h5 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem 0;
+          }
+          
+          > p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          width: 95%;
+          padding: 0.75rem;
+          
+          > h3 {
+            font-size: 1.75rem;
+          }
+          
+          > h5 {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      // Specific styles for Impressum page
+      &.content-impressum {
+        // Add specific styles for impressum if needed
+        
+        // Mobile styles for Impressum
+        @media (max-width: 768px) {
+          width: 90%;
+          padding: 1rem;
+          padding-bottom: 10rem;
+          
+          > h3 {
+            font-size: 2rem;
+          }
+          
+          > h5 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem 0;
+          }
+          
+          > p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+          }
+          
+          // Impressum-specific: Make contact info more compact
+          div p {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        @media (max-width: bp.$breakpoint-xs) {
+          width: 85%;
+          padding: 1rem;
+          
+          > h3 {
+            font-size: 1.75rem;
+          }
+          
+          > h5 {
+            font-size: 1.1rem;
+          }
+        }
+      }
     }
-  }
-  
-  /* Footer adjustments for legal pages */
-  app-footer {
-    width: 100vw !important;
-    max-width: none !important;
-    margin-top: 0 !important; /* Remove negative margin */
-    position: relative;
-    z-index: 1; /* Below content */
-    
-    /* Ensure footer reaches edges */
-    left: 0;
-    right: 0;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
