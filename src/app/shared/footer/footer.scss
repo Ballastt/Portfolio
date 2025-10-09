@@ -10,9 +10,37 @@
   clip-path: polygon(0 0, 100% 27%, 100% 100%, 0% 100%);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-top: -8rem;
-  box-sizing: border-box;
+  justify-content: center;
+
+  .footer-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    justify-content: center;
+    gap: 4rem;
+
+    @media (max-width: bp.$breakpoint-md) {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    @media (max-width: bp.$breakpoint-xs) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.content {
   @media (max-width: bp.$breakpoint-lg) {
     min-height: 1050px;
     clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
@@ -110,8 +138,6 @@ app-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1920px;
-  width: 100%;
 }
 
 .wrapper-legal-sm {
@@ -256,7 +282,7 @@ app-footer {
   font-weight: 400;
   color: white;
   display: inline-block;
-  
+
   @media (max-width: bp.$breakpoint-xs) {
     font-size: 1rem;
   }
@@ -305,11 +331,51 @@ app-footer {
   .arrow-wrapper1 {
     display: none;
   }
+
   .footer-wrapper {
-    margin-top: 0;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    justify-content: center;
+    gap: 4rem;
+
+    @media (max-width: bp.$breakpoint-md) {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    @media (max-width: bp.$breakpoint-xs) {
+      gap: 1rem;
+      padding: 0 1rem;
+    }
   }
+
+  .footer-bottom {
+    margin-right: 2rem;
+
+    @media (max-width: bp.$breakpoint-sm) {
+      margin-right: 0;
+    }
+  }
+
+  .wrapper-legal-sm {
+    margin-left: 2rem;
+
+    @media (max-width: bp.$breakpoint-sm) {
+      margin-left: 0;
+    }
+  }
+
   background: var(--color-primary);
   color: var(--color-white);
+
   .legal a {
     color: var(--color-white);
   }
