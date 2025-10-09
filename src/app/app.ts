@@ -15,6 +15,7 @@ import { Footer } from './shared/footer/footer';
 export class App {
   burgerMenuOpen = false;
   showFooter = true;
+  isLegalPage = false;
 
   constructor(private router: Router) {
     this.router.events
@@ -22,11 +23,12 @@ export class App {
       .subscribe((event: any) => {
         const url = event.urlAfterRedirects;
 
-        // Footer nur anzeigen, wenn NICHT auf diesen Routen
-        const hiddenFooterRoutes = ['/datenschutz', '/privacy', '/impressum'];
-        this.showFooter = !hiddenFooterRoutes.some((route) =>
-          url.includes(route)
-        );
+        // Check if we're on legal pages
+        const legalRoutes = ['/datenschutz', '/privacy', '/impressum'];
+        this.isLegalPage = legalRoutes.some((route) => url.includes(route));
+
+        // Footer nur anzeigen, wenn NICHT auf diesen Routen  
+        this.showFooter = !this.isLegalPage;
 
         // Scroll für ALLE legal pages nach oben
         if (
