@@ -1,0 +1,80 @@
+@use "breakpoints" as bp;
+
+.legal-mobile-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+
+  // Add clip-path for angled top
+  clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+  min-height: auto;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      height: auto;
+      width: 80px;
+    }
+  }
+
+  .email {
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+      font-size: 1rem;
+
+      &:hover {
+        color: var(--color-highlight);
+      }
+    }
+  }
+
+  .legal-links {
+    .legal {
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      justify-content: center;
+
+      a {
+        position: relative;
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        display: inline-block;
+
+        // Hover underline effect
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: calc(2.4rem);
+          width: 0;
+          height: 2px;
+          background-color: var(--color-highlight);
+          transition: width 0.2s ease-out;
+        }
+
+        &:hover {
+          transform: translateX(12px);
+          font-weight: 600;
+
+          &::after {
+            width: calc(100% - 2.4rem);
+          }
+        }
+      }
+    }
+  }
+}
+
