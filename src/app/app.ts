@@ -14,7 +14,6 @@ import { Footer } from './shared/footer/footer';
 })
 export class App {
   burgerMenuOpen = false;
-  showBackButton = false;
   showFooter = true;
 
   constructor(private router: Router) {
@@ -22,12 +21,6 @@ export class App {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         const url = event.urlAfterRedirects;
-
-        // Show back button for ALL legal pages
-        this.showBackButton =
-          url.includes('/datenschutz') ||
-          url.includes('/privacy') ||
-          url.includes('/impressum');
 
         // Footer nur anzeigen, wenn NICHT auf diesen Routen
         const hiddenFooterRoutes = ['/datenschutz', '/privacy', '/impressum'];
