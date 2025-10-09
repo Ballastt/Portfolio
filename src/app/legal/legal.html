@@ -1,7 +1,7 @@
 <div class="legal-shell">
   <section class="legal-page">
     <div class="legal">
-      <div class="legal-content">
+      <div class="legal-content" [class]="'content-' + pageType">
         @if (pageType === 'datenschutz') {
         <h3 i18n="@@legal.privacy.title">Datenschutzerklärung</h3>
         <br />
@@ -127,7 +127,7 @@
           <b>Webseitenbetreiber:</b> Birgit Leitner<br />
           <b>Telefonnummer:</b> +43 650 366 4353<br />
           <b>Email:</b>
-          <a href="mailto:birgit.leitner&#64;yahoo.de"
+          <a href="mailto:birgit.leitner@yahoo.de?subject=Impressum Contact"
             >birgit.leitner&#64;yahoo.de</a
           >
         </p>
@@ -159,7 +159,7 @@
           <p>
             <strong>Kontakt:</strong><br />
             E-Mail:
-            <a href="mailto:birgit.leitner&#64;yahoo.de"
+            <a href="mailto:birgit.leitner@yahoo.de?subject=Impressum Contact"
               >birgit.leitner&#64;yahoo.de</a
             >
           </p>
