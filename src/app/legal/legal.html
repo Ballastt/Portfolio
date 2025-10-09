@@ -187,5 +187,10 @@
       </div>
     </div>
   </section>
-  <app-footer [compact]="true"></app-footer>
+  
+  <!-- Regular footer for desktop/tablet -->
+  <app-footer [compact]="true" class="footer-desktop"></app-footer>
+  
+  <!-- Mobile-optimized footer for xs breakpoint -->
+  <app-footer-legal-mobile class="footer-mobile"></app-footer-legal-mobile>
 </div>
