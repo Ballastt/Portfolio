@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class Header implements OnInit {
   @Input() isOverlay = false;
-  @Input() showBackButton = false;
   @Output() toggleBurger = new EventEmitter<void>();
 
   activeLang: string = 'de';
@@ -61,10 +60,5 @@ export class Header implements OnInit {
         console.log('Already on English version');
       }
     }
-  }
-
-  goHome(): void {
-    const homeUrl = this.activeLang === 'en' ? '/en' : '/';
-    window.location.href = homeUrl;
   }
 }

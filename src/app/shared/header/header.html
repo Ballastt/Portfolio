@@ -57,15 +57,7 @@
         >
       </div>
 
-      @if (showBackButton) {
-      <img
-        class="back"
-        src="assets/icons/back-arrow.png"
-        i18n-alt="@@header.backToHome"
-        alt="Zurück zur Startseite"
-        (click)="goHome()"
-      />
-      } @else if (isOverlay) {
+      @if (isOverlay) {
       <img
         class="close"
         src="assets/icons/burger/5.png"
