@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Header implements OnInit {
   @Input() isOverlay = false;
+  @Input() isLegalPage = false;
   @Output() toggleBurger = new EventEmitter<void>();
 
   activeLang: string = 'de';
