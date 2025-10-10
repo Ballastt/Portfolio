@@ -14,19 +14,15 @@
   }
   @media (max-width: bp.$breakpoint-sm) {
     justify-content: center;
-    height: 180px;
+    height: 70px;
     margin-inline-end: 0rem;
     gap: 1.5rem;
-  }
-
-  @media (max-width: bp.$breakpoint-xs) {
-    justify-content: center;
-    height: 110px;
-  }
+  } 
 }
 
 .sm-wrapper {
   width: 100%;
+
 }
 
 .icon-link {
