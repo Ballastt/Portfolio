@@ -1,8 +1,8 @@
 <section class="angled-footer" [class.footer--compact]="compact">
   @if (!compact) {
-  <div class="content">
-    <p class="blink">Sag Hi!</p>
-  </div>
+
+  <p class="blink">Sag Hi!</p>
+
   } @if (!compact) {
   <div class="form">
     <div class="text-container">
@@ -63,12 +63,14 @@
       <app-footer-social-media></app-footer-social-media>
       <div class="legal">
         <a [routerLink]="['/impressum']" i18n="@@footer.imprint">Impressum</a> |
-        <a [routerLink]="['/datenschutz']" i18n="@@footer.privacy">Datenschutzerklärung</a>
+        <a [routerLink]="['/datenschutz']" i18n="@@footer.privacy"
+          >Datenschutzerklärung</a
+        >
       </div>
       @if (!compact) {
-        <div class="arrow-wrapper">
-          <a href="#top" class="arrow" aria-label="Scroll to top"> </a>
-        </div>
+      <div class="arrow-wrapper">
+        <a href="#top" class="arrow" aria-label="Scroll to top"> </a>
+      </div>
       }
     </div>
   </div>
