@@ -30,12 +30,61 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative; // Enable absolute positioning for children
+    flex-direction: column; // Stack arrow and content vertically
+    align-items: center; // Center both arrow and content
     
     @media (max-width: bp.$breakpoint-xs) {
       width: 100%;
       padding: 0.5rem; // Reduced padding to prevent overflow
       box-sizing: border-box; // Ensure padding is included in width calculation
       justify-content: center;
+    }
+
+    // Back arrow styling
+    .legal-arrow {
+      position: absolute;
+      top: 2rem;
+      right: 20px;
+      width: 60px;
+      height: auto;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+      
+      img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        transform: translateX(-5px);
+        
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      @media (max-width: bp.$breakpoint-sm) {
+        top: 1.5rem;
+        right: 1.5rem;
+        
+        img {
+          width: auto;
+          height: 2rem;
+        }
+      }
+      
+      @media (max-width: bp.$breakpoint-xs) {
+        top: 1rem;
+        right: 0;
+        
+        img {
+          width: auto;
+          height: 2rem;
+        }
+      }
     }
     
     .legal-content {
@@ -66,7 +115,6 @@
         
         > h3 {
           font-size: 1.8rem;
-          margin-bottom: 1rem;
         }
         
         > h5 {
@@ -100,13 +148,14 @@
         // Add specific styles for privacy policy if needed
         
         // Mobile styles for Datenschutz
-        @media (max-width: 768px) {
-          width: 90%;
-          padding: 1rem;
-          padding-bottom: 10rem;
+        @media (max-width: bp.$breakpoint-sm) {
+          width: 85%;
+          
           
           > h3 {
             font-size: 2rem;
+            word-break: break-all;
+
           }
           
           > h5 {
@@ -115,12 +164,12 @@
           }
           
           > p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.5;
           }
         }
         
-        @media (max-width: 480px) {
+        @media (max-width: bp.$breakpoint-xs) {
           width: 95%;
           padding: 0.75rem;
           
@@ -136,8 +185,7 @@
         // Optimized breakpoint-xs styles for datenschutz
         @media (max-width: bp.$breakpoint-xs) {
           width: 95%;
-          padding: 0.75rem;
-          padding-bottom: 2rem; // Extra space for mobile footer
+          padding: 5rem 1rem 2rem 1rem; // Extra top/bottom padding for readability
           
           > h3 {
             font-size: 1.6rem;
@@ -162,7 +210,7 @@
         // Add specific styles for impressum if needed
         
         // Mobile styles for Impressum
-        @media (max-width: 768px) {
+        @media (max-width: bp.$breakpoint-md) {
           width: 90%;
           padding: 1rem;
           padding-bottom: 10rem;
@@ -187,14 +235,27 @@
           }
         }
 
+        // Add missing 480px breakpoint for impressum
+        @media (max-width: 480px) {
+          width: 95%;
+          padding: 0.75rem;
+          
+          > h3 {
+            font-size: 1.75rem;
+          }
+          
+          > h5 {
+            font-size: 1.1rem;
+          }
+        }
+        
         // Enhanced breakpoint-xs styles for impressum
         @media (max-width: bp.$breakpoint-xs) {
           width: 95%;
-          padding: 2rem 0 2rem 0; // Extra top/bottom padding for readability
+          padding: 5rem 1rem 2rem 1rem; // Match datenschutz padding exactly
           
           > h3 {
             font-size: 1.6rem;
-            margin-bottom: 1rem;
           }
           
           > h5 {
@@ -221,7 +282,7 @@
   .footer-desktop {
     display: block;
     
-    @media (max-width: bp.$breakpoint-xs) {
+    @media (max-width: bp.$breakpoint-sm) {
       display: none; // Hide regular footer on mobile
     }
   }
@@ -229,7 +290,7 @@
   .footer-mobile {
     display: none; // Hide mobile footer by default
     
-    @media (max-width: bp.$breakpoint-xs) {
+    @media (max-width: bp.$breakpoint-sm) {
       display: block; // Show mobile footer only on xs
     }
   }
