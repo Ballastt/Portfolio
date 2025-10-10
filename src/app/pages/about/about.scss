@@ -162,6 +162,8 @@
   > p {
     text-align: justify;
     line-height: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     @media (max-width: bp.$breakpoint-md) {
       padding-left: 1rem;
