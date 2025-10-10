@@ -52,6 +52,21 @@ export class App {
   }
 
   scrollToSection(section: 'about' | 'skills' | 'projects') {
+    // If we're on a legal page, navigate to home first
+    if (this.isLegalPage) {
+      this.router.navigate(['/']).then(() => {
+        // Wait for the home page to load, then scroll
+        setTimeout(() => {
+          this.performScroll(section);
+        }, 100);
+      });
+    } else {
+      // We're already on home page, scroll directly
+      this.performScroll(section);
+    }
+  }
+
+  private performScroll(section: 'about' | 'skills' | 'projects') {
     const el = document.getElementById(section);
     if (!el) return;
 
