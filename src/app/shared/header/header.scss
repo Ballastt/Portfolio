@@ -86,13 +86,49 @@
   }
 }
 
-.burger,
-.close {
+.burger-icon {
   cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-image: url('/assets/icons/burger/1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.05s steps(1); // Smooth frame transitions
+  
   @media (max-width: bp.$breakpoint-xs) {
+    width: 24px;
     height: 24px;
-    width: auto;
+    margin-right: 0.4rem;
   }
+
+  // Animation from burger (1) to close (5)
+  &.animate-to-close {
+    animation: burger-to-close 0.4s steps(4) forwards;
+  }
+
+  // Animation from close (5) to burger (1) 
+  &.animate-to-burger {
+    animation: close-to-burger 0.4s steps(4) forwards;
+  }
+}
+
+// Keyframes for burger to close animation (1→2→3→4→5)
+@keyframes burger-to-close {
+  0% { background-image: url('/assets/icons/burger/1.png'); }
+  25% { background-image: url('/assets/icons/burger/2.png'); }
+  50% { background-image: url('/assets/icons/burger/3.png'); }
+  75% { background-image: url('/assets/icons/burger/4.png'); }
+  100% { background-image: url('/assets/icons/burger/5.png'); }
+}
+
+// Keyframes for close to burger animation (5→4→3→2→1)
+@keyframes close-to-burger {
+  0% { background-image: url('/assets/icons/burger/5.png'); }
+  25% { background-image: url('/assets/icons/burger/4.png'); }
+  50% { background-image: url('/assets/icons/burger/3.png'); }
+  75% { background-image: url('/assets/icons/burger/2.png'); }
+  100% { background-image: url('/assets/icons/burger/1.png'); }
 }
 
 .lang-toggle {
@@ -147,13 +183,7 @@
   border: 3px solid var(--color-highlight);
 }
 
-.burger {
-  @media (max-width: bp.$breakpoint-xs) {
-    height: 32px;
-    width: auto;
-    padding-right: 0.4rem;
-  }
-}
+
 .right-header img {
   .tooltip-text {
     visibility: hidden;
