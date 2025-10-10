@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,13 +16,21 @@ export class Header implements OnInit {
 
   activeLang: string = 'de';
 
-  constructor(@Inject(LOCALE_ID) private locale: string) {}
+  constructor(@Inject(LOCALE_ID) private locale: string, private router: Router) {}
 
   ngOnInit(): void {
     // Set active language based on current locale
     this.activeLang = this.locale === 'en' ? 'en' : 'de';
     console.log('Current locale:', this.locale);
     console.log('Active lang set to:', this.activeLang);
+  }
+
+  navigateToHome(): void {
+    // If we're in overlay mode, close the menu first
+    if (this.isOverlay) {
+      this.toggleBurger.emit();
+    }
+    this.router.navigate(['/']);
   }
 
   setLang(lang: string): void {
