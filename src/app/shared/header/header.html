@@ -60,23 +60,14 @@
         >
       </div>
 
-      @if (isOverlay) {
-      <img
-        class="close"
-        src="assets/icons/burger/5.png"
-        i18n-alt="@@header.closeMenu"
-        alt="Menü schließen"
+      <div
+        class="burger-icon"
+        [class.animate-to-close]="isOverlay"
+        [class.animate-to-burger]="!isOverlay"
+        [attr.aria-label]="isOverlay ? 'Menü schließen' : 'Menü öffnen'"
+        [attr.i18n-aria-label]="isOverlay ? '@@header.closeMenu' : '@@header.openMenu'"
         (click)="toggleBurger.emit()"
-      />
-      } @else {
-      <img
-        class="burger"
-        src="assets/icons/burger/1.png"
-        i18n-alt="@@header.openMenu"
-        alt="Menü öffnen"
-        (click)="toggleBurger.emit()"
-      />
-      }
+      ></div>
     </div>
   </div>
 </div>
