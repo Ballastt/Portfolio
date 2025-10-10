@@ -1,4 +1,4 @@
-<div class="scroll-arrow" #arrowRef>
+<div class="scroll-arrow" [class.to-footer]="target === 'footer'" #arrowRef>
   <a href="#" 
      class="arrow-link"
      (click)="scrollToSection($event); $event.preventDefault()">
