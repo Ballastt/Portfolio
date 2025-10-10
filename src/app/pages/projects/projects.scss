@@ -3,6 +3,7 @@
 .header-portfolio {
   display: flex;
   flex-direction: column;
+  padding-top: 2.5rem;
   @media (max-width: bp.$breakpoint-xs) {
     padding-top: 0.6rem;
   }

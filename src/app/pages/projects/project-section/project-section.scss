@@ -45,10 +45,10 @@
 
     .img-overlay {
       position: absolute;
-      top: 1rem;
-      right: -2rem;
-      left: 1rem;
-      bottom: -2rem;
+      top: 0.5rem;
+      right: -1.5rem;
+      left: 0.5rem;
+      bottom: -1rem;
       border: 4px solid black;
       opacity: 0;
       pointer-events: none;
@@ -164,7 +164,7 @@
   @media (max-width: bp.$breakpoint-xs) { padding: 0 1rem; margin-top: 1.5rem; }
   > h2 {
     font-weight: 800;
-    font-size: 44px;
+    font-size: 50px;
     margin-bottom: 0.2em;
 
     @media (max-width: bp.$breakpoint-md) { font-size: 3rem; margin: 0; }
@@ -172,7 +172,7 @@
     @media (max-width: bp.$breakpoint-xs) { margin-bottom: 0.4rem; font-size: 32px; }
   }
   > span {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: var(--color-highlight);
     @media (max-width: bp.$breakpoint-md) {font-size: 1.6rem;
     }
@@ -180,7 +180,7 @@
 
   > p {
     font-size: var(--font-base);
-    padding-right: 2rem;
+    padding: 2rem 2rem 2rem 0;
     @media (max-width: bp.$breakpoint-md) { font-size: 1.4rem; }
     @media (max-width: bp.$breakpoint-sm) { padding-right: 0; font-size: 1.2rem; margin-top: 1rem; }
     @media (max-width: bp.$breakpoint-xs) { font-size: 1rem; margin-bottom: 1rem; }
@@ -197,10 +197,10 @@
 
   .img-overlay {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    left: -2rem;
-    bottom: -2rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    left: -1.5rem;
+    bottom: -1rem;
     border: 4px solid black;
     opacity: 0;
     pointer-events: none;
