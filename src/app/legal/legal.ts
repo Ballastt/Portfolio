@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Footer } from '../shared/footer/footer';
 import { FooterLegalMobile } from '../shared/footer/footer-legal-mobile/footer-legal-mobile';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-legal',
@@ -13,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class Legal implements OnInit {
   pageType: string = 'datenschutz'; // default to privacy policy
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     // Get the current route path
@@ -27,5 +27,9 @@ export class Legal implements OnInit {
     }
 
     console.log('Legal pageType set to:', this.pageType);
+  }
+
+  navigateToHome(): void {
+    this.router.navigate(['/']);
   }
 }
