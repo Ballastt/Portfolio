@@ -7,27 +7,10 @@
   max-width: 100%;
   overflow-x: hidden;
   height: auto;
-  @media (max-width: bp.$breakpoint-lg) {
-    flex-direction: column;
-    padding: 3rem;
-    outline: 2px solid var(--color-highlight);
-  }
-
-  @media (max-width: bp.$breakpoint-md) {
-    padding: 2rem 1rem;
-    outline: 2px solid var(--color-highlight);
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    width: 100%;
-    padding: 2rem 0rem;
-    outline: 2px solid var(--color-highlight);
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    width: 100%;
-    height: fit-content;
-    padding: 1rem 0rem;
-    outline: 2px solid var(--color-highlight);
-  }
+  @media (max-width: bp.$breakpoint-lg) { flex-direction: column; padding: 3rem; }
+  @media (max-width: bp.$breakpoint-md) { padding: 2rem 1rem; }
+  @media (max-width: bp.$breakpoint-sm) { width: 100%; padding: 2rem 0rem; }
+  @media (max-width: bp.$breakpoint-xs) { width: 100%; height: fit-content; padding: 1rem 0rem; }
 }
 
 .project {
@@ -35,54 +18,29 @@
   position: relative;
   align-items: center;
   box-sizing: border-box;
-  @media (max-width: bp.$breakpoint-lg) {
-    flex-direction: column;
-    padding-top: 2rem;
-  }
+  @media (max-width: bp.$breakpoint-lg) { flex-direction: column; padding-top: 2rem; }
   .project-id {
     position: absolute;
     right: 0;
     top: -18px;
     font-size: 40px;
     font-weight: 700;
-    @media (max-width: bp.$breakpoint-lg) {
-      top: -2.5rem;
-      right: 0;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      top: -2.4rem;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      font-size: 32px;
-      top: -1.5rem;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      font-size: 32px;
-      top: 0;
-    }
+    @media (max-width: bp.$breakpoint-lg) { top: -2.5rem; right: 0; }
+    @media (max-width: bp.$breakpoint-md) { top: -2.4rem; }
+    @media (max-width: bp.$breakpoint-sm) { font-size: 32px; top: -1.5rem; }
+    @media (max-width: bp.$breakpoint-xs) { font-size: 32px; top: 0; }
   }
 
   .img-wrapper {
     position: relative;
-    @media (max-width: bp.$breakpoint-lg) {
-      margin: 0;
-      height: fit-content;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      width: 100%;
-    }
+    @media (max-width: bp.$breakpoint-lg) { margin: 0; height: fit-content; }
+    @media (max-width: bp.$breakpoint-md) { width: 100%; }
 
     img {
       filter: grayscale(100%);
       transition: filter 0.4s ease, transform 0.4s ease;
-      @media (max-width: bp.$breakpoint-lg) {
-        width: 100%;
-        height: auto;
-      }
-
-      @media (max-width: bp.$breakpoint-xs) {
-        padding-top: 2rem;
-      }
+      @media (max-width: bp.$breakpoint-lg) { width: 100%; height: auto; }
+      @media (max-width: bp.$breakpoint-xs) { padding-top: 2rem; }
     }
 
     .img-overlay {
@@ -111,19 +69,8 @@
         right: -1rem;
         bottom: -1rem;
       }
-      @media (max-width: bp.$breakpoint-sm) {
-        top: 0.5rem;
-        left: 0rem;
-        right: 0rem;
-        bottom: -0.5rem;
-      }
-      @media (max-width: bp.$breakpoint-xs) {
-        border: 3px solid black;
-        bottom: -0.7rem;
-        top: 2.5rem;
-        left: 0rem;
-        right: 0rem;
-      }
+      @media (max-width: bp.$breakpoint-sm) { top: 0.5rem; left: 0rem; right: 0rem; bottom: -0.5rem; }
+      @media (max-width: bp.$breakpoint-xs) { border: 3px solid black; bottom: -0.7rem; top: 2.5rem; left: 0rem; right: 0rem; }
 
       .arrow-small {
         position: absolute;
@@ -134,18 +81,9 @@
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
           opacity 0.2s ease;
         transition-delay: 0.4s;
-        @media (max-width: bp.$breakpoint-lg) {
-          top: 100%;
-          right: 40%;
-        }
-        @media (max-width: bp.$breakpoint-md) {
-          top: 100%;
-          right: 40%;
-        }
-
-        @media (max-width: bp.$breakpoint-xs) {
-          display: none;
-        }
+        @media (max-width: bp.$breakpoint-lg) { top: 100%; right: 40%; }
+        @media (max-width: bp.$breakpoint-md) { top: 100%; right: 40%; }
+        @media (max-width: bp.$breakpoint-xs) { display: none; }
       }
 
       .arrow-large {
@@ -157,19 +95,9 @@
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
           opacity 0.2s ease;
         transition-delay: 0.4s;
-        @media (max-width: bp.$breakpoint-lg) {
-          top: 100%;
-          right: 40%;
-        }
-        @media (max-width: bp.$breakpoint-md) {
-          top: 100%;
-          right: 40%;
-        }
-
-        @media (max-width: bp.$breakpoint-xs) {
-          top: 100%;
-          right: 100px;
-        }
+        @media (max-width: bp.$breakpoint-lg) { top: 100%; right: 40%; }
+        @media (max-width: bp.$breakpoint-md) { top: 100%; right: 40%; }
+        @media (max-width: bp.$breakpoint-xs) { top: 100%; right: 100px; }
       }
     }
   }
@@ -182,17 +110,9 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.4s ease;
-    @media (max-width: bp.$breakpoint-lg) {
-      padding-left: 0;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      padding-top: 2rem;
-      height: auto;
-      width: 100%;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      padding-top: 3rem;
-    }
+    @media (max-width: bp.$breakpoint-lg) { padding-left: 0; }
+    @media (max-width: bp.$breakpoint-md) { padding-top: 2rem; height: auto; width: 100%; }
+    @media (max-width: bp.$breakpoint-xs) { padding-top: 3rem; }
   }
 
   &:hover {
@@ -239,58 +159,31 @@
 
 .project-details {
   box-sizing: border-box;
-  @media (max-width: bp.$breakpoint-lg) {
-    width: 80%;
-  }
-  @media (max-width: bp.$breakpoint-md) {
-    max-width: 100%;
-    padding: 0 2rem;
-    margin-top: 2rem;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    padding: 0 1rem;
-    margin-top: 1.5rem;
-  }
+  @media (max-width: bp.$breakpoint-lg) { width: 80%; }
+  @media (max-width: bp.$breakpoint-md) { max-width: 100%; padding: 0 2rem; margin-top: 2rem; }
+  @media (max-width: bp.$breakpoint-xs) { padding: 0 1rem; margin-top: 1.5rem; }
   > h2 {
     font-weight: 800;
     font-size: 44px;
     margin-bottom: 0.2em;
 
-    @media (max-width: bp.$breakpoint-md) {
-      font-size: 3rem;
-      margin: 0;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      font-size: 2.7rem;
-      margin-bottom: 0.4rem;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      margin-bottom: 0.4rem;
-      font-size: 32px;
-    }
+    @media (max-width: bp.$breakpoint-md) { font-size: 3rem; margin: 0; }
+    @media (max-width: bp.$breakpoint-sm) { font-size: 2.7rem; margin-bottom: 0.4rem; }
+    @media (max-width: bp.$breakpoint-xs) { margin-bottom: 0.4rem; font-size: 32px; }
   }
   > span {
     font-size: 1.2rem;
     color: var(--color-highlight);
-    @media (max-width: bp.$breakpoint-md) {
-      font-size: 1.6rem;
+    @media (max-width: bp.$breakpoint-md) {font-size: 1.6rem;
     }
   }
 
   > p {
     font-size: var(--font-base);
     padding-right: 2rem;
-    @media (max-width: bp.$breakpoint-md) {
-      font-size: 1.4rem;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      padding-right: 0;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      font-size: 1rem;
-    }
+    @media (max-width: bp.$breakpoint-md) { font-size: 1.4rem; }
+    @media (max-width: bp.$breakpoint-sm) { padding-right: 0; font-size: 1.2rem; margin-top: 1rem; }
+    @media (max-width: bp.$breakpoint-xs) { font-size: 1rem; margin-bottom: 1rem; }
   }
 }
 
@@ -316,31 +209,10 @@
     align-items: center;
     padding-right: 2rem;
     transition: opacity 0.4s ease;
-    @media (max-width: bp.$breakpoint-lg) {
-      top: 0.4rem;
-      right: 0.2rem;
-      left: -1.2rem;
-      bottom: -0.4rem;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      top: 0.5rem;
-      left: -1rem;
-      right: 0.2rem;
-      bottom: -0.5rem;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      top: 0.5rem;
-      left: 0rem;
-      right: 0rem;
-      bottom: -0.5rem;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      border: 3px solid black;
-      bottom: -0.7rem;
-      top: 2.5rem;
-      left: 0rem;
-      right: 0rem;
-    }
+    @media (max-width: bp.$breakpoint-lg) { top: 0.4rem; right: 0.2rem; left: -1.2rem; bottom: -0.4rem; }
+    @media (max-width: bp.$breakpoint-md) { top: 0.5rem; left: -1rem; right: 0.2rem; bottom: -0.5rem; }
+    @media (max-width: bp.$breakpoint-sm) { top: 0.5rem; left: 0rem; right: 0rem; bottom: -0.5rem; }
+    @media (max-width: bp.$breakpoint-xs) { border: 3px solid black; bottom: -0.7rem; top: 2.5rem; left: 0rem; right: 0rem; }
   }
 
   .img-wrapper .img-overlay {
@@ -348,54 +220,27 @@
       right: auto;
       left: -36px;
       transform: translateY(-50%) scale(1) rotate(0deg);
-      @media (max-width: bp.$breakpoint-lg) {
-        top: 100%;
-        left: 300px;
-      }
-      @media (max-width: bp.$breakpoint-md) {
-        left: 250px;
-      }
-
-      @media (max-width: bp.$breakpoint-xs) {
-        left: 150px;
-      }
+      @media (max-width: bp.$breakpoint-lg) { top: 100%; left: 300px; }
+      @media (max-width: bp.$breakpoint-md) { left: 250px; }
+      @media (max-width: bp.$breakpoint-xs) { left: 150px; }
     }
     .arrow-large {
       right: auto;
       left: -40px;
       transform: translateY(-50%) scale(0.9) rotate(0deg);
-      @media (max-width: bp.$breakpoint-lg) {
-        top: 100%;
-        left: 300px;
-      }
-      @media (max-width: bp.$breakpoint-md) {
-        left: 250px;
-      }
-      @media (max-width: bp.$breakpoint-xs) {
-        left: 150px;
-      }
+      @media (max-width: bp.$breakpoint-lg) { top: 100%; left: 300px; }
+      @media (max-width: bp.$breakpoint-md) { left: 250px; }
+      @media (max-width: bp.$breakpoint-xs) { left: 150px; }
     }
   }
 
   .project-id {
     left: 0;
     right: auto;
-    @media (max-width: bp.$breakpoint-lg) {
-      top: -2.5rem;
-      left: 0;
-    }
-    @media (max-width: bp.$breakpoint-md) {
-      top: -2.4rem;
-      left: 0;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      font-size: 32px;
-      top: -1.5rem;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      font-size: 32px;
-      top: 0;
-    }
+    @media (max-width: bp.$breakpoint-lg) { top: -2.5rem; left: 0; }
+    @media (max-width: bp.$breakpoint-md) { top: -2.4rem; left: 0; }
+    @media (max-width: bp.$breakpoint-sm) { font-size: 32px; top: -1.5rem; }
+    @media (max-width: bp.$breakpoint-xs) { font-size: 32px; top: 0; }
   }
 }
 
@@ -435,17 +280,8 @@
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  @media (max-width: bp.$breakpoint-lg) {
-    padding: 2rem;
-  }
-  @media (max-width: bp.$breakpoint-md) {
-    padding: 2rem 1rem;
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    padding: 0.9rem;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    flex-direction: column;
-    padding: 0.7rem;
-  }
+  @media (max-width: bp.$breakpoint-lg) { padding: 2rem; }
+  @media (max-width: bp.$breakpoint-md) { padding: 2rem 1rem; }
+  @media (max-width: bp.$breakpoint-sm) { padding: 0.9rem; }
+  @media (max-width: bp.$breakpoint-xs) { flex-direction: column; padding: 0.7rem 0.7rem 3rem 0.7rem; }
 }
