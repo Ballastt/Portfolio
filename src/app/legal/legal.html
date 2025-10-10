@@ -1,6 +1,11 @@
 <div class="legal-shell">
   <section class="legal-page">
     <div class="legal">
+      <!-- Back to home arrow -->
+      <div class="legal-arrow" (click)="navigateToHome()">
+        <img src="assets/icons/arrow_legal.png" alt="Back to home" i18n-alt="@@legal.arrow.alt">
+      </div>
+      
       <div class="legal-content" [class]="'content-' + pageType">
         @if (pageType === 'datenschutz') {
         <h3 i18n="@@legal.privacy.title">Datenschutzerklärung</h3>
