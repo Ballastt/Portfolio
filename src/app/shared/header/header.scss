@@ -180,6 +180,19 @@
 }
 
 .logo {
+  &.clickable {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
   @media (max-width: bp.$breakpoint-xs) {
     font-size: 108px;
   }
