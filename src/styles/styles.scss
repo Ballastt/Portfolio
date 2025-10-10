@@ -36,16 +36,19 @@ a {
 h1 {
   margin: 0;
   font-weight: 800;
-  font-size: 4.8rem;
-  @media (max-width: bp.$breakpoint-md) {
-    font-size: 50px;
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    font-size: 40px;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    font-size: 40px;
-  }
+  font-size: clamp(2.5rem, 5vw, 4.8rem); // Responsive: 40px → 77px
+}
+
+h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.5rem); // Responsive: 32px → 56px
+}
+
+h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.5rem); // Responsive: 24px → 40px
 }
 
 @media (max-width: bp.$breakpoint-xs) {
