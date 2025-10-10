@@ -57,11 +57,9 @@
   @media (max-width: bp.$breakpoint-md) {
     padding-left: 1.5rem;
   }
-
   @media (max-width: bp.$breakpoint-xs) {
     padding: 0;
     padding-left: 0.5rem;
-    
   }
   > svg {
     width: 100px;
@@ -80,6 +78,9 @@
   justify-content: space-between;
   padding: 1rem 4rem 1rem 1rem;
   gap: 50px;
+  @media (max-width: bp.$breakpoint-sm) {
+    padding: 1rem 2rem 1rem 1rem;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     padding: 0.5rem;
   }
@@ -103,6 +104,12 @@
   font-weight: 500;
   cursor: pointer;
 
+  // Hide on legal pages
+  &.hidden-legal {
+    display: none;
+  }
+
+  // Hide on mobile screens
   @media (max-width: bp.$breakpoint-xs) {
     display: none;
   }
