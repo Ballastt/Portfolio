@@ -199,8 +199,19 @@
     color: var(--color-highlight);
   }
   > address {
-    padding: 8px;
-    font-style: normal;
+    font-style: normal; // Remove default italic styling from address tag
+    margin: 0;
+    
+    > a {
+      color: white;
+      padding: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--color-highlight);
+      }
+    }
   }
 }
 
