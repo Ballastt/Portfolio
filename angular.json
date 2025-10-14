@@ -72,6 +72,15 @@
             "en": {
               "aot": true,
               "outputPath": "dist/en/",
+              "localize": ["en"],
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            },
+            "development-en": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
               "localize": ["en"]
             },
             "production-de": {

@@ -277,6 +277,7 @@ app-footer {
   font-size: 1rem;
   height: 50px;
   margin-inline-end: 2.7rem;
+  
   @media (max-width: bp.$breakpoint-md) {
     margin-right: 30px;
   }
@@ -288,6 +289,26 @@ app-footer {
   @media (max-width: bp.$breakpoint-xs) {
     margin: 0;
     justify-content: center;
+  }
+}
+
+// English version - separate selector for better specificity
+:lang(en) .legal {
+  margin-inline-end: 0.5rem;
+  margin-inline-start: 2.7rem;
+  justify-content: flex-end;
+  
+  @media (max-width: bp.$breakpoint-md) {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: bp.$breakpoint-sm) {
+    margin-right: 0.5rem;
+  }
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    margin: 0;
+    justify-content: center; // Keep center alignment on mobile
   }
 }
 

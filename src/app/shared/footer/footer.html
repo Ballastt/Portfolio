@@ -1,13 +1,13 @@
 <section class="angled-footer" [class.footer--compact]="compact">
   @if (!compact) {
 
-  <h1 class="blink">Sag Hi!</h1>
+  <h1 class="blink" i18n="@@footer.sayhi.title">Sag Hi!</h1>
 
   } @if (!compact) {
   <div class="form">
     <div class="text-container">
-      <h3>Willst du über ein Projekt sprechen?</h3>
-      <span>Sag hallo, lass uns Ideen diskutieren und sie machbar machen</span>
+      <h3 i18n="@@footer.project.question">Willst du über ein Projekt sprechen?</h3>
+      <span i18n="@@footer.project.subtitle">Sag hallo, lass uns Ideen diskutieren und sie machbar machen</span>
     </div>
 
     <app-contact></app-contact>
@@ -69,7 +69,7 @@
       </div>
       @if (!compact) {
       <div class="arrow-wrapper">
-        <a href="#top" class="arrow" aria-label="Scroll to top"> </a>
+        <a href="#top" class="arrow" aria-label="Scroll to top" i18n-aria-label="@@footer.scroll.top.aria"> </a>
       </div>
       }
     </div>

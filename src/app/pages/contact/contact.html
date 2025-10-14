@@ -8,7 +8,7 @@
         formControlName="name"
         autocomplete="off"
       />
-      <label for="name">Dein Name</label>
+      <label for="name" i18n="@@contact.form.name.label">Dein Name</label>
 
       <span class="validation-icon">
         @if (applyForm.get('name')?.valid && applyForm.get('name')?.touched) {
@@ -21,7 +21,7 @@
     </div>
     @if (applyForm.get('name')?.hasError('required') &&
     applyForm.get('name')?.touched) {
-    <span class="error"> Der Name ist erforderlich. </span>
+    <span class="error" i18n="@@contact.form.name.required"> Der Name ist erforderlich. </span>
     }
   </div>
 
@@ -34,7 +34,7 @@
         formControlName="email"
         autocomplete="off"
       />
-      <label for="email">Deine Email</label>
+      <label for="email" i18n="@@contact.form.email.label">Deine Email</label>
 
       <span class="validation-icon">
         @if (applyForm.get('email')?.valid && applyForm.get('email')?.touched) {
@@ -47,10 +47,10 @@
     </div>
     @if (applyForm.get('email')?.hasError('required') &&
     applyForm.get('email')?.touched) {
-    <span class="error"> Die Email ist erforderlich. </span>
+    <span class="error" i18n="@@contact.form.email.required"> Die Email ist erforderlich. </span>
     } @if (applyForm.get('email')?.hasError('email') &&
     applyForm.get('email')?.touched) {
-    <span class="error"> Bitte eine gültige Email eingeben. </span>
+    <span class="error" i18n="@@contact.form.email.invalid"> Bitte eine gültige Email eingeben. </span>
     }
   </div>
 
@@ -61,7 +61,7 @@
         placeholder=" "
         formControlName="message"
       ></textarea>
-      <label for="message">Deine Nachricht</label>
+      <label for="message" i18n="@@contact.form.message.label">Deine Nachricht</label>
 
       <span class="validation-icon-textarea">
         @if (applyForm.get('message')?.valid &&
@@ -76,10 +76,10 @@
 
     @if (applyForm.get('message')?.hasError('required') &&
     applyForm.get('message')?.touched) {
-    <span class="error"> Die Nachricht ist erforderlich. </span>
+    <span class="error" i18n="@@contact.form.message.required"> Die Nachricht ist erforderlich. </span>
     } @if (applyForm.get('message')?.hasError('minlength') &&
     applyForm.get('message')?.touched) {
-    <span class="error">
+    <span class="error" i18n="@@contact.form.message.minlength">
       Die Nachricht muss mindestens 100 Zeichen lang sein.
     </span>
     }
@@ -102,7 +102,7 @@
           [class.visible]="isPrivacyHovered && !applyForm.get('privacy')?.value"
         ></span>
       </div>
-      <div class="checkbox-text">
+      <div class="checkbox-text" i18n="@@contact.form.privacy.text">
         Ich habe die
         <a href="/privacy-policy" target="_blank" class="pp"
           >Datenschutzerklärung</a
@@ -112,13 +112,13 @@
     </label>
     @if (applyForm.get('privacy')?.hasError('required') &&
     applyForm.get('privacy')?.touched) {
-    <span class="error"> Bitte Datenschutzerklärung akzeptieren. </span>
+    <span class="error" i18n="@@contact.form.privacy.required"> Bitte Datenschutzerklärung akzeptieren. </span>
     }
   </div>
 
   <div class="btn-container">
     <button class="btn-primary send-btn" [disabled]="applyForm.invalid">
-      <span>Abschicken</span>
+      <span i18n="@@contact.form.submit.button">Abschicken</span>
     </button>
   </div>
 </form>

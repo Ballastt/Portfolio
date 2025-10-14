@@ -629,6 +629,99 @@
         <source>Haftungsausschluss</source>
         <target>Disclaimer</target>
       </trans-unit>
+
+      <!-- Contact Form Translations -->
+      <trans-unit id="contact.form.name.label" datatype="html">
+        <source>Dein Name</source>
+        <target>Your Name</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.name.required" datatype="html">
+        <source>Der Name ist erforderlich.</source>
+        <target>Name is required.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.email.label" datatype="html">
+        <source>Deine Email</source>
+        <target>Your Email</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.email.required" datatype="html">
+        <source>Die Email ist erforderlich.</source>
+        <target>Email is required.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.email.invalid" datatype="html">
+        <source>Bitte eine gültige Email eingeben.</source>
+        <target>Please enter a valid email.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.message.label" datatype="html">
+        <source>Deine Nachricht</source>
+        <target>Your Message</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.message.required" datatype="html">
+        <source>Die Nachricht ist erforderlich.</source>
+        <target>Message is required.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.message.minlength" datatype="html">
+        <source>Die Nachricht muss mindestens 100 Zeichen lang sein.</source>
+        <target>Message must be at least 100 characters long.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.privacy.text" datatype="html">
+        <source>Ich habe die <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;/privacy-policy&quot; target=&quot;_blank&quot; class=&quot;pp&quot;&gt;"/>Datenschutzerklärung<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> gelesen und stimme dem Verarbeiten meiner Daten zu.</source>
+        <target>I have read the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;/privacy-policy&quot; target=&quot;_blank&quot; class=&quot;pp&quot;&gt;"/>privacy policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> and agree to the processing of my data.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.privacy.required" datatype="html">
+        <source>Bitte Datenschutzerklärung akzeptieren.</source>
+        <target>Please accept the privacy policy.</target>
+      </trans-unit>
+      
+      <trans-unit id="contact.form.submit.button" datatype="html">
+        <source>Abschicken</source>
+        <target>Send Message</target>
+      </trans-unit>
+
+      <!-- Header Translations -->
+      <trans-unit id="header.logo.title" datatype="html">
+        <source>Zur Startseite</source>
+        <target>Go to homepage</target>
+      </trans-unit>
+
+      <!-- Footer Translations -->
+      <trans-unit id="footer.imprint" datatype="html">
+        <source>Impressum</source>
+        <target>Imprint</target>
+      </trans-unit>
+      
+      <trans-unit id="footer.privacy" datatype="html">
+        <source>Datenschutzerklärung</source>
+        <target>Privacy Policy</target>
+      </trans-unit>
+      
+      <trans-unit id="footer.sayhi.title" datatype="html">
+        <source>Sag Hi!</source>
+        <target>Say Hi!</target>
+      </trans-unit>
+      
+      <trans-unit id="footer.project.question" datatype="html">
+        <source>Willst du über ein Projekt sprechen?</source>
+        <target>Want to discuss a project?</target>
+      </trans-unit>
+      
+      <trans-unit id="footer.project.subtitle" datatype="html">
+        <source>Sag hallo, lass uns Ideen diskutieren und sie machbar machen</source>
+        <target>Say hello, let's discuss ideas and make them happen</target>
+      </trans-unit>
+      
+      <trans-unit id="footer.scroll.top.aria" datatype="html">
+        <source>Scroll to top</source>
+        <target>Scroll to top</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
