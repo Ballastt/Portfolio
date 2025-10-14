@@ -191,6 +191,42 @@
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 1.6rem;
     }
+
+    // English-specific styling
+    &:lang(en) {
+      // Hide line breaks in English version since "My Skills" fits on one line
+      br {
+        display: none;
+      }
+      
+      // Add margins for single-line English heading
+      margin-top: 2rem;
+      margin-bottom: 1.7rem;
+      
+      @media (max-width: bp.$breakpoint-lg) {
+        font-size: 2.8rem; // Slightly smaller for English
+        margin-top: 0.8rem;
+        margin-bottom: 1.2rem;
+      }
+
+      @media (max-width: bp.$breakpoint-md) {
+        font-size: 2.5rem;
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+      }
+      @media (max-width: bp.$breakpoint-sm) {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.8rem;
+      }
+      @media (max-width: bp.$breakpoint-xs) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-top: 0.4rem;
+        margin-bottom: 0.6rem;
+      }
+    }
   }
   > h1:hover {
     color: var(--color-highlight);

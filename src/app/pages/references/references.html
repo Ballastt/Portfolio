@@ -1,7 +1,7 @@
 <div class="wrapper-references">
   <div class="header">
-    <h1 class="blink">Referenzen</h1>
-    <span>
+    <h1 class="blink" i18n="@@references.title">Referenzen</h1>
+    <span i18n="@@references.subtitle">
       Ich arbeite genauso gerne selbständig, als auch im Team.<br />
       Das sagen meine bisherigen Projektkollegen über mich.
     </span>
@@ -17,6 +17,7 @@
         <figure>
           <svg
             aria-label="Anführungszeichen"
+            i18n-aria-label="@@references.quote.icon"
             class="quote-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -37,9 +38,9 @@
         </figure>
 
         <div class="reference-details">
-          <h3 id="ref-title-{{ $index }}">{{ reference.name }}</h3>
-          <span>{{ reference.role }}</span>
-          <p>{{ reference.text }}</p>
+          <h3 id="ref-title-{{ $index }}">{{ getTranslatedName(reference) }}</h3>
+          <span>{{ getTranslatedRole(reference) }}</span>
+          <p>{{ getTranslatedText(reference) }}</p>
         </div>
       </article>
     </section>

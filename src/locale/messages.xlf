@@ -356,6 +356,109 @@
           <context context-type="linenumber">81,82</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="skills.title" datatype="html">
+        <source>Meine <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>Fähigkeiten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/skills/skills.html</context>
+          <context context-type="linenumber">4,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.learning.icon" datatype="html">
+        <source>Icon that implicates willigness to learn</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/skills/skills.html</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.learning.text" datatype="html">
+        <source>Du suchst etwas anderes? Ich bin offen für neue Technologien -
+        <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#contact&quot; class=&quot;underline-slide&quot;&gt;"/>Schreib mir!<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/skills/skills.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.title" datatype="html">
+        <source>Portfolio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.html</context>
+          <context context-type="linenumber">2,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.subtitle" datatype="html">
+        <source>Eine Auswahl meiner Projekte – entdecke, wie ich arbeite, indem du direkt
+    interagierst.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.tech.label" datatype="html">
+        <source>Verwendete Technologien</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.github.aria" datatype="html">
+        <source>Projekt auf GitHub öffnen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.github.button" datatype="html">
+        <source>GitHub</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">81,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.join.title" datatype="html">
+        <source>Join</source>
+      </trans-unit>
+      <trans-unit id="projects.join.imgAlt" datatype="html">
+        <source>Screenshot of Join Project</source>
+      </trans-unit>
+      <trans-unit id="projects.join.description" datatype="html">
+        <source>Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.</source>
+      </trans-unit>
+      <trans-unit id="projects.elpollo.title" datatype="html">
+        <source>El Pollo Loco</source>
+      </trans-unit>
+      <trans-unit id="projects.elpollo.imgAlt" datatype="html">
+        <source>Screenshot of the jump-n-run Game El Pollo Loco</source>
+      </trans-unit>
+      <trans-unit id="projects.elpollo.description" datatype="html">
+        <source>Ein simples Jump-and-Run Spiel basierend auf dem Paradigma der Objektorientierung. Hilf Pepe Münzen und Tabasco-Flaschen ein zu sammeln um seine Gegner zu besiegen</source>
+      </trans-unit>
+      <trans-unit id="projects.dabubble.title" datatype="html">
+        <source>DABubble</source>
+      </trans-unit>
+      <trans-unit id="projects.dabubble.imgAlt" datatype="html">
+        <source>Screenshot of DABubble-Website</source>
+      </trans-unit>
+      <trans-unit id="projects.dabubble.description" datatype="html">
+        <source>Diese App ist ein Slack-Klon. Die App revolutioniert Team-Kommunikation und Zusammenarbeit mit ihrem intuitivem Interface, Nachrichtenaustausch in Real-Time und robuster Channel Organisation.</source>
+      </trans-unit>
+      <trans-unit id="projects.pokedex.title" datatype="html">
+        <source>Pokédex</source>
+      </trans-unit>
+      <trans-unit id="projects.pokedex.imgAlt" datatype="html">
+        <source>Screenshot of Pokemon-Website</source>
+      </trans-unit>
+      <trans-unit id="projects.pokedex.description" datatype="html">
+        <source>Eine simple Bibliothek, die auf der PokéAPI basiert. Stellt Pokemon Informationen zur Verfügung und katalogisiert diese.</source>
+      </trans-unit>
+      <trans-unit id="references.title" datatype="html">
+        <source>Referenzen</source>
+      </trans-unit>
+      <trans-unit id="references.subtitle" datatype="html">
+        <source>Ich arbeite genauso gerne selbständig, als auch im Team.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>Das sagen meine bisherigen Projektkollegen über mich.</source>
+      </trans-unit>
+      <trans-unit id="references.quote.icon" datatype="html">
+        <source>Anführungszeichen</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

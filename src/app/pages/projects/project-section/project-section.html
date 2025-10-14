@@ -68,19 +68,19 @@
       <span aria-hidden="true" class="project-id">{{ project.id }}</span>
       <div class="content">
         <div class="project-details">
-          <h2>{{ project.title }}</h2>
-          <span class="tech" aria-label="Verwendete Technologien">{{
+          <h2>{{ getTranslatedTitle(project) }}</h2>
+          <span class="tech" aria-label="Verwendete Technologien" i18n-aria-label="@@projects.tech.label">{{
             project.tech.join(" | ")
           }}</span>
-          <p>{{ project.description }}</p>
+          <p>{{ getTranslatedDescription(project) }}</p>
           <a
             class="btn-primary"
             [href]="project.githubUrl"
             target="_blank"
             rel="noopener noreferrer"
-            [attr.aria-label]="
-              'Projekt ' + project.title + ' auf GitHub öffnen'
-            "
+            aria-label="Projekt auf GitHub öffnen"
+            i18n-aria-label="@@projects.github.aria"
+            i18n="@@projects.github.button"
           >
             GitHub
           </a>

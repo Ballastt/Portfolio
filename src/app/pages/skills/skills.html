@@ -1,7 +1,7 @@
 <div class="skills-container" id="skills">
   <div class="border">
     <div class="border-top"></div>
-    <h1 class="blink">Meine <br />Fähigkeiten</h1>
+    <h1 class="blink" i18n="@@skills.title">Meine <br />Fähigkeiten</h1>
 
     <div class="skills-grid">
       @for (skill of skills; track $index) {
@@ -15,8 +15,9 @@
       <img
         src="assets/icons/lang/learning.png"
         alt="Icon that implicates willigness to learn"
+        i18n-alt="@@skills.learning.icon"
       />
-      <span
+      <span i18n="@@skills.learning.text"
         >Du suchst etwas anderes? Ich bin offen für neue Technologien -
         <a href="#contact" class="underline-slide">Schreib mir!</a></span
       >
