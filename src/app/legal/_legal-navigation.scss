@@ -1,0 +1,50 @@
+@use "breakpoints" as bp;
+
+/* ===== NAVIGATION & ARROW STYLES ===== */
+
+.legal-arrow {
+  position: absolute;
+  top: 2rem;
+  right: 70px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+
+  @media (min-width: bp.$breakpoint-lg) {
+    display: none;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateX(-5px);
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: bp.$breakpoint-sm) {
+    top: 1rem;
+    right: 2.5rem;
+
+    img {
+      width: auto;
+      height: 2rem;
+    }
+  }
+
+  @media (max-width: bp.$breakpoint-xs) {
+    top: 1rem;
+    right: 1rem;
+
+    img {
+      width: auto;
+      height: 2rem;
+    }
+  }
+}

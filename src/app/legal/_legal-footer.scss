@@ -1,0 +1,19 @@
+@use "breakpoints" as bp;
+
+/* ===== FOOTER VISIBILITY CONTROLS ===== */
+
+.footer-desktop {
+  display: block;
+
+  @media (max-width: bp.$breakpoint-lg) {
+    display: none;
+  }
+}
+
+.footer-mobile {
+  display: none;
+
+  @media (max-width: bp.$breakpoint-lg) {
+    display: block;
+  }
+}

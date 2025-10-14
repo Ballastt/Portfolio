@@ -1,0 +1,160 @@
+@use "breakpoints" as bp;
+
+/* ===== PAGE-SPECIFIC VARIANTS ===== */
+
+// Specific styles for Datenschutz page
+.content-datenschutz {
+  @media (max-width: bp.$breakpoint-sm) {
+    width: 85%;
+
+    > h3 {
+      font-size: 2rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.25rem;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    > p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 95%;
+    padding: 5rem 1rem 2rem 1rem;
+
+    > h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1rem;
+      margin: 1.2rem 0 0.6rem 0;
+    }
+
+    > p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Specific styles for Impressum page
+.content-impressum {
+  @media (max-width: bp.$breakpoint-lg) {
+    width: 90%;
+    padding: 5rem 1rem 3rem 1rem;
+
+    > h3 {
+      font-size: 2rem;
+    }
+
+    > h5 {
+      font-size: 1.25rem;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    > p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    div p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @media (max-width: bp.$breakpoint-md) {
+    width: 90%;
+    padding: 5rem 1rem 3rem 1rem;
+
+    > h3 {
+      font-size: 2rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.25rem;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    > p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    div p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @media (max-width: bp.$breakpoint-sm) {
+    width: 90%;
+    padding: 5rem 1rem 3rem 1rem;
+
+    > h3 {
+      font-size: 1.8rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.2rem;
+      margin: 1.3rem 0 0.7rem 0;
+    }
+
+    > p {
+      font-size: 1.1rem;
+      line-height: 1.45;
+    }
+
+    div p {
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 95%;
+    padding: 5rem 1rem 2rem 1rem;
+
+    > h3 {
+      font-size: 1.6rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1rem;
+      margin: 1.2rem 0 0.6rem 0;
+    }
+
+    > p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    div p {
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "breakpoints" as bp;
+
+/* ===== LAYOUT & CONTAINER STYLES ===== */
+
+.legal-shell {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 100vh;
+  background-color: var(--color-white);
+
+  @media (max-width: bp.$breakpoint-xs) {
+    position: static;
+    width: 100%;
+    margin: 0;
+    left: auto;
+    right: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .legal-page {
+    width: 100%;
+  }
+
+  .legal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: bp.$breakpoint-xs) {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      justify-content: center;
+    }
+
+    // Navigation arrow is nested here (defined in _legal-navigation.scss)
+    
+    // Content section is nested here (defined in _legal-content.scss)
+  }
+
+  // Footer visibility controls are nested here (defined in _legal-footer.scss)
+}

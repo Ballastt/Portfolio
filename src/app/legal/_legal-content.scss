@@ -1,0 +1,171 @@
+@use "breakpoints" as bp;
+
+/* ===== CONTENT STYLING ===== */
+
+.legal-content {
+  max-width: 900px;
+  width: 80%;
+  padding: 5rem 2rem 6rem 2rem;
+
+  > p {
+    text-align: justify;
+  }
+
+  > h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+  }
+
+  > h5 {
+    color: var(--color-highlight);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 2rem 0 1rem 0;
+  }
+
+  // Large desktop styles
+  @media (max-width: bp.$breakpoint-lg) {
+    width: 80%;
+    padding: 6rem 2rem 5rem 2rem;
+
+    > h3 {
+      font-size: 2.8rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.4rem;
+      margin: 1.8rem 0 0.9rem 0;
+    }
+
+    > p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    > ul {
+      padding-left: 1.5rem;
+
+      li {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
+      }
+    }
+  }
+
+  // Tablet styles
+  @media (max-width: bp.$breakpoint-md) {
+    width: 80%;
+    padding: 7rem 1.5rem 4rem 1.5rem;
+
+    > h3 {
+      font-size: 2.4rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.3rem;
+      margin: 1.6rem 0 0.8rem 0;
+    }
+
+    > p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    > ul {
+      padding-left: 1.3rem;
+
+      li {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  // Small tablet styles
+  @media (max-width: bp.$breakpoint-sm) {
+    width: 85%;
+    padding: 5rem 1rem 3rem 1rem;
+
+    > h3 {
+      font-size: 2.1rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.2rem;
+      margin: 1.4rem 0 0.7rem 0;
+    }
+
+    > p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    > ul {
+      padding-left: 1.2rem;
+
+      li {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  // Mobile styles for all content types
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 90%;
+    padding: 2rem 0.75rem 2.5rem 0.75rem;
+
+    > h3 {
+      font-size: 1.8rem;
+      hyphens: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    > h5 {
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    > p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    > ul {
+      padding-left: 1.2rem;
+
+      li {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    a {
+      word-break: break-word;
+    }
+  }
+}
