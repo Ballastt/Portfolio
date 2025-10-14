@@ -161,7 +161,7 @@
   box-sizing: border-box;
   @media (max-width: bp.$breakpoint-lg) { width: 80%; }
   @media (max-width: bp.$breakpoint-md) { max-width: 100%; padding: 0 2rem; margin-top: 2rem; }
-  @media (max-width: bp.$breakpoint-xs) { padding: 0 1rem; margin-top: 1.5rem; }
+  @media (max-width: bp.$breakpoint-xs) { width: 100%; padding: 0 1rem; margin-top: 1.5rem; }
   > h2 {
     font-weight: 800;
     font-size: 50px;
@@ -183,7 +183,7 @@
     padding: 2rem 2rem 2rem 0;
     @media (max-width: bp.$breakpoint-md) { font-size: 1.4rem; }
     @media (max-width: bp.$breakpoint-sm) { padding-right: 0; font-size: 1.2rem; margin-top: 1rem; }
-    @media (max-width: bp.$breakpoint-xs) { font-size: 1rem; margin-bottom: 1rem; }
+    @media (max-width: bp.$breakpoint-xs) { font-size: 1rem; margin-bottom: 1rem; padding: 0;}
   }
 }
 

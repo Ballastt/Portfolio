@@ -12,6 +12,25 @@
   flex-direction: column;
   justify-content: flex-end;
 
+  @media (max-width: bp.$breakpoint-lg) {
+    min-height: 1050px;
+    clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
+  }
+  @media (max-width: bp.$breakpoint-md) {
+    min-height: 1050px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    min-height: 1100px;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    min-height: 1050px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+  }
+
   .footer-wrapper {
     max-width: 1440px;
     width: 100%;
@@ -36,13 +55,17 @@
       padding: 0 1rem;
     }
   }
-  >h1 {
+  > h1 {
     font-size: 6rem;
     font-family: var(--font-base);
     margin: 0;
-    padding-left: clamp(0rem, 12vw, 17.5rem); // Scales from 0 to 280px (17.5rem)
+    padding-left: clamp(
+      0rem,
+      12vw,
+      17.5rem
+    ); // Scales from 0 to 280px (17.5rem)
     padding-bottom: clamp(2rem, 4vw, 5rem); // Flexible bottom padding
-    
+
     @media (max-width: bp.$breakpoint-sm) {
       font-size: 4rem;
     }
@@ -50,60 +73,6 @@
       font-size: 40px;
       text-align: center;
       padding-left: 0; // Override for mobile centering
-    }
-  }
-}
-
-.content {
-  @media (max-width: bp.$breakpoint-lg) {
-    min-height: 1050px;
-    clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
-  }
-  @media (max-width: bp.$breakpoint-md) {
-    min-height: 1050px;
-    width: 100%;
-    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-    min-height: 1100px;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    min-height: 1100px;
-    width: 100%;
-    clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
-  }
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1440px;
-  padding-left: 8vw;
-  padding-bottom: 2rem;
-  @media (max-width: bp.$breakpoint-lg) {
-  }
-  @media (max-width: bp.$breakpoint-md) {
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  > p {
-    font-size: 5rem;
-    font-family: var(--font-base);
-    font-weight: 800;
-    margin: 0;
-    padding-left: 80px;
-    @media (max-width: bp.$breakpoint-lg) {
-      padding-left: 0;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      font-size: 4rem;
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      font-size: 40px;
     }
   }
 }
@@ -118,6 +87,9 @@ app-footer {
   padding-bottom: 1rem;
   @media (max-width: bp.$breakpoint-lg) {
     padding-left: 1rem;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 0;
   }
 
   > .logo {
@@ -153,6 +125,20 @@ app-footer {
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 1rem;
+
+  @media (max-width: bp.$breakpoint-sm) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
 .wrapper-legal-sm {
@@ -164,6 +150,12 @@ app-footer {
   height: auto;
   width: 400px;
   padding-right: 1.7rem;
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    
+  }
 }
 
 .footer-bottom {
@@ -176,7 +168,6 @@ app-footer {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    padding-bottom: 1rem;
   }
 }
 
@@ -217,7 +208,7 @@ app-footer {
 .arrow-wrapper {
   position: absolute;
   bottom: 130%;
-  right: 15%;
+  right: 7%;
   width: 3em;
   height: 6em;
   margin: 0 auto;
@@ -277,7 +268,7 @@ app-footer {
   font-size: 1rem;
   height: 50px;
   margin-inline-end: 2.7rem;
-  
+
   @media (max-width: bp.$breakpoint-md) {
     margin-right: 30px;
   }
@@ -297,15 +288,15 @@ app-footer {
   margin-inline-end: 0.5rem;
   margin-inline-start: 2.7rem;
   justify-content: flex-end;
-  
+
   @media (max-width: bp.$breakpoint-md) {
     margin-right: 10px;
   }
-  
+
   @media (max-width: bp.$breakpoint-sm) {
     margin-right: 0.5rem;
   }
-  
+
   @media (max-width: bp.$breakpoint-xs) {
     margin: 0;
     justify-content: center; // Keep center alignment on mobile
@@ -352,6 +343,7 @@ app-footer {
   }
   @media (max-width: bp.$breakpoint-xs) {
     display: block;
+    font-size: 1rem;
   }
 }
 
@@ -378,6 +370,8 @@ app-footer {
 
     justify-content: center;
     gap: 4rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 
     @media (max-width: bp.$breakpoint-md) {
       gap: 2rem;
@@ -409,9 +403,6 @@ app-footer {
       margin-left: 0;
     }
   }
-
-  background: var(--color-primary);
-  color: var(--color-white);
 
   .legal a {
     color: var(--color-white);

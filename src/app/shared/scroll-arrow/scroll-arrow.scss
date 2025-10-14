@@ -13,21 +13,29 @@
   
   // Special positioning for arrow pointing to footer (accounts for clip-path)
   &.to-footer {
-    margin-bottom: -4rem; // Pull closer to angled footer
+    margin-bottom: 2rem; // Give space for animation above angled footer
+    padding-bottom: 3rem; // Additional padding for arrow animation room
+    z-index: 10; // Ensure arrow stays above footer background
+    
+    @media (max-width: bp.$breakpoint-md) {
+      margin-bottom: 1.5rem;
+      padding-bottom: 2.5rem;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      margin-bottom: 1rem;
+      padding-bottom: 2rem;
+    }
+    @media (max-width: bp.$breakpoint-xs) {
+      margin-bottom: -2.5rem;
+      padding-bottom: 1rem;
+    }
   }
   
   @media (max-width: bp.$breakpoint-md) {
     height: 200px;
     margin: -1.5rem 0;
   }
-  @media (max-width: bp.$breakpoint-sm) {
-    height: 150px;
-    margin: -1rem 0;
-  }
-  @media (max-width: bp.$breakpoint-xs) {
-    height: 120px; // Reduced height for mobile
-    
-  }
+  
 }
 
 .arrow-link {
@@ -45,22 +53,22 @@
 .scroll-arrow img {
   display: block;
   width: auto; 
+  height: auto;
   object-fit: contain;
   
   // Position arrows based on direction
   &.arrow-right {
     @media (max-width: bp.$breakpoint-xs) {
-      margin-left: 50%; // Adjusted for mobile
+      margin-left: 130%; // Adjusted for mobile
     }
   }
   
   &.arrow-left {
     // Arrow-left should be positioned more on the right side  
     margin-right: 30%; // Keep it on the right
-    
+    margin-top: 1rem;
     @media (max-width: bp.$breakpoint-xs) {
-      margin-bottom: -7rem;
-      margin-right: 1rem;
+      margin-right: 0%;
     }
   }
   
