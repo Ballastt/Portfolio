@@ -4,12 +4,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center; 
-  width: 100%; // Full width to allow proper positioning
+  width: 100%; 
   height: 240px;
-  margin: -1rem 0; // Reduced negative margin to prevent overlap
-  overflow: visible; // Allow arrows to extend beyond container
-  box-sizing: border-box;
-  position: relative; // Enable absolute positioning for arrows
+  margin: -1rem 0; 
+  overflow: visible;
   
   // Special positioning for arrow pointing to footer (accounts for clip-path)
   &.to-footer {
@@ -35,6 +33,10 @@
     height: 200px;
     margin: -1.5rem 0;
   }
+  @media (max-width: bp.$breakpoint-sm) {
+    height: 180px;
+    margin: -1.5rem 0;
+  }
   
 }
 
@@ -44,6 +46,9 @@
   justify-content: center;
   height: 100%;
   width: auto;
+  @media (max-width: bp.$breakpoint-sm) {
+    justify-content: flex-start;
+  }
   @media (max-width: bp.$breakpoint-xs) {
     padding-top: 1rem;
     align-items: normal;
@@ -53,13 +58,17 @@
 .scroll-arrow img {
   display: block;
   width: auto; 
-  height: auto;
   object-fit: contain;
   
   // Position arrows based on direction
   &.arrow-right {
+    @media (max-width: bp.$breakpoint-sm) {
+      margin-top: 3rem;
+      height: 120%;
+      margin-left: 40%; // Adjusted for mobile
+    }
     @media (max-width: bp.$breakpoint-xs) {
-      margin-left: 130%; // Adjusted for mobile
+      margin-left: 50%; // Adjusted for mobile
     }
   }
   
@@ -67,6 +76,10 @@
     // Arrow-left should be positioned more on the right side  
     margin-right: 30%; // Keep it on the right
     margin-top: 1rem;
+    @media (max-width: bp.$breakpoint-sm) {
+      height: 120%;
+      margin-right: 20%; // Adjusted for mobile
+    }
     @media (max-width: bp.$breakpoint-xs) {
       margin-right: 0%;
     }
