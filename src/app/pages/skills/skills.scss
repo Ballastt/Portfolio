@@ -206,7 +206,7 @@
       margin-bottom: 1.7rem;
 
       @media (max-width: bp.$breakpoint-lg) {
-        font-size: 2.8rem; // Slightly smaller for English
+        font-size: 2.8rem; 
         margin-top: 0.8rem;
         margin-bottom: 1.2rem;
       }
@@ -344,10 +344,6 @@
   transition: transform 0.3s ease;
   animation: none;
   will-change: transform;
-  @media (max-width: bp.$breakpoint-md) {
-  }
-  @media (max-width: bp.$breakpoint-sm) {
-  }
   @media (max-width: bp.$breakpoint-xs) {
     height: 40px;
     width: auto;

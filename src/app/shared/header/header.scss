@@ -145,9 +145,14 @@
     display: none;
   }
 
-  // Hide on mobile screens
+  // Hide on mobile screens when NOT in overlay mode
   @media (max-width: bp.$breakpoint-xs) {
     display: none;
+    
+    // Show when header is in overlay mode (menu is open)
+    .header.overlay & {
+      display: flex;
+    }
   }
 }
 

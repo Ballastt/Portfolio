@@ -251,6 +251,34 @@
           <context context-type="linenumber">182,191</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="menu.about" datatype="html">
+        <source> Über Mich <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;border top&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;border right&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;border bottom&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span class=&quot;border left&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
+          <context context-type="linenumber">13,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu.skills" datatype="html">
+        <source> Meine Skills <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;border top&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;border right&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;border bottom&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span class=&quot;border left&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
+          <context context-type="linenumber">30,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu.projects" datatype="html">
+        <source> Portfolio <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;border top&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;border right&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;border bottom&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span class=&quot;border left&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
+          <context context-type="linenumber">47,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu.sayHi" datatype="html">
+        <source>Sag Hi!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
+          <context context-type="linenumber">56,58</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="about.title" datatype="html">
         <source>Über mich</source>
         <context-group purpose="location">
