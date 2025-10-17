@@ -285,3 +285,67 @@
   @media (max-width: bp.$breakpoint-sm) { padding: 0.9rem; }
   @media (max-width: bp.$breakpoint-xs) { flex-direction: column; padding: 0.7rem 0.7rem 3rem 0.7rem; }
 }
+
+// Project buttons styling
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+// Live Demo button styling (secondary button)
+.btn-secondary.live-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  min-width: 120px;
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+  
+  &:hover:not(.disabled) {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    color: #999;
+    border-color: #999;
+    position: relative;
+    
+    &:hover {
+      background-color: transparent;
+      color: #999;
+      transform: none;
+    }
+    
+    &::after {
+      content: "🚀";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -192,6 +192,43 @@
           <context context-type="linenumber">81,83</context>
         </context-group>
       </trans-unit>
+      
+      <trans-unit id="projects.livedemo.aria" datatype="html">
+        <source>Live Demo des Projekts öffnen</source>
+        <target>Open Live Demo of the project</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="projects.livedemo.button" datatype="html">
+        <source> Live Demo </source>
+        <target> Live Demo </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">98,100</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="projects.livedemo.coming.aria" datatype="html">
+        <source>Live Demo bald verfügbar</source>
+        <target>Live Demo coming soon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="projects.livedemo.coming.button" datatype="html">
+        <source> Coming Soon </source>
+        <target> Coming Soon </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">108,110</context>
+        </context-group>
+      </trans-unit>
+      
       <trans-unit id="projects.join.title" datatype="html">
         <source>Join</source>
         <target>Join</target>

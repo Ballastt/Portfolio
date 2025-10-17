@@ -73,17 +73,42 @@
             project.tech.join(" | ")
           }}</span>
           <p>{{ getTranslatedDescription(project) }}</p>
-          <a
-            class="btn-primary"
-            [href]="project.githubUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Projekt auf GitHub öffnen"
-            i18n-aria-label="@@projects.github.aria"
-            i18n="@@projects.github.button"
-          >
-            GitHub
-          </a>
+          <div class="project-buttons">
+            <a
+              class="btn-primary"
+              [href]="project.githubUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projekt auf GitHub öffnen"
+              i18n-aria-label="@@projects.github.aria"
+              i18n="@@projects.github.button"
+            >
+              GitHub
+            </a>
+            @if (project.liveUrl && project.liveUrl.trim() !== '') {
+            <a
+              class="btn-secondary live-demo"
+              [href]="project.liveUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live Demo des Projekts öffnen"
+              i18n-aria-label="@@projects.livedemo.aria"
+              i18n="@@projects.livedemo.button"
+            >
+              Live Demo
+            </a>
+            } @else {
+            <button
+              class="btn-secondary live-demo disabled"
+              disabled
+              aria-label="Live Demo bald verfügbar"
+              i18n-aria-label="@@projects.livedemo.coming.aria"
+              i18n="@@projects.livedemo.coming.button"
+            >
+              Coming Soon
+            </button>
+            }
+          </div>
         </div>
       </div>
     </article>

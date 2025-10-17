@@ -35,6 +35,7 @@ export class ProjectSection implements AfterViewInit {
         'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
       descriptionKey: 'join.description',
       githubUrl: 'https://github.com/Ballastt/Join',
+      liveUrl: '', // Add your deployed URL here when ready
       reverseLayout: false,
     },
     {
@@ -49,6 +50,7 @@ export class ProjectSection implements AfterViewInit {
         'Ein simples Jump-and-Run Spiel basierend auf dem Paradigma der Objektorientierung. Hilf Pepe Münzen und Tabasco-Flaschen ein zu sammeln um seine Gegner zu besiegen',
       descriptionKey: 'elpollo.description',
       githubUrl: 'https://github.com/Ballastt/El-pollo-loco',
+      liveUrl: '', // Add your deployed URL here when ready
       reverseLayout: true,
     },
     {
@@ -63,6 +65,7 @@ export class ProjectSection implements AfterViewInit {
         'Diese App ist ein Slack-Klon. Die App revolutioniert Team-Kommunikation und Zusammenarbeit mit ihrem intuitivem Interface, Nachrichtenaustausch in Real-Time und robuster Channel Organisation.',
       descriptionKey: 'dabubble.description',
       githubUrl: ' ',
+      liveUrl: '', // Future project - not available yet
       reverseLayout: false,
     },
     {
@@ -76,7 +79,8 @@ export class ProjectSection implements AfterViewInit {
       description:
         'Eine simple Bibliothek, die auf der PokéAPI basiert. Stellt Pokemon Informationen zur Verfügung und katalogisiert diese.',
       descriptionKey: 'pokedex.description',
-      githubUrl: 'https://github.com/Ballastt/Join',
+      githubUrl: 'https://github.com/Ballastt/Project-Pokedex-with-API',
+      liveUrl: '', // Add your deployed URL here when ready
       reverseLayout: true,
     },
   ];

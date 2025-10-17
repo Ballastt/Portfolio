@@ -276,7 +276,7 @@
         <source>Sag Hi!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
-          <context context-type="linenumber">56,58</context>
+          <context context-type="linenumber">57,58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.title" datatype="html">
@@ -453,14 +453,42 @@
         <source>Projekt auf GitHub öffnen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
-          <context context-type="linenumber">81,82</context>
+          <context context-type="linenumber">82,83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projects.github.button" datatype="html">
         <source> GitHub </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
-          <context context-type="linenumber">85,87</context>
+          <context context-type="linenumber">86,88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.livedemo.aria" datatype="html">
+        <source>Live Demo des Projekts öffnen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.livedemo.button" datatype="html">
+        <source> Live Demo </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">98,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.livedemo.coming.aria" datatype="html">
+        <source>Live Demo bald verfügbar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.livedemo.coming.button" datatype="html">
+        <source> Coming Soon </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
+          <context context-type="linenumber">108,110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projects.title" datatype="html">
