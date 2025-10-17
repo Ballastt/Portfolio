@@ -1,0 +1,72 @@
+@use "../../../styles/breakpoints" as bp;
+
+/* ===== ARROW WRAPPER & ANIMATIONS ===== */
+
+.arrow-wrapper {
+  position: absolute;
+  bottom: 130%;
+  right: 7%;
+  width: 3em;
+  height: 6em;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @media (max-width: bp.$breakpoint-sm) {
+    display: none;
+  }
+}
+
+.arrow-wrapper:hover .arrow {
+  height: 4em;
+}
+
+.arrow {
+  display: block;
+  width: 0.2em;
+  height: 2.6em;
+  bottom: 0%;
+  right: 50%;
+  position: absolute;
+  background: white;
+  transition: height 0.35s;
+  cursor: pointer;
+  
+  @media (max-width: bp.$breakpoint-lg) {
+    right: 5%;
+    bottom: 10%;
+  }
+  
+  @media (max-width: bp.$breakpoint-md) {
+    right: 3%;
+    bottom: 20%;
+  }
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    right: 30%;
+    bottom: 80%;
+  }
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 0.2em;
+  background: white;
+  top: 0;
+  left: 74%;
+  transform-origin: left center;
+  
+  @media (max-width: bp.$breakpoint-sm) {
+    left: 80%;
+  }
+}
+
+.arrow::before {
+  transform: translateX(-0%) rotate(45deg);
+}
+
+.arrow::after {
+  transform: translateX(-10%) rotate(-220deg);
+}

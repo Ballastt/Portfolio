@@ -1,0 +1,72 @@
+@use "../../../styles/breakpoints" as bp;
+
+/* ===== COMPACT FOOTER & RESPONSIVE VARIANTS ===== */
+
+.footer--compact {
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  min-height: auto;
+  padding-top: 3rem;
+  
+  .content,
+  .form,
+  .arrow-wrapper1 {
+    display: none;
+  }
+
+  .footer-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 4rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    @media (max-width: bp.$breakpoint-md) {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    
+    @media (max-width: bp.$breakpoint-sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      padding: 0 1rem;
+    }
+  }
+
+  .footer-bottom {
+    margin-right: 2rem;
+    
+    @media (max-width: bp.$breakpoint-sm) {
+      margin-right: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  .wrapper-legal-sm {
+    margin-left: 2rem;
+
+    @media (max-width: bp.$breakpoint-sm) {
+      margin-left: 0;
+    }
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      width: 100%;
+    }
+  }
+
+  .legal a {
+    color: var(--color-white);
+  }
+}

@@ -209,6 +209,13 @@ form {
   }
 }
 
+.send-btn:hover {
+  background-color: var(--color-highlight);
+  color: black;
+  border: 4px solid black;
+  transform: scale(1.05);
+}
+
 .checkbox-circle-wrapper {
   position: relative;
   width: 20px;

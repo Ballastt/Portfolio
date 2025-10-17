@@ -1,0 +1,59 @@
+@use "../../../styles/breakpoints" as bp;
+
+/* ===== CONTENT & TEXT STYLING ===== */
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  > h3 {
+    color: var(--color-highlight);
+    margin: 1rem 0;
+    
+    @media (max-width: bp.$breakpoint-sm) {
+      font-size: 1.4rem;
+    }
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+  
+  > span {
+    margin: 1rem 0;
+    
+    @media (max-width: bp.$breakpoint-md) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    
+    @media (max-width: bp.$breakpoint-sm) {
+      font-size: 1rem;
+    }
+    
+    @media (max-width: bp.$breakpoint-xs) {
+      font-size: 0.9rem;
+      padding-top: 0.5rem;
+      width: 80%;
+    }
+  }
+}
+
+.mobile-email {
+  display: none;
+  
+  > a {
+    color: white;
+  }
+  
+  @media (max-width: bp.$breakpoint-xs) {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+.bracket {
+  width: 100%;
+}
