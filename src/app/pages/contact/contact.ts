@@ -23,8 +23,12 @@ export class ContactComponent {
     privacy: new FormControl<boolean>(false, [Validators.requiredTrue]),
   });
 
+  // Use local sendMail.php when running on localhost to support Maildev testing
   post = {
-    endPoint: 'https://birgit-leitner.at/sendMail.php',
+    endPoint:
+      window && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? 'http://127.0.0.1/sendMail.php'
+        : 'https://birgit-leitner.at/sendMail.php',
     options: {
       headers: { 'Content-Type': 'application/json' },
       responseType: 'text' as const,

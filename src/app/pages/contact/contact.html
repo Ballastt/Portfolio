@@ -18,11 +18,11 @@
         <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         }
       </span>
+      @if (applyForm.get('name')?.hasError('required') &&
+      applyForm.get('name')?.touched) {
+      <span class="error" i18n="@@contact.form.name.required"> Der Name ist erforderlich. </span>
+      }
     </div>
-    @if (applyForm.get('name')?.hasError('required') &&
-    applyForm.get('name')?.touched) {
-    <span class="error" i18n="@@contact.form.name.required"> Der Name ist erforderlich. </span>
-    }
   </div>
 
   <div class="form-field">
@@ -44,14 +44,14 @@
         <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         }
       </span>
+      @if (applyForm.get('email')?.hasError('required') &&
+      applyForm.get('email')?.touched) {
+      <span class="error" i18n="@@contact.form.email.required"> Die Email ist erforderlich. </span>
+      } @if (applyForm.get('email')?.hasError('email') &&
+      applyForm.get('email')?.touched) {
+      <span class="error" i18n="@@contact.form.email.invalid"> Bitte eine gültige Email eingeben. </span>
+      }
     </div>
-    @if (applyForm.get('email')?.hasError('required') &&
-    applyForm.get('email')?.touched) {
-    <span class="error" i18n="@@contact.form.email.required"> Die Email ist erforderlich. </span>
-    } @if (applyForm.get('email')?.hasError('email') &&
-    applyForm.get('email')?.touched) {
-    <span class="error" i18n="@@contact.form.email.invalid"> Bitte eine gültige Email eingeben. </span>
-    }
   </div>
 
   <div class="form-field">
@@ -72,17 +72,16 @@
         <img src="assets/icons/validation_red.png" alt="Invalid Icon" />
         }
       </span>
+      @if (applyForm.get('message')?.hasError('required') &&
+      applyForm.get('message')?.touched) {
+      <span class="error" i18n="@@contact.form.message.required"> Die Nachricht ist erforderlich. </span>
+      } @if (applyForm.get('message')?.hasError('minlength') &&
+      applyForm.get('message')?.touched) {
+      <span class="error" i18n="@@contact.form.message.minlength">
+        Die Nachricht muss mindestens 100 Zeichen lang sein.
+      </span>
+      }
     </div>
-
-    @if (applyForm.get('message')?.hasError('required') &&
-    applyForm.get('message')?.touched) {
-    <span class="error" i18n="@@contact.form.message.required"> Die Nachricht ist erforderlich. </span>
-    } @if (applyForm.get('message')?.hasError('minlength') &&
-    applyForm.get('message')?.touched) {
-    <span class="error" i18n="@@contact.form.message.minlength">
-      Die Nachricht muss mindestens 100 Zeichen lang sein.
-    </span>
-    }
   </div>
 
   <div
