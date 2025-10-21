@@ -74,13 +74,13 @@ export class App {
     let headerOffset = 0;
     switch (section) {
       case 'about':
-        headerOffset = 120; // z.B. 120px von oben
+        headerOffset = 100; // z.B. 100px von oben
         break;
       case 'skills':
-        headerOffset = -100;
+        headerOffset = 100;
         break;
       case 'projects':
-        headerOffset = -100;
+        headerOffset = 100;
         break;
     }
 

@@ -3,18 +3,19 @@
 .scroll-arrow {
   display: flex;
   justify-content: flex-end;
-  align-items: center; 
-  width: 100%; 
+  align-items: center;
+  width: 100%;
   height: 240px;
-  margin: -1rem 0; 
+  margin: -1rem 0;
   overflow: visible;
-  
+  position: relative; // allow absolute positioning of arrow icons
+
   // Special positioning for arrow pointing to footer (accounts for clip-path)
   &.to-footer {
     margin-bottom: 2rem; // Give space for animation above angled footer
     padding-bottom: 3rem; // Additional padding for arrow animation room
     z-index: 10; // Ensure arrow stays above footer background
-    
+
     @media (max-width: bp.$breakpoint-md) {
       margin-bottom: 1.5rem;
       padding-bottom: 2.5rem;
@@ -28,7 +29,7 @@
       padding-bottom: 1rem;
     }
   }
-  
+
   @media (max-width: bp.$breakpoint-md) {
     margin: -1.5rem 0;
   }
@@ -36,7 +37,6 @@
     height: 180px;
     margin: -1.5rem 0;
   }
-  
 }
 
 .arrow-link {
@@ -56,46 +56,45 @@
 
 .scroll-arrow img {
   display: block;
-  width: auto; 
+  width: auto;
   object-fit: contain;
-  
+
   // Position arrows based on direction
   &.arrow-right {
-    @media (max-width: bp.$breakpoint-md) {
-      height: 100%;
-      margin-left: 80%;
-      margin-top: 3rem;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      margin-top: 3rem;
-      height: 120%;
-      margin-left: 40%; // Adjusted for mobile
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      margin-top: 0;
-      height: 100%;
-      margin-left: 58%; // Adjusted for mobile
-    }
-  }
-  
-  &.arrow-left {
-    // Arrow-left should be positioned more on the right side  
-    margin-right: 30%; // Keep it on the right
-    margin-top: 1rem;
-    @media (max-width: bp.$breakpoint-md) {
-      height: 100%;
-      margin-right: 0;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      height: 120%;
-      margin-right: 20%; // Adjusted for mobile
-    }
-    @media (max-width: bp.$breakpoint-xs) {
-      height: 100%;
-      margin-right: 0%;
-    }
-  }
-  
-  
-}
+    position: absolute;
+    left: 1rem; // anchor to left edge of viewport/container
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
 
+    @media (max-width: bp.$breakpoint-md) {
+      height: 100%;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      height: 100%;
+    }
+    @media (max-width: bp.$breakpoint-xs) {
+      left: 0.75rem;
+    }
+  }
+
+  &.arrow-left {
+    // Arrow-left should be positioned more on the right side
+    margin-top: 1rem;
+    position: absolute;
+    right: 1rem; // anchor to right side
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+
+    @media (max-width: bp.$breakpoint-md) {
+      height: 100%;
+    }
+    @media (max-width: bp.$breakpoint-sm) {
+      height: 100%;
+    }
+    @media (max-width: bp.$breakpoint-xs) {
+      right: 0.75rem;
+    }
+  }
+}

@@ -146,6 +146,9 @@
   @media (max-width: bp.$breakpoint-sm) {
     margin-right: 0;
     justify-content: center;
+    font-size: 1.1rem;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
     font-size: 0.9rem;
   }
 }
