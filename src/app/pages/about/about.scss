@@ -40,10 +40,6 @@
     width: 100%;
   }
 
-  @media (max-width: bp.$breakpoint-xs) {
-    padding: 1rem 0;
-  }
-
   &:hover {
     color: var(--color-highlight);
   }

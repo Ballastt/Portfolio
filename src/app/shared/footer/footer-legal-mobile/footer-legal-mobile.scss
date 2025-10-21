@@ -9,8 +9,6 @@
   background: var(--color-primary);
   color: var(--color-white);
   text-align: center;
-
-  // Add clip-path for angled top
   clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
   min-height: auto;
 
@@ -44,6 +42,9 @@
       gap: 1rem;
       margin: 0;
       justify-content: center;
+      @media (max-width: bp.$breakpoint-xs) {
+        font-size: 0.9rem !important;
+      }
 
       a {
         position: relative;

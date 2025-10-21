@@ -161,7 +161,7 @@
   box-sizing: border-box;
   @media (max-width: bp.$breakpoint-lg) { width: 80%; }
   @media (max-width: bp.$breakpoint-md) { max-width: 100%; padding: 0 2rem; margin-top: 2rem; }
-  @media (max-width: bp.$breakpoint-xs) { width: 100%; padding: 0 1rem; margin-top: 1.5rem; }
+  @media (max-width: bp.$breakpoint-xs) { width: 100%; padding: 0 1rem; margin-top: 1.5rem; text-align: left;}
   > h2 {
     font-weight: 800;
     font-size: 50px;
@@ -193,6 +193,17 @@
   @media (max-width: bp.$breakpoint-lg) {
     flex-direction: column;
     width: 100%;
+  }
+
+  .project-details {
+    @media (max-width: bp.$breakpoint-xs) {
+      text-align: right;
+      .project-buttons {
+        /* When buttons stack vertically, align them to the right edge */
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+    }
   }
 
   .img-overlay {
@@ -295,6 +306,18 @@
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     gap: 0.8rem;
+  }
+}
+
+.project-buttons a,
+.project-buttons button {
+  @media (max-width: bp.$breakpoint-xs) {
+    width: 120px;
+    align-self: flex-end; 
+  }
+
+  &:active {
+    width: 150px;
   }
 }
 

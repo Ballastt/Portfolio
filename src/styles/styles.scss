@@ -37,21 +37,18 @@ h1 {
   margin: 0;
   font-weight: 800;
   font-size: 2.5rem; // 40px base
-  
-  @media (min-width: bp.$breakpoint-sm) {
-    font-size: 3rem; // 48px
-  }
-  
-  @media (min-width: bp.$breakpoint-md) {
-    font-size: 3.5rem; // 56px
-  }
-  
-  @media (min-width: bp.$breakpoint-lg) {
+  @media (max-width: bp.$breakpoint-lg) {
     font-size: 4rem; // 64px
   }
-  
-  @media (min-width: bp.$breakpoint-xl) {
-    font-size: 4.8rem; // 77px
+
+  @media (max-width: bp.$breakpoint-md) {
+    font-size: 3.5rem; // 56px
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    font-size: 3rem; // 48px
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    font-size: 2rem; // 45px
   }
 }
 
@@ -73,7 +70,8 @@ h3 {
     color: #000;
   }
 
-  p.blink, h2.blink {
+  p.blink,
+  h2.blink {
     animation: blink 3s infinite ease-in-out;
     color: white;
   }
@@ -82,9 +80,10 @@ h3 {
 @keyframes blink {
   0%,
   100% {
-    color: inherit; 
+    color: inherit;
   }
-  50%, 80% {
+  50%,
+  80% {
     color: var(--color-highlight);
   }
 }

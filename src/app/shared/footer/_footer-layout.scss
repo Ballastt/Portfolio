@@ -43,7 +43,7 @@
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1rem 0.5rem 1rem;
+    padding: 0 1rem 1rem 1rem;
     box-sizing: border-box;
     gap: 4rem;
     display: flex;
@@ -93,4 +93,18 @@
 
 app-footer {
   display: block;
+}
+
+/* When rendered on the Impressum page, remove the angled offset so the footer sits at the bottom */
+.legal-shell.page-impressum .angled-footer {
+  margin-top: 0 !important;
+  @media (max-width: bp.$breakpoint-md) {
+    margin-top: 0 !important;
+  }
+  @media (max-width: bp.$breakpoint-sm) {
+    margin-top: 0 !important;
+  }
+  @media (max-width: bp.$breakpoint-xs) {
+    margin-top: 0 !important;
+  }
 }

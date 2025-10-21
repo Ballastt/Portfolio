@@ -4,6 +4,8 @@
 
 // Specific styles for Datenschutz page
 .content-datenschutz {
+  margin-top: auto;
+  margin-bottom: auto;
   @media (max-width: bp.$breakpoint-sm) {
     width: 85%;
 

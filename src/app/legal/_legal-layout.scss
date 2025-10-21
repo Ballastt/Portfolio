@@ -11,6 +11,8 @@
   margin-right: -50vw;
   min-height: 100vh;
   background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: bp.$breakpoint-xs) {
     position: static;
@@ -24,12 +26,13 @@
 
   .legal-page {
     width: 100%;
+    flex: 1 0 auto; /* allow content to take remaining space so footer is at bottom */
   }
 
   .legal {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* top-align content by default to avoid scrolling for short pages */
     position: relative;
     flex-direction: column;
     align-items: center;
