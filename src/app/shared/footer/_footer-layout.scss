@@ -6,7 +6,7 @@
   position: relative;
   max-width: 1960px;
   width: 100%;
-  min-height: 1100px;
+  min-height: 1200px;
   background-color: var(--color-primary);
   color: white;
   clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
@@ -16,25 +16,24 @@
   margin-top: -13rem;
 
   @media (max-width: bp.$breakpoint-lg) {
-    min-height: 1050px;
-    clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
   }
   
   @media (max-width: bp.$breakpoint-md) {
     margin-top: -8rem;
-    min-height: 1050px;
+    min-height: 1150px; /* Increased to accommodate form error messages */
     width: 100%;
     clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
   }
   
   @media (max-width: bp.$breakpoint-sm) {
     margin-top: -5rem;
-    min-height: 1100px;
+    min-height: 1200px; /* Increased to accommodate form error messages */
   }
   
   @media (max-width: bp.$breakpoint-xs) {
     margin-top: 1rem;
-    min-height: 1050px;
+    min-height: 1150px; /* Increased to accommodate form error messages */
     width: 100%;
     clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
   }
@@ -67,24 +66,18 @@
   }
 
   > h1 {
-    font-size: 6rem;
     font-family: var(--font-base);
     margin: 0;
     padding-left: clamp(0rem, 12vw, 17.5rem);
     padding-bottom: clamp(2rem, 4vw, 5rem);
     
     @media (max-width: bp.$breakpoint-md) {
-      font-size: 5rem;
       padding-left: clamp(0rem, 8vw, 10rem);
       padding-bottom: clamp(1.5rem, 3vw, 4rem);
     }
-
-    @media (max-width: bp.$breakpoint-sm) {
-      font-size: 4rem;
-    }
     
     @media (max-width: bp.$breakpoint-xs) {
-      font-size: 40px;
+      font-size: 3rem;
       text-align: center;
       padding-left: 0;
     }
