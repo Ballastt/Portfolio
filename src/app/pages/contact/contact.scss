@@ -5,7 +5,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: fit-content;  
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -14,6 +14,8 @@ form {
   display: flex;
   flex-direction: column;
   position: relative;
+  box-sizing: border-box;
+  min-height: 100px; /* Reserve space for error messages */
   @media (max-width: bp.$breakpoint-md) {
     width: 90%;
   }
@@ -115,10 +117,11 @@ textarea:-webkit-autofill {
 
 /* Ensure default error spacing when label is not floated */
 .input-wrapper .error {
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
+  padding: 0 0.9rem;
   position: relative;
   z-index: 20; // Make sure the error text is above the floated label
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .input-wrapper input:hover:not(:focus),
@@ -153,6 +156,8 @@ textarea:-webkit-autofill {
 .error {
   color: red;
   font-size: 0.85rem;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .checkbox-wrapper {
