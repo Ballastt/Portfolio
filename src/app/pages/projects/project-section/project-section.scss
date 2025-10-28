@@ -10,7 +10,7 @@
   @media (max-width: bp.$breakpoint-lg) { flex-direction: column; padding: 3rem; }
   @media (max-width: bp.$breakpoint-md) { padding: 2rem 1rem; }
   @media (max-width: bp.$breakpoint-sm) { width: 100%; padding: 2rem 0rem; }
-  @media (max-width: bp.$breakpoint-xs) { width: 100%; height: fit-content; padding: 1rem 0rem; }
+  @media (max-width: bp.$breakpoint-xs) { width: 100%; height: fit-content; padding: 1rem 0rem; overflow: visible;}
 }
 
 .project {
@@ -56,6 +56,7 @@
       justify-content: flex-end;
       align-items: center;
       padding-right: 2rem;
+      overflow: visible;
       transition: opacity 0.4s ease;
       @media (max-width: bp.$breakpoint-lg) {
         top: 0.4rem;
@@ -70,7 +71,7 @@
         bottom: -1rem;
       }
       @media (max-width: bp.$breakpoint-sm) { top: 0.5rem; left: 0rem; right: 0rem; bottom: -0.5rem; }
-      @media (max-width: bp.$breakpoint-xs) { border: 3px solid black; bottom: -0.7rem; top: 2.5rem; left: 0rem; right: 0rem; }
+      @media (max-width: bp.$breakpoint-xs) { border: 3px solid black; bottom: -0.8rem; top: 2.5rem; left: -0.5rem; right: 0.5rem; }
 
       .arrow-small {
         position: absolute;
@@ -83,7 +84,7 @@
         transition-delay: 0.4s;
         @media (max-width: bp.$breakpoint-lg) { top: 100%; right: 40%; }
         @media (max-width: bp.$breakpoint-md) { top: 100%; right: 40%; }
-        @media (max-width: bp.$breakpoint-xs) { display: none; }
+        @media (max-width: bp.$breakpoint-xs) { top: 50%; right: -35px; display: block; }
       }
 
       .arrow-large {
@@ -97,7 +98,7 @@
         transition-delay: 0.4s;
         @media (max-width: bp.$breakpoint-lg) { top: 100%; right: 40%; }
         @media (max-width: bp.$breakpoint-md) { top: 100%; right: 40%; }
-        @media (max-width: bp.$breakpoint-xs) { top: 100%; right: 100px; }
+        @media (max-width: bp.$breakpoint-xs) { display: none; }
       }
     }
   }
@@ -128,25 +129,33 @@
       transform: translateY(-50%) scale(0) rotate(0deg);
       opacity: 0;
       z-index: 1;
+      @media (max-width: bp.$breakpoint-xs) {
+        transform: translateY(-50%) scale(0.7) rotate(-135deg);
+        opacity: 1;
+        z-index: 2;
+      }
     }
 
     .arrow-large {
       transform: translateY(-50%) scale(1) rotate(0deg);
       opacity: 1;
       z-index: 2;
+      @media (max-width: bp.$breakpoint-xs) {
+        display: none;
+      }
     }
 
     .content {
       opacity: 1;
       pointer-events: auto;
       transform: translateY(0);
-      transition-delay: 0.57s;
+      transition-delay: 0.5s;
     }
   }
 }
 
 .arrow-small {
-  transform: translateY(-50%) scale(1) rotate(0deg);
+  transform: translateY(-50%) scale(0.7) rotate(0deg);
   opacity: 1;
   z-index: 2;
 }
@@ -222,11 +231,12 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 2rem;
+    overflow: visible;
     transition: opacity 0.4s ease;
     @media (max-width: bp.$breakpoint-lg) { top: 0.4rem; right: 0.2rem; left: -1.2rem; bottom: -0.4rem; }
     @media (max-width: bp.$breakpoint-md) { top: 0.5rem; left: -1rem; right: 0.2rem; bottom: -0.5rem; }
     @media (max-width: bp.$breakpoint-sm) { top: 0.5rem; left: 0rem; right: 0rem; bottom: -0.5rem; }
-    @media (max-width: bp.$breakpoint-xs) { border: 3px solid black; bottom: -0.7rem; top: 2.5rem; left: 0rem; right: 0rem; }
+    @media (max-width: bp.$breakpoint-xs) { border: 3px solid black; bottom: -0.7rem; top: 2.5rem; left: 0.5rem; right: -0.5rem; }
   }
 
   .img-wrapper .img-overlay {
@@ -234,17 +244,23 @@
       right: auto;
       left: -36px;
       transform: translateY(-50%) scale(1) rotate(0deg);
+      overflow: visible;
       @media (max-width: bp.$breakpoint-lg) { top: 100%; left: 300px; }
       @media (max-width: bp.$breakpoint-md) { left: 250px; }
-      @media (max-width: bp.$breakpoint-xs) { left: 150px; }
+      @media (max-width: bp.$breakpoint-xs) { 
+        top: 50%; 
+        left: -35px; 
+        transform: translateY(-50%) scale(0.7) rotate(0deg);
+      }
     }
     .arrow-large {
       right: auto;
       left: -40px;
       transform: translateY(-50%) scale(0.9) rotate(0deg);
+      overflow: visible;
       @media (max-width: bp.$breakpoint-lg) { top: 100%; left: 300px; }
       @media (max-width: bp.$breakpoint-md) { left: 250px; }
-      @media (max-width: bp.$breakpoint-xs) { left: 150px; }
+      @media (max-width: bp.$breakpoint-xs) { display: none; }
     }
   }
 
@@ -272,6 +288,11 @@
       opacity: 0;
       z-index: 1;
       transition-delay: 0.4s;
+      @media (max-width: bp.$breakpoint-xs) {
+        transform: translateY(-50%) scale(0.7) rotate(-135deg);
+        opacity: 1;
+        z-index: 2;
+      }
     }
 
     .arrow-large {
@@ -279,6 +300,9 @@
       opacity: 1;
       z-index: 2;
       transition-delay: 0.4s;
+      @media (max-width: bp.$breakpoint-xs) {
+        display: none;
+      }
     }
   }
 
@@ -286,7 +310,7 @@
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
-    transition-delay: 0.8s;
+    transition-delay: 0.5s;
   }
 }
 
@@ -309,14 +333,6 @@
   @media (max-width: bp.$breakpoint-xs) {
     flex-direction: column;
     gap: 0.8rem;
-  }
-}
-
-.project-buttons a,
-.project-buttons button {
-  @media (max-width: bp.$breakpoint-xs) {
-    // width: 120px;
-    // align-self: flex-end; 
   }
 }
 
