@@ -29,7 +29,6 @@ export class ScrollArrow implements AfterViewInit {
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver(
       ([entry]) => {
-        console.log('IntersectionObserver:', entry.isIntersecting);
         if (entry.isIntersecting && !this.hasAnimated) {
           this.hasAnimated = true;
           this.animateArrow();
