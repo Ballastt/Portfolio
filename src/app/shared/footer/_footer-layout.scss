@@ -18,19 +18,19 @@
   @media (max-width: bp.$breakpoint-lg) {
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
   }
-  
+
   @media (max-width: bp.$breakpoint-md) {
     margin-top: -8rem;
     min-height: 1150px; /* Increased to accommodate form error messages */
     width: 100%;
     clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
   }
-  
+
   @media (max-width: bp.$breakpoint-sm) {
     margin-top: -5rem;
     min-height: 1200px; /* Increased to accommodate form error messages */
   }
-  
+
   @media (max-width: bp.$breakpoint-xs) {
     margin-top: 1rem;
     min-height: 1150px; /* Increased to accommodate form error messages */
@@ -48,20 +48,21 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
+
     @media (max-width: bp.$breakpoint-md) {
-      padding: 1rem 0 0 0;
+      margin-top: 2rem;
       gap: 1rem;
     }
-    
+
     @media (max-width: bp.$breakpoint-sm) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    
+
     @media (max-width: bp.$breakpoint-xs) {
-      padding: 0 1rem;
+      padding: 0;
+      gap: 0.3rem;
     }
   }
 
@@ -70,12 +71,12 @@
     margin: 0;
     padding-left: clamp(0rem, 12vw, 17.5rem);
     padding-bottom: clamp(2rem, 4vw, 5rem);
-    
+
     @media (max-width: bp.$breakpoint-md) {
       padding-left: clamp(0rem, 8vw, 10rem);
       padding-bottom: clamp(1.5rem, 3vw, 4rem);
     }
-    
+
     @media (max-width: bp.$breakpoint-xs) {
       font-size: 3rem;
       text-align: center;

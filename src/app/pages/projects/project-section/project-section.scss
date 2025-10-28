@@ -246,7 +246,7 @@
       transform: translateY(-50%) scale(1) rotate(0deg);
       overflow: visible;
       @media (max-width: bp.$breakpoint-lg) { top: 100%; left: 300px; }
-      @media (max-width: bp.$breakpoint-md) { left: 250px; }
+      @media (max-width: bp.$breakpoint-md) { left: 40%; }
       @media (max-width: bp.$breakpoint-xs) { 
         top: 50%; 
         left: -35px; 
@@ -259,7 +259,7 @@
       transform: translateY(-50%) scale(0.9) rotate(0deg);
       overflow: visible;
       @media (max-width: bp.$breakpoint-lg) { top: 100%; left: 300px; }
-      @media (max-width: bp.$breakpoint-md) { left: 250px; }
+      @media (max-width: bp.$breakpoint-md) { left: 40%; }
       @media (max-width: bp.$breakpoint-xs) { display: none; }
     }
   }
