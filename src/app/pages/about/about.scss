@@ -5,9 +5,7 @@
   flex-direction: column;
   max-width: 1440px;
   width: 100%;
-  height: 100vh;
-  padding-top: 7rem;
-  padding-left: 4rem;
+  padding: 7rem 4rem 2rem 4rem;
   box-sizing: border-box;
   @media (max-width: bp.$breakpoint-lg) {
     margin: 0;
@@ -54,7 +52,7 @@
   width: 100%;
   height: fit-content;
   font-size: 22px;
-  gap: 140px;
+  gap: 100px;
   @media (max-width: bp.$breakpoint-lg) {
     gap: 40px;
   }
@@ -85,13 +83,12 @@
   height: 50px;
   padding: 0.5rem 0;
   @media (max-width: bp.$breakpoint-lg) {
-    padding: 0;
+    padding: 0.5rem 0 0.5rem 0;
     height: auto;
     width: 300px;
   }
 
   @media (max-width: bp.$breakpoint-md) {
-    padding: 0.5rem 0 0.5rem 0;
     font-size: 1.3rem;
     width: 100%;
   }
@@ -140,7 +137,7 @@
   width: 50%;
   height: fit-content;
   @media (max-width: bp.$breakpoint-lg) {
-    width: 100%;
+    width: 50%;
   }
   @media (max-width: bp.$breakpoint-md) {
     width: 95%;
@@ -181,6 +178,7 @@
 .right-wrapper {
   display: flex;
   padding-top: 2rem;
+  height: fit-content;
 
   @media (max-width: bp.$breakpoint-md) {
     padding: 0;
@@ -189,7 +187,6 @@
 }
 
 .portrait {
-  position: relative;
   display: inline-block;
   width: 100%; // Allow the portrait to take full width of its container
   max-width: 500px; // Set a max-width to prevent it from getting too large
@@ -204,68 +201,73 @@
 
   @media (max-width: bp.$breakpoint-sm) {
     width: 300px;
-    height: 400px;
+    padding-bottom: 0;
   }
 
   @media (max-width: bp.$breakpoint-xs) {
-    width: 300px;
+    width: 250px;
   }
 
-  > img {
+  .image-wrapper {
+    position: relative;
     display: block;
-    height: auto; 
-    object-fit: cover;
 
-    @media (max-width: bp.$breakpoint-md) {
-      height: fit-content;
+    > img {
+      display: block;
       width: 100%;
-    }
-
-    @media (max-width: bp.$breakpoint-sm) {
       height: 100%;
-      width: 100%;
       object-fit: cover;
+
+      @media (max-width: bp.$breakpoint-md) {
+        height: fit-content;
+        width: 100%;
+      }
+
+      @media (max-width: bp.$breakpoint-sm) {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: bp.$breakpoint-xs) {
+        object-fit: cover;
+      }
     }
 
-    @media (max-width: bp.$breakpoint-xs) {
-      height: 100%;
-      width: 100%;
-      object-fit: scale-down;
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    right: -16px;
-    bottom: -16px;
-    border: 4px solid black;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    @media (max-width: bp.$breakpoint-md) {
-      top: 0.7rem;
-      left: -1rem;
-      right: 0.7rem;
-      bottom: 0.7rem;
-    }
-    @media (max-width: bp.$breakpoint-sm) {
-      top: 0.7rem;
-      left: -1.2rem;
-      bottom: 1.1rem;
-      right: 0.7rem;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      right: -16px;
+      bottom: -16px;
+      border: 4px solid black;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      @media (max-width: bp.$breakpoint-md) {
+        top: 0.7rem;
+        left: -1rem;
+        right: 0.7rem;
+        bottom: 0.7rem;
+      }
+      @media (max-width: bp.$breakpoint-sm) {
+        top: 0.7rem;
+        left: -1.2rem;
+        bottom: 1.1rem;
+        right: 0.7rem;
+      }
+
+      @media (max-width: bp.$breakpoint-xs) {
+        top: 0.7rem;
+        left: -1.2rem;
+        bottom: 1.1rem;
+        right: 0.7rem;
+      }
     }
 
-    @media (max-width: bp.$breakpoint-xs) {
-      top: 0.7rem;
-      left: 2rem;
-      bottom: 1.1rem;
-      right: 3.7rem;
+    &:hover::after {
+      opacity: 1;
     }
-  }
-
-  &:hover::after {
-    opacity: 1;
   }
 }
