@@ -315,12 +315,8 @@
 .project-buttons a,
 .project-buttons button {
   @media (max-width: bp.$breakpoint-xs) {
-    width: 120px;
-    align-self: flex-end; 
-  }
-
-  &:active {
-    width: 150px;
+    // width: 120px;
+    // align-self: flex-end; 
   }
 }
 
