@@ -43,12 +43,32 @@ export class App {
 
   toggleMenu() {
     this.burgerMenuOpen = !this.burgerMenuOpen;
-    document.body.style.overflow = this.burgerMenuOpen ? 'hidden' : '';
+    if (this.burgerMenuOpen) {
+      // Prevent scrolling
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      // Restore scrolling
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
   }
 
   closeMenu() {
     this.burgerMenuOpen = false;
+    // Restore scrolling
+    const scrollY = document.body.style.top;
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 
   scrollToSection(section: 'about' | 'skills' | 'projects') {
