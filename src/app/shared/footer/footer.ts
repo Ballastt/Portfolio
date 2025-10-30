@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Inject, LOCALE_ID} from '@angular/core';
 import { ContactComponent } from '../../pages/contact/contact';
 import { FooterSocialMedia } from '../footer-social-media/footer-social-media';
 import { RouterModule, Router, RouterLink } from '@angular/router';
@@ -15,8 +15,9 @@ export class Footer {
   currentYear: number = new Date().getFullYear();
   currentLang: string = 'de';
 
-  constructor(private router: Router) {
-    const segments = this.router.url.split('/');
-    this.currentLang = segments[1] || 'de';
+  constructor(private router: Router, @Inject(LOCALE_ID) private locale: string) {
+    // Use Angular's LOCALE_ID for reliable language detection
+    this.currentLang = this.locale;
+    console.log('Footer current language:', this.currentLang);
   }
 }

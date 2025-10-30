@@ -255,28 +255,28 @@
         <source> Über Mich <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;border top&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;border right&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;border bottom&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span class=&quot;border left&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
-          <context context-type="linenumber">13,20</context>
+          <context context-type="linenumber">14,21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menu.skills" datatype="html">
         <source> Meine Skills <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;border top&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;border right&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;border bottom&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span class=&quot;border left&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
-          <context context-type="linenumber">30,37</context>
+          <context context-type="linenumber">31,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menu.projects" datatype="html">
         <source> Portfolio <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;border top&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;border right&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;border bottom&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span class=&quot;border left&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
-          <context context-type="linenumber">47,53</context>
+          <context context-type="linenumber">48,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menu.sayHi" datatype="html">
         <source>Sag Hi!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu-overlay/menu-overlay.html</context>
-          <context context-type="linenumber">57,58</context>
+          <context context-type="linenumber">59,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.title" datatype="html">
@@ -339,7 +339,7 @@
         <source>Foto von mir</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about.html</context>
-          <context context-type="linenumber">51,54</context>
+          <context context-type="linenumber">52,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.name.label" datatype="html">
@@ -353,7 +353,7 @@
         <source> Der Name ist erforderlich. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">24,28</context>
+          <context context-type="linenumber">23,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.email.label" datatype="html">
@@ -367,14 +367,14 @@
         <source> Die Email ist erforderlich. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">50,51</context>
+          <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.email.invalid" datatype="html">
         <source> Bitte eine gültige Email eingeben. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">53,57</context>
+          <context context-type="linenumber">52,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.message.label" datatype="html">
@@ -388,14 +388,14 @@
         <source> Die Nachricht ist erforderlich. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">79,80</context>
+          <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.message.minlength" datatype="html">
         <source> Die Nachricht muss mindestens 100 Zeichen lang sein. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">83,88</context>
+          <context context-type="linenumber">81,84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.privacy.text" datatype="html">
@@ -404,21 +404,21 @@
         &gt;"/> gelesen und stimme dem Verarbeiten meiner Daten zu. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">106,111</context>
+          <context context-type="linenumber">105,110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.privacy.required" datatype="html">
         <source> Bitte Datenschutzerklärung akzeptieren. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">115,119</context>
+          <context context-type="linenumber">114,118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.form.submit.button" datatype="html">
         <source>Abschicken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.html</context>
-          <context context-type="linenumber">121,124</context>
+          <context context-type="linenumber">120,123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="error.404.title" datatype="html">
@@ -461,34 +461,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
           <context context-type="linenumber">86,88</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="projects.livedemo.aria" datatype="html">
-        <source>Live Demo des Projekts öffnen</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
-          <context context-type="linenumber">94,95</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="projects.livedemo.button" datatype="html">
-        <source> Live Demo </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
-          <context context-type="linenumber">98,100</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="projects.livedemo.coming.aria" datatype="html">
-        <source>Live Demo bald verfügbar</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
-          <context context-type="linenumber">104,105</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="projects.livedemo.coming.button" datatype="html">
-        <source> Coming Soon </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/project-section/project-section.html</context>
-          <context context-type="linenumber">108,110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projects.title" datatype="html">
@@ -584,7 +556,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="footer.project.subtitle" datatype="html">
-        <source>Sag hallo, lass uns Ideen diskutieren und sie machbar machen</source>
+        <source>Sag hallo, lass uns Ideen diskutieren und umsetzen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.html</context>
           <context context-type="linenumber">10,13</context>

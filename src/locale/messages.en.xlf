@@ -648,13 +648,17 @@
         </context-group>
       </trans-unit>
       <trans-unit id="legal.imprint.info.title">
-        <source>Angaben gemäß § 25 Mediengesetz und § 5 E-Commerce-Gesetz (ECG)</source>
-        <target>Information according to § 25 Media Act and § 5 E-Commerce Act (ECG)</target>
+        <source> Angaben gemäß § 25 Mediengesetz und § 5 E-Commerce-Gesetz (ECG) </source>
+        <target> Information according to § 25 Media Act and § 5 E-Commerce Act (ECG) </target>
       </trans-unit>
 
       <trans-unit id="legal.imprint.contact.section">
-        <source>...</source>
-        <target><p><strong>Name:</strong> Birgit Leitner</p>...</target>
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Name:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Birgit Leitner<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Adresse:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Große Neugasse 26/19<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 1040 Wien<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Österreich <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Kontakt:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> E-Mail: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:birgit.leitner@yahoo.de?subject=Impressum Contact&quot;
+              &gt;"/>birgit.leitner@yahoo.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+            &gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Name:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Birgit Leitner<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Address:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Große Neugasse 26/19<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 1040 Vienna<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Austria <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Contact:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> E-Mail: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:birgit.leitner@yahoo.de?subject=Impressum Contact&quot;
+              &gt;"/>birgit.leitner@yahoo.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+            &gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
       </trans-unit>
 
       <trans-unit id="legal.imprint.website.title">
@@ -665,6 +669,43 @@
       <trans-unit id="legal.imprint.disclaimer.title">
         <source>Haftungsausschluss</source>
         <target>Disclaimer</target>
+      </trans-unit>
+
+      <trans-unit id="legal.arrow.alt" datatype="html">
+        <source>Back to home</source>
+        <target>Back to home</target>
+      </trans-unit>
+
+      <trans-unit id="legal.imprint.title" datatype="html">
+        <source>Impressum</source>
+        <target>Imprint</target>
+      </trans-unit>
+
+
+
+      <trans-unit id="legal.imprint.website.description" datatype="html">
+        <source> Dies ist eine private, nicht-kommerzielle Website im Rahmen einer Ausbildung (Portfolio-Projekt im Bereich Frontend Development). </source>
+        <target> This is a private, non-commercial website as part of an education program (Portfolio project in Frontend Development). </target>
+      </trans-unit>
+
+      <trans-unit id="legal.imprint.disclaimer.content" datatype="html">
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> Diese Website dient ausschließlich der Präsentation von Ausbildungsprojekten. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> Für die Inhalte externer Links wird keine Haftung übernommen. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
+        <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> This website serves exclusively for the presentation of educational projects. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> No liability is assumed for the content of external links. The operators of linked pages are exclusively responsible for their content. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+      </trans-unit>
+
+      <trans-unit id="error.404.title" datatype="html">
+        <source>404 - Seite nicht gefunden</source>
+        <target>404 - Page not found</target>
+      </trans-unit>
+
+      <trans-unit id="error.404.message" datatype="html">
+        <source> Die angeforderte Seite konnte nicht gefunden werden. </source>
+        <target> The requested page could not be found. </target>
+      </trans-unit>
+
+      <trans-unit id="error.404.home" datatype="html">
+        <source> Zurück zur Startseite </source>
+        <target> Back to home page </target>
       </trans-unit>
 
       <!-- Contact Form Translations -->
