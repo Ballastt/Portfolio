@@ -73,6 +73,7 @@
     padding-bottom: clamp(2rem, 4vw, 5rem);
 
     @media (max-width: bp.$breakpoint-md) {
+      font-size: 4rem;
       padding-left: clamp(0rem, 8vw, 10rem);
       padding-bottom: clamp(1.5rem, 3vw, 4rem);
     }

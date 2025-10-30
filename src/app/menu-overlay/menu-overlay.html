@@ -1,55 +1,57 @@
 <div class="menu-overlay">
   <section class="content">
-    <h1
-      class="nav-heading"
-      [ngClass]="{ pressed: pressedHeadings['about'] }"
-      (mousedown)="setPressed('about', true)"
-      (mouseup)="setPressed('about', false)"
-      (mouseleave)="setPressed('about', false)"
-      [class.active]="activeSection === 'about'"
-      (click)="goTo('about')"
-      i18n="@@menu.about"
-    >
-      Über Mich
-      <span class="border top"></span>
-      <span class="border right"></span>
-      <span class="border bottom"></span>
-      <span class="border left"></span>
-    </h1>
+    <div class="menu-group">
+      <h1
+        class="nav-heading"
+        [ngClass]="{ pressed: pressedHeadings['about'] }"
+        (mousedown)="setPressed('about', true)"
+        (mouseup)="setPressed('about', false)"
+        (mouseleave)="setPressed('about', false)"
+        [class.active]="activeSection === 'about'"
+        (click)="goTo('about')"
+        i18n="@@menu.about"
+      >
+        Über Mich
+        <span class="border top"></span>
+        <span class="border right"></span>
+        <span class="border bottom"></span>
+        <span class="border left"></span>
+      </h1>
 
-    <h1
-      class="nav-heading"
-      [ngClass]="{ pressed: pressedHeadings['skills'] }"
-      (mousedown)="setPressed('skills', true)"
-      (mouseup)="setPressed('skills', false)"
-      (mouseleave)="setPressed('skills', false)"
-      [class.active]="activeSection === 'skills'"
-      (click)="goTo('skills')"
-      i18n="@@menu.skills"
-    >
-      Meine Skills
-      <span class="border top"></span>
-      <span class="border right"></span>
-      <span class="border bottom"></span>
-      <span class="border left"></span>
-    </h1>
+      <h1
+        class="nav-heading"
+        [ngClass]="{ pressed: pressedHeadings['skills'] }"
+        (mousedown)="setPressed('skills', true)"
+        (mouseup)="setPressed('skills', false)"
+        (mouseleave)="setPressed('skills', false)"
+        [class.active]="activeSection === 'skills'"
+        (click)="goTo('skills')"
+        i18n="@@menu.skills"
+      >
+        Meine Skills
+        <span class="border top"></span>
+        <span class="border right"></span>
+        <span class="border bottom"></span>
+        <span class="border left"></span>
+      </h1>
 
-    <h1
-      class="nav-heading"
-      [ngClass]="{ pressed: pressedHeadings['projects'] }"
-      (mousedown)="setPressed('projects', true)"
-      (mouseup)="setPressed('projects', false)"
-      (mouseleave)="setPressed('projects', false)"
-      [class.active]="activeSection === 'projects'"
-      (click)="goTo('projects')"
-      i18n="@@menu.projects"
-    >
-      Portfolio
-      <span class="border top"></span>
-      <span class="border right"></span>
-      <span class="border bottom"></span>
-      <span class="border left"></span>
-    </h1>
+      <h1
+        class="nav-heading"
+        [ngClass]="{ pressed: pressedHeadings['projects'] }"
+        (mousedown)="setPressed('projects', true)"
+        (mouseup)="setPressed('projects', false)"
+        (mouseleave)="setPressed('projects', false)"
+        [class.active]="activeSection === 'projects'"
+        (click)="goTo('projects')"
+        i18n="@@menu.projects"
+      >
+        Portfolio
+        <span class="border top"></span>
+        <span class="border right"></span>
+        <span class="border bottom"></span>
+        <span class="border left"></span>
+      </h1>
+    </div>
   </section>
   <section class="footer">
     <div class="footer-content">
