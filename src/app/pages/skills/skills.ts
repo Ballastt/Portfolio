@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,7 +8,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills.scss'
 })
 export class Skills {
-   public skills = [
+  currentLang: string = 'de';
+
+  constructor(@Inject(LOCALE_ID) private locale: string) {
+    this.currentLang = this.locale;
+    console.log('Skills current language:', this.currentLang);
+  }
+
+  public skills = [
     { name: 'Angular', img: 'assets/icons/lang/angular.png'},
     { name: 'Typescript', img: 'assets/icons/lang/typescript.png'},
     { name: 'HTML', img: 'assets/icons/lang/html.png' },
